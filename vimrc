@@ -86,6 +86,7 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme desert
+"colorscheme github
 
 set cursorline
 set number
@@ -142,7 +143,10 @@ augroup END
 " NERDTree
 "------------------------------------
 let g:NERDTreeHijackNetrw=0
-autocmd vimenter * if !argc() | NERDTree ~/Dropbox | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"autocmd vimenter * if !argc() | NERDTree ~/Dropbox | endif
+
+map h :NERDTreeToggle<cr>
 
 " ----------------------------------------
 " Deal with unwanted spaces
@@ -156,5 +160,4 @@ noremap k :bn<cr>
 noremap j :bp<cr>
 noremap l :bd<cr>
 map <cr> o<Esc>
-map h :NERDTreeToggle<cr>
 map <Leader>f vip:sm/\n/ <cr>$<cr>

@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------
--- Configuration file by Thomas Friedrich (friedrich@suud.de)
+-- Xmonad configuration file by Thomas Friedrich (friedrich@suud.de)
 --
 import System.IO
 import System.Exit

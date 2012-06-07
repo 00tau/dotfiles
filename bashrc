@@ -55,13 +55,13 @@ export DARCS_EDITOR=vim
 export EMAIL=friedrich@statistik.tu-dortmund.de
 export PATH=~/.cabal/bin:$PATH
 
-# TMUX
-if which tmux 2>&1 >/dev/null; then
-    # if no session is started, start a new session
-    test -z ${TMUX} && tmux
-
-    # when quitting tmux, try to attach
-    while test -z ${TMUX}; do
-        tmux attach || break
-    done
-fi
+# TMUX -- following does not work with my wm/de-setup
+#if which tmux 2>&1 >/dev/null; then
+#    # if no session is started, start a new session
+#    test -z ${TMUX} && tmux
+#
+#    # when quitting tmux, try to attach
+#    while test -z ${TMUX}; do
+#        tmux attach || break
+#    done
+#fi
