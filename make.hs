@@ -23,10 +23,19 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
+# move any existing dotfiles in homedir to ~/.dotfiles_old
+# then create symlinks
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
+done
+
+# do the same thing for the wm-files
+for file in $wm; do
+    echo "Moving any existing wm-files from ~/.xmonad/ to $olddir"
+    mv ~/.xmonad/$file ~/dotfiles_old/
+    echo "Creating symlink to $file in home directory."
+    ln -s $dir/$file ~/.xmonad/$file
 done
