@@ -146,7 +146,7 @@ let g:NERDTreeHijackNetrw=0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "autocmd vimenter * if !argc() | NERDTree ~/Dropbox | endif
 
-map h :NERDTreeToggle<cr>
+" map h :NERDTreeToggle<cr>
 
 " ----------------------------------------
 " Deal with unwanted spaces
@@ -156,8 +156,8 @@ autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst autocmd BufWritePre <buff
 "------------------------------------
 " Custom Keys
 "------------------------------------
-noremap k :bn<cr>
-noremap j :bp<cr>
-noremap l :bd<cr>
+" noremap k :bn<cr>
+" noremap j :bp<cr>
+" noremap l :bd<cr>
 map <cr> o<Esc>
 map <Leader>f vip:sm/\n/ <cr>$<cr>
