@@ -35,6 +35,8 @@
 *color7:  #cccccc
 *color15: #ffffff
 
+dzen2.font: -*-dejavu-*-*-*-*-*-*-*-*-*-*-*-*
+
 ! Xcursor --------------------------------------------------------------
 
 Xcursor.theme: Vanilla-DMZ-AA
