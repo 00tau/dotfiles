@@ -51,8 +51,8 @@ Xft.hintstyle:  hintslight
 ! xterm settings -------------------------------------------------------
 
 xterm*geometry:           80x25
-xterm*faceName:           terminus:bold:pixelsize=14
-!xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
+xterm*faceName:           Inconsolata
+xterm*faceSize:           11
 xterm*dynamicColors:      true
 xterm*utf8:               2
 xterm*eightBitInput:      true
@@ -65,28 +65,6 @@ xterm*jumpScroll:         true
 xterm*multiScroll:        true
 xterm*toolBar:            false
 xterm*highlightSelection: true
-
-! URxvt settings -------------------------------------------------------
-
-URxvt.saveLines: 1000
-URxvt.scrollBar: false
-!URxvt.foreground: Black
-!URxvt.background: Grey
-URxvt.secondaryScroll: true
-URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
-URxvt.tabbed.saveLines: 1000
-URxvt.tabbed.scrollBar: false
-URxvt.tabbed.tabbar-fg: 0
-URxvt.tabbed.tabbar-bg: 7
-URxvt.tabbed.tab-fg: 0
-URxvt.tabbed.tab-bg: 8
-URxvt.tabbed.secondaryScroll: true
-
-URxvt.tabbed.font: xft:Bitstream Vera Sans Mono:pixelsize=12
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: chromium
-URxvt.matcher.button: 1
-URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
 ! xpdf -------------------------------------------------------------------
 
@@ -126,7 +104,7 @@ xscreensaver.passwd.thermometer.width:       8
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
 
-!xcalc------------------------------------------------------------------
+! xcalc ------------------------------------------------------------------
 
 xcalc*geometry:                        200x275
 xcalc.ti.bevel.background:             #111111
