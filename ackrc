@@ -1,0 +1,2 @@
+--type-set=rscript=.r,.s
+--type-set=sweave=.rnw
