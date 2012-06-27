@@ -1,0 +1,165 @@
+default
+xkb_symbols "basic" {
+
+    name[Group1]="Dvorak";
+
+    // Alphanumeric section
+
+    key <ESC>  { [ Escape ] };
+    key <LCTL> { [ Caps_Lock ] };
+    key <RALT> { [ Alt_L ] };
+
+    // Keyboard row number: +2
+    key <TLDE> { [ Home ] };
+    key <AE01> { [ Super_L ] };
+    key <AE02> { [ 7 ] };                                    
+    key <AE03> { [ 5 ] };                                    
+    key <AE04> { [ 3 ] };                                    
+    key <AE05> { [ 1 ] };                                    
+    key <AE06> { [ 9 ] };                                    
+    key <AE07> { [ 0 ] };                                    
+    key <AE08> { [ 2 ] };                                    
+    key <AE09> { [ 4 ] };                                    
+    key <AE10> { [ 6 ] };                                    
+    key <AE11> { [ 8 ] };                                    
+    key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] }; 
+		                                             
+    // Keyboard row number: +1
+    key <TAB>  { [ question, exclam, degree ] };
+    key <AD01> { [ odiaeresis, Odiaeresis, bracketleft ] };
+    key <AD02> { [ comma, semicolon, plus ] };
+    key <AD03> { [ period, colon, dollar ] };
+    key <AD04> { [ p, P, bracketright, Greek_pi ] };
+    key <AD05> { [ y, Y, acute, Greek_psi ] };
+    key <AD06> { [ f, F, grave, Greek_phi ] };
+    key <AD07> { [ g, G, slash, Greek_gamma ] };
+    key <AD08> { [ c, C, underscore, Greek_chi ] };
+    key <AD09> { [ r, R, ampersand, Greek_rho ] };
+    key <AD10> { [ l, L, percent, Greek_lambda ] };
+    key <AD11> { [ apostrophe, quotedbl ] };
+    key <AD12> { [ slash, backslash ] };
+
+    // Keyboard row number: 0
+    key <CAPS> { [ Control_L ] };
+    key <AC01> { [ a, A, asciitilde, Greek_alpha ] };
+    key <AC02> { [ o, O, less, Greek_omicron ] };
+    key <AC03> { [ e, E, minus, Greek_epsilon ] };
+    key <AC04> { [ u, U, greater, Greek_upsilon ] };
+    key <AC05> { [ i, I, parenleft, Greek_iota ] };
+    key <AC06> { [ d, D, parenright, Greek_delta ] };
+    key <AC07> { [ h, H, braceright, Greek_eta ] };
+    key <AC08> { [ t, T, backslash, Greek_tau ] };
+    key <AC09> { [ n, N, braceleft, Greek_nu ] };
+    key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
+    key <AC11> { [ ssharp, degree ] };
+    key <BKSL> { [ minus, underscore, bar, brokenbar ] };
+
+    // Keyboard row number: -1
+    key <LSGT> { [ adiaeresis, Adiaeresis, bar ] };
+    key <AB01> { [ udiaeresis, Udiaeresis, section ] };
+    key <AB02> { [ q, Q, colon ] };
+    key <AB03> { [ j, J, equal ] };
+    key <AB04> { [ k, K, asterisk, Greek_kappa ] };
+    key <AB05> { [ x, X, bar, Greek_xi ] };
+    key <AB06> { [ b, B, brokenbar, Greek_beta ] };
+    key <AB07> { [ m, M, numbersign, Greek_mu ] };
+    key <AB08> { [ w, W, quotedbl, Greek_omega ] };
+    key <AB09> { [ v, V, apostrophe, Greek_theta ] };
+    key <AB10> { [ z, Z, at, Greek_zeta ] };
+
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "kinesis" {
+
+    name[Group1]= "Dvorak - Kinesis";
+
+    // Alphanumeric section
+
+    key <ESC>  { [ Caps_Lock ] };
+
+    // Thumb row: left-high
+    key <LCTL> { [ yen ] };
+    key <LALT> { [ at ] };
+    key <HOME> { [ copyright ] };
+
+    // Thumb row: right-high
+    key <RCTL> { [ sterling ] };
+    key <RALT> { [ at ] };
+    key <PGUP> { [ registered ] };
+
+    // Thumb row: left-low
+    key <PGDN> { [ Alt_L, Meta_L ] };
+    key <SPCE> { [ space ] };
+    key <RTRN> { [ Return ] };
+
+    // Thumb row: left-low
+    key <END>  { [ Super_L ] };
+    key <BKSP> { [ ISO_Level3_Shift ] };
+    key <DELE> { [ Control_L ] };
+
+    // Keyboard row number: +2
+    key <AE12> { [ Escape ] };
+    key <AE01> { [ 7 ] };
+    key <AE02> { [ 5 ] };
+    key <AE03> { [ 3 ] };
+    key <AE04> { [ 1 ] };
+    key <AE05> { [ 9 ] };
+    key <AE06> { [ 0 ] };
+    key <AE07> { [ 2 ] };
+    key <AE08> { [ 4 ] };
+    key <AE09> { [ 6 ] };
+    key <AE10> { [ 8 ] };
+    key <AE11> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
+
+    // Keyboard row number: +1
+    key <TAB>  { [ question, questiondown ] };
+    key <AD01> { [ odiaeresis, Odiaeresis, bracketleft ] };
+    key <AD02> { [ comma, semicolon, plus ] };
+    key <AD03> { [ period, colon, dollar ] };
+    key <AD04> { [ p, P, bracketright, Greek_pi ] };
+    key <AD05> { [ y, Y, acute, Greek_psi ] };
+    key <AD06> { [ f, F, grave, Greek_phi ] };
+    key <AD07> { [ g, G, slash, Greek_gamma ] };
+    key <AD08> { [ c, C, underscore, Greek_chi ] };
+    key <AD09> { [ r, R, ampersand, Greek_rho ] };
+    key <AD10> { [ l, L, percent, Greek_lambda ] };
+    key <BKSL> { [ exclam, exclamdown ] };
+
+    // Keyboard row number: 0
+    key <CAPS> { [ Shift_L ] };
+    key <AC01> { [ a, A, asciitilde, Greek_alpha ] };
+    key <AC02> { [ o, O, less, Greek_omicron ] };
+    key <AC03> { [ e, E, minus, Greek_epsilon ] };
+    key <AC04> { [ u, U, greater, Greek_upsilon ] };
+    key <AC05> { [ i, I, parenleft, Greek_iota ] };
+    key <AC06> { [ d, D, parenright, Greek_delta ] };
+    key <AC07> { [ h, H, braceright, Greek_eta ] };
+    key <AC08> { [ t, T, backslash, Greek_tau ] };
+    key <AC09> { [ n, N, braceleft, Greek_nu ] };
+    key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
+    key <AC11> { [ Shift_R ] };
+
+    // Keyboard row number: -1
+    key <LFSH> { [ adiaeresis, Adiaeresis ] };
+    key <AB01> { [ udiaeresis, Udiaeresis, section ] };
+    key <AB02> { [ q, Q, colon ] };
+    key <AB03> { [ j, J, equal ] };
+    key <AB04> { [ k, K, asterisk, Greek_kappa ] };
+    key <AB05> { [ x, X, bar, Greek_xi ] };
+    key <AB06> { [ b, B, brokenbar, Greek_beta ] };
+    key <AB07> { [ m, M, numbersign, Greek_mu ] };
+    key <AB08> { [ w, W, quotedbl, Greek_omega ] };
+    key <AB09> { [ v, V, apostrophe, Greek_theta ] };
+    key <AB10> { [ z, Z, at, Greek_zeta ] };
+    key <RTSH> { [ ssharp, degree ] };
+
+    // Keyboard row number: -2
+    key <TLDE> { [ Home ] };
+    key <LSGT> { [ Delete ] };
+    key <AD11> { [ BackSpace ] };
+    key <AD12> { [ End ] };
+
+    include "level3(ralt_switch)"
+};
