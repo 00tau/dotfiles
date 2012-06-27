@@ -8,8 +8,8 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="Xresources bash_aliases bash_profile bashrc gtkrc-2.0 gvimrc vimrc xinitrc"
-wm="xmonad.hs"
+files="Rprofile Xresources bash_aliases bash_profile bashrc gtkrc-2.0 gvimrc vimrc xinitrc"
+wm="xmonad.hs conkyrc"
 
 ##########
 
@@ -27,7 +27,7 @@ echo "...done"
 # then create symlinks
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/.$file $olddir/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
@@ -35,7 +35,7 @@ done
 # do the same thing for the wm-files
 for file in $wm; do
     echo "Moving any existing wm-files from ~/.xmonad/ to $olddir"
-    mv ~/.xmonad/$file ~/dotfiles_old/
+    mv ~/.xmonad/$file $olddir/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.xmonad/$file
 done
