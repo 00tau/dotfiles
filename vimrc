@@ -1,28 +1,57 @@
 set nocompatible
 
+"------------------------------------
+" Pathogen
+"------------------------------------
+"
 " pathegon is used for easily installing new skripts to
-" vim.  Simply install new skipts to the .vim/bundle/
-" directory.
+" vim.  Simply copy new skipts to the .vim/bundle/
+" directory.  They get loaded automatically.
+runtime bundle/pathogen/autoload/pathogen.vim
+let g:pathogen_disabled = [ ]
 call pathogen#infect()
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting for the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax enable
-  set hlsearch
-endif
+"------------------------------------
+" Eye candy
+"------------------------------------
+"
+set t_Co=256
+syntax enable
+set hlsearch
 
-filetype plugin on
-filetype indent on
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 
+colorscheme desert
+
+set cursorline
+set number
+set showmode
+set showcmd
+set title
+set showmatch
+
+"------------------------------------
+" Spellchecking settings
+"------------------------------------
 set spelllang=de,en
 set spellsuggest=10
 
 "------------------------------------
+" File type handling
+"------------------------------------
+"
+filetype plugin on
+filetype indent on
+set fileformat=unix
+
+"------------------------------------
 " Behaviour
 "------------------------------------
-set directory=~/.tmp
-set backupdir=~/.tmp
+set directory=~/.tmp/vimswap
+set backupdir=~/.tmp/vimbackups
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
@@ -35,12 +64,11 @@ if has('mouse')
   set mouse=a
 endif
 if version >= 730
-    set undodir=~/.vim/undodir
+    set undodir=~/.tmp/vimundo
     set undofile
     set undolevels=1000
     set undoreload=10000
 endif
-set fileformat=unix
 
 " resume at last cursor position
 if has("autocmd")
@@ -71,29 +99,10 @@ set autoindent
 set smartindent
 
 " Nicer movement with wrapped lines
-au FileType html,tex,context,noweb,rnoweb noremap <buffer> <Down> gj
-au FileType html,tex,context,noweb,rnoweb inoremap <buffer> <Down> <C-O>gj
-au FileType html,tex,context,noweb,rnoweb noremap <buffer> <Up> gk
-au FileType html,tex,context,noweb,rnoweb inoremap <buffer> <Up> <C-O>gk
-
-"------------------------------------
-" Appearance
-"------------------------------------
-set t_Co=256
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme desert
-"colorscheme github
-
-set cursorline
-set number
-set showmode
-set showcmd
-set title
-set showmatch
+au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
+au FileType html,tex,context,noweb,rnoweb inoremap <buffer> j <C-O>gj
+au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
+au FileType html,tex,context,noweb,rnoweb inoremap <buffer> k <C-O>gk
 
 "------------------------------------
 " Statusbar
@@ -136,7 +145,7 @@ let g:vimrplugin_indent_commented = 1
 " ConTeXt
 "------------------------------------
 augroup filetypedetect
-	au! BufRead,BufNewFile *.tex		setfiletype context
+	au! BufRead,BufNewFile *.tex setfiletype context
 augroup END
 
 "------------------------------------
@@ -160,4 +169,4 @@ autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst autocmd BufWritePre <buff
 " noremap j :bp<cr>
 " noremap l :bd<cr>
 map <cr> o<Esc>
-map <Leader>f vip:sm/\n/ <cr>$<cr>
+" map <Leader>f vip:sm/\n/ <cr>$<cr>

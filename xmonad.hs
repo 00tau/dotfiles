@@ -52,7 +52,7 @@ role = stringProperty "WM_WINDOW_ROLE"
 main = do
   spawn "/home/friedrich/.autostart"
   status <- spawnPipe myDzenStatus -- xmonad status on the left
-  conky  <- spawnPipe myDzenConky  -- conky stats on the right
+  --conky  <- spawnPipe myDzenConky  -- conky stats on the right
   xmonad $ withUrgencyHook NoUrgencyHook $ myConfig status
 
 ------------------------------------------------------------------------
@@ -109,8 +109,9 @@ myLogHook h = dynamicLogWithPP $ defaultPP
                     _           -> x
 
 myDzenLayout = " -h 18 -fg '#FFFFFF' -bg '#000000'" -- '#1B1D1E'"
-myDzenStatus = "dzen2 -w 900 -ta l" ++ myDzenLayout
-myDzenConky = "conky -c ~/.xmonad/conkyrc | dzen2 -x 900 -w 304 -ta r" ++ myDzenLayout
+myDzenStatus = "dzen2 -ta l -h 18 -fg '#FFFFFF' -bg '#000000'"
+--myDzenStatus = "dzen2 -w 900 -ta l" ++ myDzenLayout
+--myDzenConky = "conky -c ~/.xmonad/conkyrc | dzen2 -x 900 -w 304 -ta r" ++ myDzenLayout
 
 ------------------------------------------------------------------------
 -- Scratchpads
@@ -119,7 +120,7 @@ myDzenConky = "conky -c ~/.xmonad/conkyrc | dzen2 -x 900 -w 304 -ta r" ++ myDzen
 -- namely: urxvt, pcmanfm and the google-chromium-chat extension.
 --
 myScratchpads =
-    [ NS "term" "xterm -class ScratchIt" (className =? "ScratchIt")
+    [ NS "term" "xterm -class ScratchIt -e tmux new-session -s 00tau" (className =? "ScratchIt")
              (customFloating $ W.RationalRect (1/16) 0 (7/8) (2/3))
     , NS "fold" "pcmanfm --no-desktop" (className =? "Pcmanfm")
              (customFloating $ W.RationalRect (1/2) 0 (1/2) 1)

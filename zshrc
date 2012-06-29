@@ -31,3 +31,6 @@ prompt off
 alias l="ls -lha --color=auto"
 alias ll="ls -lh --color=auto"
 alias lll="ls -h --color=auto"
+
+# Keybindings
+bindkey "^T" vi-cmd-mode
