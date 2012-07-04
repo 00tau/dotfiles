@@ -1,5 +1,7 @@
-# The following lines were added by compinstall
+# ~/.zshrc
+# Thomas Friedrich (00tau@suud.de)
 
+# Completion
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' completions 1
 zstyle ':completion:*' glob 1
@@ -11,16 +13,13 @@ zstyle :compinstall filename '/home/friedrich/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
-# Lines configured by zsh-newuser-install
+# Settings
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
-bindkey -v
-# End of lines configured by zsh-newuser-install
 
 # Setting the promt to the most simple
 autoload -U promptinit
@@ -32,5 +31,9 @@ alias l="ls -lha --color=auto"
 alias ll="ls -lh --color=auto"
 alias lll="ls -h --color=auto"
 
+# Run skype as user skype
+alias skype='xhost +local: && su skype -c skype'
+
 # Keybindings
+bindkey -v
 bindkey "^T" vi-cmd-mode

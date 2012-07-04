@@ -124,8 +124,8 @@ myScratchpads =
              (customFloating $ W.RationalRect (1/16) 0 (7/8) (2/3))
     , NS "fold" "pcmanfm --no-desktop" (className =? "Pcmanfm")
              (customFloating $ W.RationalRect (1/2) 0 (1/2) 1)
-    , NS "chat" [] (className =? "Chromium" <&&> role =? "pop-up")
-             (customFloating $ W.RationalRect 0 0 (1/3) 1)
+    , NS "chat" "pidgin" (role =? "conversation")
+             (customFloating $ W.RationalRect (1/2) 0 (1/2) (1/2))
     ]
 
 ------------------------------------------------------------------------
@@ -138,6 +138,7 @@ myWorkspaces :: [String]
 myWorkspaces =
     [ "webbing"
     , "editing"
+    , "chatting"
 --    , "reading"
 --    , "managing"
     , "listening"
@@ -156,43 +157,22 @@ myWorkspaces =
 -- To match on the WM_NAME, you can use 'title' in the same way that
 -- 'className' and 'resource' are used below.
 --
--- FIXME: Use >>= instead of two entries ??
---
 myManageHook :: ManageHook
 myManageHook = manageDocks <+> namedScratchpadManageHook myScratchpads <+> composeAll
-    [ role =? "browser"        --> doShift "webbing"
+    [ role =? "browser"              --> doShift "webbing"
     , className =? "Gvim"            --> doShift "editing"
-    , resource  =? "gpicview"        --> doFloat
-    -- , className =? "Firefox"         --> doShift "webbing"
-    -- , className =? "Chromium" <&&> role =? "pop-up" --> unfloat -- doShift "chatting"
-    -- , className =? "Chromium" <&&> title /=? "Chat" --> doShift "webbing"
-    -- , className =? "Chromium"        --> doShift "webbing"
-    -- , className =? "Emacs"           --> doShift "editing"
-    -- , className =? "Mendeleydesktop" --> doShift "editing"
-    -- , className =? "Xpdf"            --> doShift "reading"
-    -- , className =? "Evince"          --> doShift "reading"
-    -- , className =? "Okular"          --> unfloat
-    -- , className =? "Okular"          --> viewShift "reading"
-    -- , className =? "Nautilus"        --> doShift "managing"
-    -- , className =? "Thunar"          --> doShift "managing"
-    -- , className =? "Pcmanfm"         --> doShift "managing"
-    -- , className =? "Skype"           --> doShift "chatting"
-    -- , className =? "Xchat"           --> doShift "chatting"
+    , className =? "Xpdf"            --> doShift "editing"
+    , className =? "Pidgin"          --> doShift "chatting"
+    , className =? "Skype"           --> doShift "chatting"
     , className =? "Vlc"             --> doShift "listening"
-    , className =? "Rhythmbox"       --> doShift "listening"
-    , resource  =? "Manager"         --> doShift "NSP"
-    , className =? "Galculator"      --> doFloat
+    , className =? "Clementine"      --> doShift "listening"
     , className =? "Gimp"            --> doFloat
-    , className =? "MPlayer"         --> doFloat
-    -- , title     =? "EmacsMinibuffer" --> doFloat
-    -- , title     =? "EmacsMinibuffer" --> doIgnore
     , className =? "Wicd-client.py"  --> doFloat
     , resource  =? "desktop_window"  --> doIgnore
-    -- , isFullscreen --> (doF W.focusDown <+> doFullFloat)
-    -- , className =? "Empathy" <&&> title =? "Kontaktliste" --> doShift "chatting"
+    , isFullscreen --> (doF W.focusDown <+> doFullFloat)
+    -- , resource  =? "gpicview"        --> doFloat
     ]
-    where unfloat   = ask >>= doF . W.sink
-          -- viewShift = doF . liftM2 (.) W.greedyView W.shift
+    where unfloat = ask >>= doF . W.sink
 
 ------------------------------------------------------------------------
 -- Layouts
@@ -211,9 +191,9 @@ myLayout = smartBorders $ avoidStrutsOn [] $
     msepane  = mouseResizableTile {draggerType = BordersDragger}
     twopane  = TwoPane (1%100) (1%2)
     tabpane  = tabbed shrinkText tabConfig
-    mChat    = named "Tile" $ withIM (1%7) (Role "pop-up") msepane
-    tChat    = named "Pane" $ withIM (1%7) (Role "pop-up") twopane
-    bChat    = named "Tab" $ withIM (1%7) (Role "pop-up") tabpane
+    mChat    = named "Tile" $ withIM (1%7) (Role "conversation") msepane
+    tChat    = named "Pane" $ withIM (1%7) (Role "conversation") twopane
+    bChat    = named "Tab" $ withIM (1%7) (Role "conversation") tabpane
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
 tabConfig = defaultTheme {
@@ -243,7 +223,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
 --      , ((modm, xK_4         ),
       , ((modm, xK_6         ), io (exitWith ExitSuccess))
       , ((modm, xK_8         ), refresh)
-      , ((modm, xK_Tab       ), spawn "killall trayer conky dzen2 && xmonad --recompile && xmonad --restart")
+      , ((modm, xK_Tab       ), spawn "killall trayer dzen2 && xmonad --recompile && xmonad --restart")
       --
       , ((modm, xK_Print     ), spawn "scrot -q 100") -- shot of whole screen
       , ((modm .|. shiftMask, xK_Print), spawn "scrot -q 100 -s") -- shot of one frame
