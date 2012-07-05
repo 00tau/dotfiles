@@ -1,6 +1,6 @@
 #/bin/bash
 
-files=(Rprofile Xresources ackrc autostart bash_aliases bash_profile bashrc gtkrc-2.0 gvimrc tmux.conf vimrc xinitrc zshrc)
+files=(Rprofile Xresources ackrc autostart bash_aliases bash_profile bashrc gtkrc-2.0 gvimrc rat-hack tmux.conf vim vimrc xinitrc zshrc)
 dir=`pwd`
 
 for file in ${files[@]}; do
