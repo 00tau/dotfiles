@@ -24,7 +24,7 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 
-colorscheme desert
+colorscheme github
 
 set cursorline
 set number
@@ -46,6 +46,7 @@ set spellsuggest=10
 filetype plugin on
 filetype indent on
 set fileformat=unix
+set encoding=utf-8
 
 "------------------------------------
 " Behaviour
