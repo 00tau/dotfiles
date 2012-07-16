@@ -1,8 +1,7 @@
 ! ----------------------------------------------------------------------
 ! file:     ~/.Xresources
 ! author:   Thomas Friedrich
-! modified: May 2012
-! vim: set fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+! modified: Juli 2012
 ! ----------------------------------------------------------------------
 
 ! terminal colors ------------------------------------------------------
@@ -73,7 +72,7 @@ xpdf*enableFreetype:    yes
 xpdf*antialias:         yes
 xpdf*foreground:        black
 xpdf*background:        white
-xpdf*urlCommand:        /usr/bin/chromium %s
+xpdf*urlCommand:        /usr/bin/firefox %s
 
 ! xscreensaver -----------------------------------------------------------
 

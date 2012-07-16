@@ -1,6 +1,5 @@
-" Set the font and size
-"set guifont=DejaVu\ Sans\ Mono\ 11
-"set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
+" Set font and size
+set guifont=Inconsolata\ 12
 
 " Remove menu bar
 set guioptions-=m

@@ -14,3 +14,7 @@ fi
 if [ -x /usr/bin/dropboxd ] ; then
   dropboxd &
 fi
+
+if [ -x /usr/bin/xscreensaver ] ; then
+  xscreensaver -no-splash &
+fi

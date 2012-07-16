@@ -36,23 +36,28 @@ import XMonad.Layout.ToggleLayouts
 import XMonad.Layout.MouseResizableTile
 import XMonad.Layout.Tabbed
 import XMonad.Layout.Named
-import XMonad.Layout.Circle
+import XMonad.Layout.Grid
 
 import qualified XMonad.StackSet as W
 import qualified XMonad.Prompt as P
 
 import Data.Ratio ((%))
+import Graphics.X11.ExtraTypes.XF86
 
 -- I really use this a lot
 role = stringProperty "WM_WINDOW_ROLE"
+special = "#159828"
+comment = "#999988"
+hiddenc = "#7b7b7b"
+urgendc = "#ebac54"
 
 ------------------------------------------------------------------------
--- Run xmonad with the defaults below
+-- Run xmonad with configuration myConfig
 --
 main = do
-  spawn "/home/friedrich/.autostart"
   status <- spawnPipe myDzenStatus -- xmonad status on the left
-  --conky  <- spawnPipe myDzenConky  -- conky stats on the right
+  conky  <- spawnPipe myDzenConky  -- conky status on the right
+  spawn "/home/friedrich/.autostart"
   xmonad $ withUrgencyHook NoUrgencyHook $ myConfig status
 
 ------------------------------------------------------------------------
@@ -65,10 +70,10 @@ myConfig status = defaultConfig
            , focusFollowsMouse  = True
            , borderWidth        = 1
            , modMask            = mod4Mask
-           , normalBorderColor  = "#7c7c7c"
-           , focusedBorderColor = "#ffb6b0"
+           , normalBorderColor  = comment
+           , focusedBorderColor = special
            , handleEventHook    = ewmhDesktopsEventHook
-           , startupHook        = setWMName "LG3D"
+           , startupHook        = setWMName "lg3d"
            , workspaces         = myWorkspaces
            , manageHook         = myManageHook
            , layoutHook         = myLayout
@@ -81,37 +86,35 @@ myConfig status = defaultConfig
 --
 myLogHook :: Handle -> X ()
 myLogHook h = dynamicLogWithPP $ defaultPP
-        { ppCurrent           =   dzenColor "#ebac54" "#000000" . addIcons
-        , ppVisible           =   dzenColor "white" "#000000" . addIcons
-        , ppHidden            =   dzenColor "white" "#000000" . addIcons
-        , ppHiddenNoWindows   =   dzenColor "#7b7b7b" "#000000" . addIcons
-        , ppUrgent            =   dzenColor "#ff0000" "#000000" . addIcons
+        { ppCurrent           =   dzenColor special "black" . addIcons
+        , ppVisible           =   dzenColor "white" "black" . addIcons
+        , ppHidden            =   dzenColor "white" "black" . addIcons
+        , ppHiddenNoWindows   =   dzenColor comment "black" . addIcons
+        , ppUrgent            =   dzenColor urgendc "black" . addIcons
         , ppWsSep             =   " "
         , ppSep               =   " | "
-        , ppLayout            =   dzenColor "#ebac54" "#000000" .
+        , ppLayout            =   dzenColor special "black" .
                                     (\x -> case x of
                                        "Tile" -> "^i(" ++ myIcons ++ "empty.xbm)"
                                        "Pane" -> "^i(" ++ myIcons ++ "half.xbm)"
-                                       "Tab"  -> "^i(" ++ myIcons ++ "info_01.xbm)"
+                                       "Tabd" -> "^i(" ++ myIcons ++ "info_01.xbm)"
                                        "Full" -> "^i(" ++ myIcons ++ "full.xbm)"
+                                       "Grid" -> "^i(" ++ myIcons ++ "cpu.xbm)"
                                        _      -> x
                                     )
-        , ppTitle             =   (" " ++) . dzenColor "white" "#000000" . dzenEscape
+        , ppTitle             =   (" " ++) . dzenColor "white" "black" . dzenEscape
         , ppOutput            =   hPutStrLn h
         } where myIcons = "/home/friedrich/Dropbox/.icons/"
                 addIcons x = case x of
                     "webbing"   -> "^i(" ++ myIcons ++ "fox.xbm)"
                     "editing"   -> "^i(" ++ myIcons ++ "cat.xbm)"
-                    -- "reading"   -> "^i(" ++ myIcons ++ "mail.xbm)"
-                    -- "managing"  -> "^i(" ++ myIcons ++ "diskette.xbm)"
+                    "chatting"  -> "^i(" ++ myIcons ++ "bug_01.xbm)"
                     "listening" -> "^i(" ++ myIcons ++ "note.xbm)"
                     "NSP"       -> "^i(" ++ myIcons ++ "mem.xbm)"
                     _           -> x
 
-myDzenLayout = " -h 18 -fg '#FFFFFF' -bg '#000000'" -- '#1B1D1E'"
-myDzenStatus = "dzen2 -ta l -h 18 -fg '#FFFFFF' -bg '#000000'"
---myDzenStatus = "dzen2 -w 900 -ta l" ++ myDzenLayout
---myDzenConky = "conky -c ~/.xmonad/conkyrc | dzen2 -x 900 -w 304 -ta r" ++ myDzenLayout
+myDzenStatus = "dzen2 -ta l -h 18 -bg black"
+myDzenConky = "conky -c ~/.xmonad/conkyrc | dzen2 -x 900 -w 300 -ta r -h 18 -bg black"
 
 ------------------------------------------------------------------------
 -- Scratchpads
@@ -121,11 +124,11 @@ myDzenStatus = "dzen2 -ta l -h 18 -fg '#FFFFFF' -bg '#000000'"
 --
 myScratchpads =
     [ NS "term" "xterm -class ScratchIt -e tmux new-session -s 00tau" (className =? "ScratchIt")
-             (customFloating $ W.RationalRect (1/16) 0 (7/8) (2/3))
+          (customFloating $ W.RationalRect (1%16) (1%32) (7%8) (2%3))
     , NS "fold" "pcmanfm --no-desktop" (className =? "Pcmanfm")
-             (customFloating $ W.RationalRect (1/2) 0 (1/2) 1)
+          (customFloating $ W.RationalRect (1%2) 0 (1%2) 1)
     , NS "chat" "pidgin" (role =? "conversation")
-             (customFloating $ W.RationalRect (1/2) 0 (1/2) (1/2))
+          (customFloating $ W.RationalRect (1%2) 0 (1%2) (1%2))
     ]
 
 ------------------------------------------------------------------------
@@ -168,7 +171,7 @@ myManageHook = manageDocks <+> namedScratchpadManageHook myScratchpads <+> compo
     , className =? "Clementine"      --> doShift "listening"
     , className =? "Gimp"            --> doFloat
     , className =? "Wicd-client.py"  --> doFloat
-    , resource  =? "desktop_window"  --> doIgnore
+    , className =? "Xfce4-notifyd"   --> doIgnore
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)
     -- , resource  =? "gpicview"        --> doFloat
     ]
@@ -186,14 +189,14 @@ myManageHook = manageDocks <+> namedScratchpadManageHook myScratchpads <+> compo
 myLayout = smartBorders $ avoidStrutsOn [] $
                toggleLayouts Full mChat
                ||| toggleLayouts Full tChat
-               ||| toggleLayouts Circle bChat
+               ||| toggleLayouts Grid bChat
     where
     msepane  = mouseResizableTile {draggerType = BordersDragger}
     twopane  = TwoPane (1%100) (1%2)
     tabpane  = tabbed shrinkText tabConfig
     mChat    = named "Tile" $ withIM (1%7) (Role "conversation") msepane
     tChat    = named "Pane" $ withIM (1%7) (Role "conversation") twopane
-    bChat    = named "Tab" $ withIM (1%7) (Role "conversation") tabpane
+    bChat    = named "Tabd" $ withIM (1%7) (Role "conversation") tabpane
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
 tabConfig = defaultTheme {
@@ -213,9 +216,20 @@ myKeys :: XConfig Layout -> Map.Map (ButtonMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modm})
     = Map.fromList $
       [ ((0, xK_Menu), dmenu)
+      , ((0   , xF86XK_Launch1), spawn "xscreensaver-command -lock")
+      , ((modm, xF86XK_Launch1), spawn "~/.rat-hack")
+      --
+      , ((0, xF86XK_AudioLowerVolume), spawn "amixer -- sset Master playback 10%-")
+      , ((0, xF86XK_AudioRaiseVolume), spawn "amixer -- sset Master playback 10%+")
+      , ((0, xF86XK_AudioMute), spawn "amixer -- sset Master playback toggle")
+      --
+      , ((modm                , xK_Print), spawn "scrot -q 100") -- shot of whole screen
+      , ((modm .|. shiftMask  , xK_Print), spawn "scrot -q 100 -s") -- shot of one frame
+      , ((modm .|. controlMask, xK_Print), spawn "scrot -q 100 -m") -- shot of xinemera
+      --
       , ((modm, xK_7         ), sendMessage ToggleStruts)
       , ((modm, xK_5         ), withFocused $ windows . W.sink)
-      , ((modm, xK_3         ), spawn "xscreensaver-command -lock")
+--      , ((modm, xK_3         ),
 --      , ((modm, xK_1         ),
 --      , ((modm, xK_9         ),
 --      , ((modm, xK_0         ), 
@@ -224,10 +238,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
       , ((modm, xK_6         ), io (exitWith ExitSuccess))
       , ((modm, xK_8         ), refresh)
       , ((modm, xK_Tab       ), spawn "killall trayer dzen2 && xmonad --recompile && xmonad --restart")
-      --
-      , ((modm, xK_Print     ), spawn "scrot -q 100") -- shot of whole screen
-      , ((modm .|. shiftMask, xK_Print), spawn "scrot -q 100 -s") -- shot of one frame
-      , ((modm .|. controlMask, xK_Print), spawn "scrot -q 100 -m") -- shot of xinemera
       --
       , ((modm, xK_question  ), toggleWS' ["NSP"])
       , ((modm, xK_odiaeresis), screenWorkspace 0 >>= flip whenJust (windows . W.view))

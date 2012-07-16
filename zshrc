@@ -27,9 +27,10 @@ promptinit
 prompt off
 
 # Aliases
-alias l="ls -lha --color=auto"
-alias ll="ls -lh --color=auto"
-alias lll="ls -h --color=auto"
+alias ls="ls -h --color=auto "
+alias ll="ls -l "
+alias la="ls -la "
+alias diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/Dissertation/
 
 # Run skype as user skype
 alias skype='xhost +local: && su skype -c skype'
@@ -37,3 +38,6 @@ alias skype='xhost +local: && su skype -c skype'
 # Keybindings
 bindkey -v
 bindkey "^T" vi-cmd-mode
+
+# Source
+source /opt/context-minimals/setuptex

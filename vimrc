@@ -53,38 +53,32 @@ set encoding=utf-8
 "------------------------------------
 set directory=~/.tmp/vimswap
 set backupdir=~/.tmp/vimbackups
+set undodir=~/.tmp/vimundo
+set undofile
+set undolevels=1000
+set undoreload=1000
+set history=50
+set showcmd
+set hidden
+set autoread
+
+if has('mouse')
+  set mouse=a
+endif
+
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file
 endif
-set hidden
-set autoread
-set autowrite
-if has('mouse')
-  set mouse=a
-endif
-if version >= 730
-    set undodir=~/.tmp/vimundo
-    set undofile
-    set undolevels=1000
-    set undoreload=10000
-endif
 
-" resume at last cursor position
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  " resume at last cursor position
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  " Automatically change local directory (lch) to current file in buffer but
+  " not when the file lies in /tmp
+  autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
 endif
-
-set history=50 " keep 50 lines of command line history
-set showcmd    " display incomplete commands
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
-" Automatically change local directory (lch) to current file in buffer but
-" not when the file lies in /tmp
-autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
 
 set grepprg=grep\ -nH\ $*
 
@@ -108,7 +102,8 @@ au FileType html,tex,context,noweb,rnoweb inoremap <buffer> k <C-O>gk
 "------------------------------------
 " Statusbar
 "------------------------------------
-set statusline=%F%m%r%h%w\ format=%{&ff}\ type=%Y\ ascii=\%03.3b\ hex=\%02.2B\ pos=%04l,%04v\ %p%%\ len=%L
+"set statusline=%F%m%r%h%w\ format=%{&ff}\ type=%Y\ ascii=\%03.3b\ hex=\%02.2B\ pos=%04l,%04v\ %p%%\ len=%L
+set statusline=%F%m%r%h%w\ type=%Y\ pos=%04l,%04v\ %p%%\ len=%L
 set laststatus=2
 
 "------------------------------------
@@ -145,9 +140,11 @@ let g:vimrplugin_indent_commented = 1
 "------------------------------------
 " ConTeXt
 "------------------------------------
-augroup filetypedetect
-	au! BufRead,BufNewFile *.tex setfiletype context
-augroup END
+let g:tex_flavor = "context"
+
+"augroup filetypedetect
+"	au! BufRead,BufNewFile *.tex setfiletype context
+"augroup END
 
 "------------------------------------
 " NERDTree
