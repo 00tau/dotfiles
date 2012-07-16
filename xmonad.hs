@@ -232,16 +232,16 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
 --      , ((modm, xK_3         ),
 --      , ((modm, xK_1         ),
 --      , ((modm, xK_9         ),
---      , ((modm, xK_0         ), 
---      , ((modm, xK_2         ),
---      , ((modm, xK_4         ),
+      , ((modm, xK_0         ), swapScreens)
+      , ((modm, xK_2         ), screenWorkspace 1 >>= flip whenJust (windows . W.view))
+      , ((modm, xK_4         ), screenWorkspace 0 >>= flip whenJust (windows . W.view))
       , ((modm, xK_6         ), io (exitWith ExitSuccess))
       , ((modm, xK_8         ), refresh)
       , ((modm, xK_Tab       ), spawn "killall trayer dzen2 && xmonad --recompile && xmonad --restart")
       --
       , ((modm, xK_question  ), toggleWS' ["NSP"])
-      , ((modm, xK_odiaeresis), screenWorkspace 0 >>= flip whenJust (windows . W.view))
-      , ((modm, xK_comma     ), screenWorkspace 1 >>= flip whenJust (windows . W.view))
+--      , ((modm, xK_odiaeresis),
+--      , ((modm, xK_comma     ),
 --      , ((modm, xK_period    ),
 --      , ((modm, xK_p         ),
 --      , ((modm, xK_y         ),
