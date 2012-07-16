@@ -142,8 +142,6 @@ myWorkspaces =
     [ "webbing"
     , "editing"
     , "chatting"
---    , "reading"
---    , "managing"
     , "listening"
     , "NSP"]
 
@@ -165,6 +163,7 @@ myManageHook = manageDocks <+> namedScratchpadManageHook myScratchpads <+> compo
     [ role =? "browser"              --> doShift "webbing"
     , className =? "Gvim"            --> doShift "editing"
     , className =? "Xpdf"            --> doShift "editing"
+    , className =? "Evince"            --> doShift "editing"
     , className =? "Pidgin"          --> doShift "chatting"
     , className =? "Skype"           --> doShift "chatting"
     , className =? "Vlc"             --> doShift "listening"
@@ -173,9 +172,7 @@ myManageHook = manageDocks <+> namedScratchpadManageHook myScratchpads <+> compo
     , className =? "Wicd-client.py"  --> doFloat
     , className =? "Xfce4-notifyd"   --> doIgnore
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)
-    -- , resource  =? "gpicview"        --> doFloat
-    ]
-    where unfloat = ask >>= doF . W.sink
+    ] -- where unfloat = ask >>= doF . W.sink
 
 ------------------------------------------------------------------------
 -- Layouts
@@ -199,14 +196,14 @@ myLayout = smartBorders $ avoidStrutsOn [] $
     bChat    = named "Tabd" $ withIM (1%7) (Role "conversation") tabpane
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
-tabConfig = defaultTheme {
-    activeBorderColor = "#7C7C7C",
-    activeTextColor = "#CEFFAC",
-    activeColor = "#000000",
-    inactiveBorderColor = "#7C7C7C",
-    inactiveTextColor = "#EEEEEE",
-    inactiveColor = "#000000"
-}
+tabConfig = defaultTheme
+    { activeBorderColor = "#000000"
+    , activeTextColor = special
+    , activeColor = comment
+    , inactiveBorderColor = "#000000"
+    , inactiveTextColor = special
+    , inactiveColor = "#000000"
+    }
 
 ------------------------------------------------------------------------
 -- Keybindings used for manipulating frames and workspaces
@@ -240,11 +237,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
       , ((modm, xK_Tab       ), spawn "killall trayer dzen2 && xmonad --recompile && xmonad --restart")
       --
       , ((modm, xK_question  ), toggleWS' ["NSP"])
---      , ((modm, xK_odiaeresis),
---      , ((modm, xK_comma     ),
---      , ((modm, xK_period    ),
---      , ((modm, xK_p         ),
---      , ((modm, xK_y         ),
+      , ((modm, xK_odiaeresis), shiftToPrev)
+      , ((modm, xK_comma     ), shiftToNext)
+      , ((modm, xK_period    ), prevWS) 
+      , ((modm, xK_p         ), nextWS)
+      , ((modm, xK_y         ), moveTo Next NonEmptyWS)
 --      , ((modm, xK_f         ),
       , ((modm, xK_g         ), sendMessage ToggleLayout)
       , ((modm, xK_c         ), windows W.focusUp)
@@ -265,10 +262,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
       , ((modm, xK_ssharp    ), rChat)
       , ((modm, xK_minus     ), moveTo Next NonEmptyWS)
       --
-      , ((modm, xK_adiaeresis), shiftToPrev)
-      , ((modm, xK_udiaeresis), shiftToNext)
-      , ((modm, xK_q         ), prevWS) 
-      , ((modm, xK_j         ), nextWS)
+--      , ((modm, xK_adiaeresis),
+--      , ((modm, xK_udiaeresis),
+--      , ((modm, xK_q         ),
+--      , ((modm, xK_j         ),
 --      , ((modm, xK_k         ),
 --      , ((modm, xK_x         ),
       , ((modm, xK_b         ), rTerm)
@@ -296,8 +293,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
           rEditorC  = runOrCopy      "gvim" (className =? "Gvim" <||> className =? "Emacs")
           rBrowser  = runOrRaiseNext "firefox" (role =? "browser")
           rBrowserC = runOrCopy      "firefox" (role =? "browser")
-          rReader   = raiseNext (className =? "Okular" <||> className =? "Evince")
-          rReaderC  = runOrCopy "evince" (className =? "Okular" <||> className =? "Evince")
+          rReader   = raiseNext (className =? "Evince")
+          rReaderC  = runOrCopy "evince" (className =? "Evince")
           rBib      = raiseNext (className =? "Mendeleydesktop")
           rTerm = namedScratchpadAction myScratchpads "term"
           rChat = namedScratchpadAction myScratchpads "chat"

@@ -1,24 +1,6 @@
 #/bin/bash
 
-files=(
-Rprofile
-Xresources
-ackrc
-autostart
-bash_aliases
-bash_profile
-bashrc
-conkyrc
-gtkrc-2.0
-gvimrc
-rat-hack
-tmux.conf
-vim
-vimrc
-xinerama
-xinitrc
-xscreensaver
-zshrc)
+files=(Rprofile Xresources ackrc autostart bash_aliases bash_profile bashrc conkyrc gtkrc-2.0 gvimrc rat-hack tmux.conf vim vimrc xinerama xinitrc xscreensaver zshrc)
 
 dir=`pwd`
 

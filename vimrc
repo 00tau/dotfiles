@@ -61,6 +61,7 @@ set history=50
 set showcmd
 set hidden
 set autoread
+set joinspaces
 
 if has('mouse')
   set mouse=a

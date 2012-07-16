@@ -51,8 +51,8 @@ xkb_symbols "basic" {
     key <AC08> { [ t, T, backslash, Greek_tau ] };
     key <AC09> { [ n, N, braceleft, Greek_nu ] };
     key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
-    key <AC11> { [ ssharp, degree ] };
-    key <BKSL> { [ minus, underscore, bar, brokenbar ] };
+    key <AC11> { [ ssharp, at ] };
+    key <BKSL> { [ minus, underscore ] };
 
     // Keyboard row number: -1
     key <LSGT> { [ adiaeresis, Adiaeresis, bar ] };
@@ -65,7 +65,7 @@ xkb_symbols "basic" {
     key <AB07> { [ m, M, numbersign, Greek_mu ] };
     key <AB08> { [ w, W, quotedbl, Greek_omega ] };
     key <AB09> { [ v, V, apostrophe, Greek_theta ] };
-    key <AB10> { [ z, Z, at, Greek_zeta ] };
+    key <AB10> { [ z, Z, degree, Greek_zeta ] };
 
     include "level3(ralt_switch)"
 };
@@ -114,7 +114,7 @@ xkb_symbols "kinesis" {
     key <AE11> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
 
     // Keyboard row number: +1
-    key <TAB>  { [ question, questiondown ] };
+    key <TAB>  { [ question, exclam, degree ] };
     key <AD01> { [ odiaeresis, Odiaeresis, bracketleft ] };
     key <AD02> { [ comma, semicolon, plus ] };
     key <AD03> { [ period, colon, dollar ] };
@@ -125,7 +125,7 @@ xkb_symbols "kinesis" {
     key <AD08> { [ c, C, underscore, Greek_chi ] };
     key <AD09> { [ r, R, ampersand, Greek_rho ] };
     key <AD10> { [ l, L, percent, Greek_lambda ] };
-    key <BKSL> { [ exclam, exclamdown ] };
+    key <BKSL> { [ apostrophe, quotedbl ] };
 
     // Keyboard row number: 0
     key <CAPS> { [ Shift_L ] };
@@ -152,8 +152,8 @@ xkb_symbols "kinesis" {
     key <AB07> { [ m, M, numbersign, Greek_mu ] };
     key <AB08> { [ w, W, quotedbl, Greek_omega ] };
     key <AB09> { [ v, V, apostrophe, Greek_theta ] };
-    key <AB10> { [ z, Z, at, Greek_zeta ] };
-    key <RTSH> { [ ssharp, degree ] };
+    key <AB10> { [ z, Z, degree, Greek_zeta ] };
+    key <RTSH> { [ ssharp, at ] };
 
     // Keyboard row number: -2
     key <TLDE> { [ Home ] };
