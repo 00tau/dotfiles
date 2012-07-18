@@ -3,7 +3,6 @@ set nocompatible
 "------------------------------------
 " Pathogen
 "------------------------------------
-"
 " pathegon is used for easily installing new skripts to
 " vim.  Simply copy new skipts to the .vim/bundle/
 " directory.  They get loaded automatically.
@@ -14,7 +13,6 @@ call pathogen#infect()
 "------------------------------------
 " Eye candy
 "------------------------------------
-"
 set t_Co=256
 syntax enable
 set hlsearch
@@ -42,7 +40,6 @@ set spellsuggest=10
 "------------------------------------
 " File type handling
 "------------------------------------
-"
 filetype plugin on
 filetype indent on
 set fileformat=unix
@@ -96,9 +93,13 @@ set smartindent
 
 " Nicer movement with wrapped lines
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
-au FileType html,tex,context,noweb,rnoweb inoremap <buffer> j <C-O>gj
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
-au FileType html,tex,context,noweb,rnoweb inoremap <buffer> k <C-O>gk
+
+" Nicer movement between buffers and tabs
+noremap <up> :bp<cr>
+noremap <down> :bn<cr>
+noremap <left> :gT<cr>
+noremap <right> :gt<cr>
 
 "------------------------------------
 " Statusbar

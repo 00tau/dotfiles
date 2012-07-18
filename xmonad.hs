@@ -227,8 +227,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
       , ((modm, xK_7         ), sendMessage ToggleStruts)
       , ((modm, xK_5         ), withFocused $ windows . W.sink)
 --      , ((modm, xK_3         ),
---      , ((modm, xK_1         ),
---      , ((modm, xK_9         ),
+      , ((modm, xK_1         ), spawn "xscreensaver-command -lock")
+      , ((modm, xK_9         ), spawn "~/.rat-hack")
       , ((modm, xK_0         ), swapScreens)
       , ((modm, xK_2         ), screenWorkspace 1 >>= flip whenJust (windows . W.view))
       , ((modm, xK_4         ), screenWorkspace 0 >>= flip whenJust (windows . W.view))
