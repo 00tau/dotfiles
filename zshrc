@@ -31,6 +31,7 @@ alias ls="ls -h --color=auto "
 alias ll="ls -l "
 alias la="ls -la "
 alias diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/Dissertation/
+alias steam='WINEDEBUG=-all wine ~.local/share/wineprefixes/steam/drive_c/Program Files (x86)/Steam/steam 2>&1 &'
 
 # Run skype as user skype
 alias skype='xhost +local: && su skype -c skype'
