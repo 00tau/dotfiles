@@ -15,12 +15,12 @@ nmap <F6> :make show<CR>
 iabbr $$ \placeformula<cr><cr>\startformula<cr>\stopformula<esc>O
 
 " start-stop formula-block
-nmap <buffer> <LocalLeader>ff A\placeformula<cr><cr>\startformula<cr><cr>\stopformula<cr><esc>2jI
-imap <buffer> <LocalLeader>ff \placeformula<cr><cr>\startformula<cr><cr>\stopformula<cr><esc>2<up>I
+nmap <buffer> <LocalLeader>ff A\placeformula<cr><cr>\startformula<cr>\stopformula<esc>O
+imap <buffer> <LocalLeader>ff \placeformula<cr><cr>\startformula<cr>\stopformula<esc>O
 
 " start-stop formula-algin-block
-nmap <buffer> <LocalLeader>fa A\placeformula<cr><cr>\startformula\startalign<cr><cr>\stopalign\stopformula<cr><esc>2<up>I
-imap <buffer> <LocalLeader>fa \placeformula<cr><cr>\startformula\startalign<cr><cr>\stopalign \stopformula<cr><esc>2<up>I
+nmap <buffer> <LocalLeader>fa A\placeformula<cr><cr>\startformula\startalign<cr>\stopalign\stopformula<esc>O
+imap <buffer> <LocalLeader>fa \placeformula<cr><cr>\startformula\startalign<cr>\stopalign \stopformula<esc>O
 
 " Make start-stop block out of the previous word
 imap <buffer> <LocalLeader>ta \start<Cr>\stop<Cr><Esc>4bhdiw$pj$pO
@@ -37,3 +37,7 @@ imap <buffer> <LocalLeader>sc {\sc }<Left>
 " define... and setup...
 imap <buffer> <LocalLeader>de \define
 imap <buffer> <LocalLeader>se \setup
+
+" enable spellcheck
+syn spell toplevel
+set spell spelllang=en

@@ -40,5 +40,8 @@ alias skype='xhost +local: && su skype -c skype'
 bindkey -v
 bindkey "^T" vi-cmd-mode
 
+# PATH
+export PATH=~/.cabal/bin:$PATH
+
 # Source
 source /opt/context-minimals/setuptex

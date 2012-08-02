@@ -13,16 +13,13 @@ call pathogen#infect()
 "------------------------------------
 " Eye candy
 "------------------------------------
-set t_Co=256
 syntax enable
-set hlsearch
-
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-
-colorscheme github
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+colorscheme solarized
 
 set cursorline
 set number
@@ -91,20 +88,9 @@ set expandtab
 set autoindent
 set smartindent
 
-" Nicer movement with wrapped lines
-au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
-au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
-
-" Nicer movement between buffers and tabs
-noremap <up> :bp<cr>
-noremap <down> :bn<cr>
-noremap <left> :gT<cr>
-noremap <right> :gt<cr>
-
 "------------------------------------
 " Statusbar
 "------------------------------------
-"set statusline=%F%m%r%h%w\ format=%{&ff}\ type=%Y\ ascii=\%03.3b\ hex=\%02.2B\ pos=%04l,%04v\ %p%%\ len=%L
 set statusline=%F%m%r%h%w\ type=%Y\ pos=%04l,%04v\ %p%%\ len=%L
 set laststatus=2
 
@@ -144,9 +130,15 @@ let g:vimrplugin_indent_commented = 1
 "------------------------------------
 let g:tex_flavor = "context"
 
-"augroup filetypedetect
-"	au! BufRead,BufNewFile *.tex setfiletype context
-"augroup END
+"------------------------------------
+" Haskell/Literate Haskell
+" -----------------------------------
+au BufEnter *.hs compiler ghc
+let g:haddock_browser="/usr/bin/firefox"
+let hs_highlight_delimiters = 1 " highlight delimiter characters
+let hs_highlight_boolean = 1    " treat True and False as keywords
+let hs_highlight_types = 1      " treat names of primitive types as keywords
+let hs_allow_hash_operator = 1  " highlight # as operators instead
 
 "------------------------------------
 " NERDTree
@@ -155,18 +147,18 @@ let g:NERDTreeHijackNetrw=0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "autocmd vimenter * if !argc() | NERDTree ~/Dropbox | endif
 
-" map h :NERDTreeToggle<cr>
+map <f5> :NERDTreeToggle<cr>
 
 " ----------------------------------------
 " Deal with unwanted spaces
 " ----------------------------------------
-autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst,hs,lhs autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
 "------------------------------------
 " Custom Keys
 "------------------------------------
-" noremap k :bn<cr>
-" noremap j :bp<cr>
-" noremap l :bd<cr>
 map <cr> o<Esc>
-" map <Leader>f vip:sm/\n/ <cr>$<cr>
+
+" Nicer movement with wrapped lines
+au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
+au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
