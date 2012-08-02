@@ -27,6 +27,7 @@ Install
 
 Run ./create-links from the folder into which you cloned the git repository.  Copy xmonad.hs into ~/.xmonad/.  Copy dx into /usr/share/X11/xkb/symbols/ and change the file /etc/X11/xorg.conf.d/10-evdev.conf appropriately, so you have something such as
 
+~~~~~
 Section "InputClass"
         Identifier "evdev keyboard catchall"
         MatchIsKeyboard "on"
@@ -35,5 +36,6 @@ Section "InputClass"
         Option "XkbLayout" "dx"
         Option "XkbVariant" "kinesis"
 EndSection
+~~~~~
 
 in the file.
