@@ -26,13 +26,14 @@ imap <buffer> <LocalLeader>fa \placeformula<cr><cr>\startformula\startalign<cr>\
 imap <buffer> <LocalLeader>ta \start<Cr>\stop<Cr><Esc>4bhdiw$pj$pO
 
 " itemize/enumerate
-imap <buffer> <LocalLeader>en \startitemize<cr><cr>\stopitemize<Up>\item<Space>
-imap <buffer> <LocalLeader>ee <cr>\item<Space>
-nmap <buffer> <LocalLeader>ee A<cr>\item<Space>
+inoremap <buffer> <LocalLeader>en \startitemize<cr><cr>\stopitemize<Up>\item<Space>
+inoremap <buffer> <LocalLeader>ee <cr>\item<Space>
+nnoremap <buffer> <LocalLeader>ee A<cr>\item<Space>
 
 " font switching and emphasize
-imap <buffer> <LocalLeader>em {\em }<Left>
-imap <buffer> <LocalLeader>sc {\sc }<Left>
+inoremap <buffer> <LocalLeader>em {\em }<Left>
+inoremap <buffer> <LocalLeader>sc {\sc }<Left>
+inoremap <buffer> <LocalLeader>tt {\tt }<Left>
 
 " define... and setup...
 imap <buffer> <LocalLeader>de \define
@@ -40,4 +41,4 @@ imap <buffer> <LocalLeader>se \setup
 
 " enable spellcheck
 syn spell toplevel
-set spell spelllang=en
+"set spell spelllang=en

@@ -50,6 +50,7 @@ special = "#159828"
 comment = "#999988"
 hiddenc = "#7b7b7b"
 urgendc = "#ebac54"
+editor = "gvim --servername EDIT"
 
 ------------------------------------------------------------------------
 -- Run xmonad with configuration myConfig

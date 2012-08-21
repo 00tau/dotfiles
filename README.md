@@ -12,7 +12,6 @@ In order to get the full Xmonad experience from the configuration files, you sho
 - ghc, xmonad, xmonad-contrib
 - dmenu
 - dzen2
-- conky
 - xscreensaver
 - pcmanfm
 - xpdf or evince
