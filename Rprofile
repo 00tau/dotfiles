@@ -3,7 +3,7 @@ if(interactive()) {
   require(utils)
   require(setwidth)
   require(colorout)
-  setOutputColors256(stderr=0)
+  setOutputColors256(0, 3, 2, 5, 1, 1, 1)
   try(loadhistory("~/.Rhistory"))
   options(pager = "vim -c 'set ft=rdoc' -")
   options(editor = 'vim -c "set ft=r"')

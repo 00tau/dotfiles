@@ -12,7 +12,7 @@
 install.packages(  c(  "MASS"
                      , "plyr"
                      , "lhs"
-#                     , "ParamHelpers"
+                     , "ParamHelpers"
                      , "BBmisc"
                      , "BatchExperiments"
                      , "ggplot2"

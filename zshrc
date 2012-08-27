@@ -31,6 +31,7 @@ alias ls="ls -h --color=auto "
 alias ll="ls -l "
 alias la="ls -la "
 alias edit="gvim --servername EDIT --remote-tab "
+alias R="R --no-save -q "
 alias diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/Dissertation/
 alias steam='WINEDEBUG=-all wine ~.local/share/wineprefixes/steam/drive_c/Program Files (x86)/Steam/steam 2>&1 &'
 
