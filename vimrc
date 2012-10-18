@@ -125,6 +125,8 @@ let g:vimrplugin_routmorecolors = 1
 let g:vimrplugin_underscore = 0
 let g:vimrplugin_indent_commented = 1
 
+let vimrplugin_screenplugin = 0
+
 "------------------------------------
 " ConTeXt
 "------------------------------------
@@ -162,3 +164,6 @@ map <cr> o<Esc>
 " Nicer movement with wrapped lines
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
+
+" set up syntax highlighting for my e-mail
+au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail 
