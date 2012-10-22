@@ -1,5 +1,6 @@
-# ~/.zshrc
-# Thomas Friedrich (00tau@suud.de)
+#file: ~/.zshrc
+#author: Thomas Friedrich (00tau@suud.de)
+#year: 2011,2012
 
 # Completion
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
@@ -32,8 +33,10 @@ alias ll="ls -l "
 alias la="ls -la "
 alias edit="gvim --servername EDIT --remote-tab "
 alias R="R --no-save -q "
+alias C="source /opt/context-minimals/setuptex"
+alias lido="ssh friedric@lidong1.itmc.tu-dortmund.de"
 alias diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/Dissertation/
-alias steam='WINEDEBUG=-all wine ~.local/share/wineprefixes/steam/drive_c/Program Files (x86)/Steam/steam 2>&1 &'
+#alias steam='WINEDEBUG=-all wine ~.local/share/wineprefixes/steam/drive_c/Program Files (x86)/Steam/steam 2>&1 &'
 
 # Run skype as user skype
 alias skype='xhost +local: && su skype -c skype'
@@ -44,6 +47,3 @@ bindkey "^T" vi-cmd-mode
 
 # PATH
 export PATH=~/.cabal/bin:$PATH
-
-# Source
-source /opt/context-minimals/setuptex
