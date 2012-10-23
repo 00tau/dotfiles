@@ -20,7 +20,7 @@ if [ -x /usr/bin/xscreensaver ] ; then
 fi
 
 if [ -x /usr/bin/feh ] ; then
-    feh --bg-fill ~/Dropbox/.wallpaper/wood.jpg
+    feh --bg-fill ~/Dropbox/.wallpaper/woods.jpg
 fi
 
 #if [ -x /usr/bin/autocutsel ] ; then
