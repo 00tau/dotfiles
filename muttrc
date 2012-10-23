@@ -1,0 +1,58 @@
+#file: ~/.muttrc
+#author: Thomas Friedrich
+#year: 2012
+
+source "gpg2 -dq ~/.my-pwds.gpg |"
+
+# IMAP settings
+#
+set imap_user = "generalmodels@gmail.com"
+set imap_pass = $my_pw_gmail
+
+set smtp_url = "smtp://generalmodels@smtp.gmail.com:587/"
+set smtp_pass = $my_pw_gmail 
+set ssl_force_tls = yes
+set from = "generalmodels@gmail.com"
+set realname = "Thomas Friedrich"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed="+[Gmail]/Drafts"
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+set move = no
+
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+set imap_check_subscribed
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+
+mailboxes = "+INBOX"
+
+# allow Mutt to open new imap connection automatically
+unset imap_passive
+
+# keep imap connection alive by polling intermittently (time in seconds)
+set imap_keepalive = 300
+
+# how often to check for new mail (time in seconds)
+set mail_check = 120
+
+# UTF8 Encoding
+#
+set send_charset="utf-8"
+
+# VIM Editor
+#
+set editor="gvim -f"
+
+# Colours
+#
+source ~/.dotfiles/mutt-colour-scheme
