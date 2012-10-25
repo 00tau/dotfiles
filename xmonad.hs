@@ -46,10 +46,13 @@ import Graphics.X11.ExtraTypes.XF86
 
 -- I really use this a lot
 role = stringProperty "WM_WINDOW_ROLE"
+
+-- Colours
 special = "#159828"
 comment = "#999988"
 hiddenc = "#7b7b7b"
 urgendc = "#ebac54"
+
 editor = "gvim --servername EDIT"
 
 ------------------------------------------------------------------------
@@ -74,7 +77,7 @@ myConfig status = defaultConfig
            , normalBorderColor  = comment
            , focusedBorderColor = special
            , handleEventHook    = ewmhDesktopsEventHook
-           , startupHook        = setWMName "lg3d"
+           , startupHook        = setWMName "LG3D"
            , workspaces         = myWorkspaces
            , manageHook         = myManageHook
            , layoutHook         = myLayout
@@ -109,7 +112,7 @@ myLogHook h = dynamicLogWithPP $ defaultPP
                 addIcons x = case x of
                     "webbing"   -> "^i(" ++ myIcons ++ "fox.xbm)"
                     "editing"   -> "^i(" ++ myIcons ++ "cat.xbm)"
-                    "chatting"  -> "^i(" ++ myIcons ++ "bug_01.xbm)"
+                    "mailing"   -> "^i(" ++ myIcons ++ "bug_01.xbm)"
                     "listening" -> "^i(" ++ myIcons ++ "note.xbm)"
                     "NSP"       -> "^i(" ++ myIcons ++ "mem.xbm)"
                     _           -> x
@@ -121,14 +124,14 @@ myDzenConky = "conky -c ~/.xmonad/conkyrc | dzen2 -x 900 -w 300 -ta r -h 18 -bg 
 -- Scratchpads
 --
 -- The used programs obviously need to be installed on the system,
--- namely: urxvt, pcmanfm and the google-chromium-chat extension.
+-- namely: urxvt, pcmanfm, mutt, tmux
 --
 myScratchpads =
     [ NS "term" "xterm -class ScratchIt -e tmux new-session -s 00tau" (className =? "ScratchIt")
           (customFloating $ W.RationalRect (1%16) (1%32) (7%8) (2%3))
     , NS "fold" "pcmanfm --no-desktop" (className =? "Pcmanfm")
           (customFloating $ W.RationalRect (1%2) 0 (1%2) 1)
-    , NS "chat" "pidgin" (role =? "conversation")
+    , NS "mail" "xterm -class MuttMail -e mutt" (className =? "MuttMail")
           (customFloating $ W.RationalRect (1%2) 0 (1%2) (1%2))
     ]
 
@@ -142,7 +145,7 @@ myWorkspaces :: [String]
 myWorkspaces =
     [ "webbing"
     , "editing"
-    , "chatting"
+    , "mailing"
     , "listening"
     , "NSP"]
 
@@ -164,9 +167,9 @@ myManageHook = manageDocks <+> namedScratchpadManageHook myScratchpads <+> compo
     [ role =? "browser"              --> doShift "webbing"
     , className =? "Gvim"            --> doShift "editing"
     , className =? "Xpdf"            --> doShift "editing"
-    , className =? "Evince"            --> doShift "editing"
-    , className =? "Pidgin"          --> doShift "chatting"
-    , className =? "Skype"           --> doShift "chatting"
+    , className =? "Evince"          --> doShift "editing"
+    --, className =? "Pidgin"          --> doShift "chatting"
+    --, className =? "Skype"           --> doShift "chatting"
     , className =? "Vlc"             --> doShift "listening"
     , className =? "Clementine"      --> doShift "listening"
     , className =? "Gimp"            --> doFloat
@@ -185,16 +188,16 @@ myManageHook = manageDocks <+> namedScratchpadManageHook myScratchpads <+> compo
 -- where (1)+(2) can be toggeled into fullscreen.
 --
 myLayout = smartBorders $ avoidStrutsOn [] $
-               toggleLayouts Full mChat
-               ||| toggleLayouts Full tChat
-               ||| toggleLayouts Grid bChat
+               toggleLayouts Full mMail
+               ||| toggleLayouts Full tMail
+               ||| toggleLayouts Grid bMail
     where
     msepane  = mouseResizableTile {draggerType = BordersDragger}
     twopane  = TwoPane (1%100) (1%2)
     tabpane  = tabbed shrinkText tabConfig
-    mChat    = named "Tile" $ withIM (1%7) (Role "conversation") msepane
-    tChat    = named "Pane" $ withIM (1%7) (Role "conversation") twopane
-    bChat    = named "Tabd" $ withIM (1%7) (Role "conversation") tabpane
+    mMail    = named "Tile" $ withIM (1%2) (ClassName "MuttMail") msepane
+    tMail    = named "Pane" $ withIM (1%2) (ClassName "MuttMail") twopane
+    bMail    = named "Tabd" $ withIM (1%2) (ClassName "MuttMail") tabpane
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
 tabConfig = defaultTheme
@@ -260,7 +263,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
       , ((modm, xK_t         ), windows W.focusDown)
       , ((modm, xK_n         ), rotSlavesDown)
       , ((modm, xK_s         ), windows W.swapDown)
-      , ((modm, xK_ssharp    ), rChat)
+      , ((modm, xK_ssharp    ), rMail)
       , ((modm, xK_minus     ), moveTo Next NonEmptyWS)
       --
 --      , ((modm, xK_adiaeresis),
@@ -298,7 +301,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
           rReaderC  = runOrCopy "evince" (className =? "Evince")
           rBib      = raiseNext (className =? "Mendeleydesktop")
           rTerm = namedScratchpadAction myScratchpads "term"
-          rChat = namedScratchpadAction myScratchpads "chat"
+          rMail = namedScratchpadAction myScratchpads "mail"
           rFold = namedScratchpadAction myScratchpads "fold"
           swapScreens = do
             screen <- gets (listToMaybe . W.visible . windowset)

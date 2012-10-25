@@ -12,7 +12,7 @@ set imap_pass = $my_pw_gmail
 set smtp_url = "smtp://generalmodels@smtp.gmail.com:587/"
 set smtp_pass = $my_pw_gmail 
 set ssl_force_tls = yes
-set from = "generalmodels@gmail.com"
+set from = "friedrich@statistik.tu-dortmund.de"
 set realname = "Thomas Friedrich"
 
 set folder = "imaps://imap.gmail.com:993"
@@ -47,12 +47,34 @@ set mail_check = 120
 
 # UTF8 Encoding
 #
+set charset="utf-8"
 set send_charset="utf-8"
+
+# Pager
+#
+set tilde # vim-style
 
 # VIM Editor
 #
-set editor="gvim -f"
+set fast_reply          # don't ask for To: Subject:
+set edit_headers = yes  # allow for editing headers
+set include = yes       # include test in reply
+set reply_to = ask-yes  # check reply address
+set editor="gvim -f +/'^$' -c:noh" # -c:startinsert
+
+# Die Standart-Antwortzeile
+set attribution="Hallo %v,\n\n* %n [%[%d.%m.%y %H:%M]]:\n"
+
+# Der Absender steht nicht in der Group-Reply-Liste
+unset metoo 
+
+# Aliases
+#
+set alias_file = "~/.mutt/aliases"
+set sort_alias = alias
+set reverse_alias = yes
+source $alias_file
 
 # Colours
 #
-source ~/.dotfiles/mutt-colour-scheme
+source ~/.dotfiles/mutt-colour-theme

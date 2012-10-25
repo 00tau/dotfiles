@@ -160,6 +160,7 @@ autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst,hs,lhs autocmd BufWritePr
 " Custom Keys
 "------------------------------------
 map <cr> o<Esc>
+map <C-q> :bd<cr>
 
 " Nicer movement with wrapped lines
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
