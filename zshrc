@@ -47,3 +47,6 @@ bindkey "^T" vi-cmd-mode
 
 # PATH
 export PATH=~/.cabal/bin:$PATH
+
+# Start an SSH agent
+ssh-agent
