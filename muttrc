@@ -53,6 +53,9 @@ set send_charset="utf-8"
 # Pager
 #
 set tilde # vim-style
+set mailcap_path = ~/.dotfiles/mailcap
+auto_view text/html
+alternative_order text/plain text/html
 
 # VIM Editor
 #
@@ -62,6 +65,9 @@ set include = yes       # include test in reply
 set reply_to = ask-yes  # check reply address
 set editor="gvim -f +/'^$' -c:noh" # -c:startinsert
 
+set print_command="muttprint %s"
+set print = yes
+
 # Die Standart-Antwortzeile
 set attribution="Hallo %v,\n\n* %n [%[%d.%m.%y %H:%M]]:\n"
 
@@ -70,7 +76,7 @@ unset metoo
 
 # Aliases
 #
-set alias_file = "~/.mutt/aliases"
+set alias_file = "~/Dropbox/.aliases"
 set sort_alias = alias
 set reverse_alias = yes
 source $alias_file

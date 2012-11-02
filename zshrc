@@ -35,7 +35,7 @@ alias edit="gvim --servername EDIT --remote-tab "
 alias R="R --no-save -q "
 alias C="source /opt/context-minimals/setuptex"
 alias lido="ssh friedric@lidong1.itmc.tu-dortmund.de"
-alias diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/Dissertation/
+alias diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/2010-Dissertation/
 #alias steam='WINEDEBUG=-all wine ~.local/share/wineprefixes/steam/drive_c/Program Files (x86)/Steam/steam 2>&1 &'
 
 # Run skype as user skype
