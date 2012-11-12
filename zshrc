@@ -49,4 +49,4 @@ bindkey "^T" vi-cmd-mode
 export PATH=~/.cabal/bin:$PATH
 
 # Start an SSH agent
-eval $(ssh-agent)
+#eval $(ssh-agent)

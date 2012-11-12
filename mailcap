@@ -1,1 +1,7 @@
-text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/html; firefox %s; test=test -n "$DISPLAY"
+text/html; w3m -I %{charset} -T text/html %s
+text/html; w3m -I %{charset} -T text/html %s; copiousoutput
+application/pdf; ~/.dotfiles/mutt_bgrun evince %s; test=test -n "$DISPLAY"
+application/pdf; pdftotext %s -
+application/pdf; pdftotext %s -; copiousoutput
+image/*; ~/.dotfiles/mutt_bgrun gpicview %s; test=test -n "$DISPLAY"

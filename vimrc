@@ -116,6 +116,23 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+"----------------------------------------
+" Deal with unwanted spaces
+"----------------------------------------
+autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst,hs,lhs autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
+"---------------------------------------
+" Turn off the annoing beeb
+"---------------------------------------
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+"------------------------------------
+" Mutt
+"------------------------------------
+" set up syntax highlighting for my e-mail
+au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail | :set spell 
+
 "------------------------------------
 " R-plugin
 "------------------------------------
@@ -134,7 +151,7 @@ let g:tex_flavor = "context"
 
 "------------------------------------
 " Haskell/Literate Haskell
-" -----------------------------------
+"------------------------------------
 au BufEnter *.hs compiler ghc
 let g:haddock_browser="/usr/bin/firefox"
 let hs_highlight_delimiters = 1 " highlight delimiter characters
@@ -142,23 +159,18 @@ let hs_highlight_boolean = 1    " treat True and False as keywords
 let hs_highlight_types = 1      " treat names of primitive types as keywords
 let hs_allow_hash_operator = 1  " highlight # as operators instead
 
-"------------------------------------
+"---------------------------------------
 " NERDTree
-"------------------------------------
+"---------------------------------------
 let g:NERDTreeHijackNetrw=0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "autocmd vimenter * if !argc() | NERDTree ~/Dropbox | endif
 
 map <f5> :NERDTreeToggle<cr>
 
-" ----------------------------------------
-" Deal with unwanted spaces
-" ----------------------------------------
-autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst,hs,lhs autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
-
-"------------------------------------
+"---------------------------------------
 " Custom Keys
-"------------------------------------
+"---------------------------------------
 map <cr> o<Esc>
 map <C-q> :bd<cr>
 
@@ -166,5 +178,15 @@ map <C-q> :bd<cr>
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
 
-" set up syntax highlighting for my e-mail
-au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail 
+" Inserts a single character when in command-mode.
+" Use the synonyms 'cl' and 'cc' for the standard
+" 's' and 'S' instead.
+nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
+nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
+
+"" function! RepeatChar(char, count)
+""     return repeat(a:char, a:count)
+"" endfunction
+"" 
+"" nnoremap s :<C-U>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
+"" nnoremap S :<C-U>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
