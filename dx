@@ -81,12 +81,12 @@ xkb_symbols "kinesis" {
 
     // Thumb row: left-high
     key <LCTL> { [ yen ] };
-    key <LALT> { [ at ] };
+    //key <LALT> { [ at ] };
     key <HOME> { [ copyright ] };
 
     // Thumb row: right-high
     key <RCTL> { [ sterling ] };
-    key <RALT> { [ at ] };
+    //key <RALT> { [ at ] };
     key <PGUP> { [ registered ] };
 
     // Thumb row: left-low

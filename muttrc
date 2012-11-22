@@ -54,8 +54,11 @@ set send_charset="utf-8"
 #
 set tilde # vim-style
 set mailcap_path = ~/.dotfiles/mailcap
-auto_view text/html application/pdf
-alternative_order text/plain text/html application/pdf
+auto_view text/html application/pdf application/x-tex
+alternative_order text/plain text/html application/pdf application/x-tex
+
+bind pager <up> half-up
+bind pager <down> half-down
 
 # VIM Editor
 #

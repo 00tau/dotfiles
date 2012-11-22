@@ -1,6 +1,7 @@
-------------------------------------------------------------------------
--- Xmonad configuration file by Thomas Friedrich (friedrich@suud.de)
---
+--file: ~/.xmonad/xmonad.hs
+--author: Thomas Friedrich (friedrich@suud.de)
+--year: 2012
+
 import System.IO
 import System.Exit
 
@@ -54,13 +55,15 @@ hiddenc = "#7b7b7b"
 urgendc = "#ebac54"
 
 editor = "gvim --servername EDIT"
+mailclient = "xterm -class MuttMail -e mutt" 
+chatclient = "xterm -class FreeTalk -e freetalk -j generalmodels@gmail.com"
 
 ------------------------------------------------------------------------
 -- Run xmonad with configuration myConfig
 --
 main = do
   status <- spawnPipe myDzenStatus -- xmonad status on the left
-  conky  <- spawnPipe myDzenConky  -- conky status on the right
+  --conky  <- spawnPipe myDzenConky  -- conky status on the right
   spawn "/home/friedrich/.autostart"
   xmonad $ withUrgencyHook NoUrgencyHook $ myConfig status
 
@@ -118,21 +121,23 @@ myLogHook h = dynamicLogWithPP $ defaultPP
                     _           -> x
 
 myDzenStatus = "dzen2 -ta l -h 18 -bg black"
-myDzenConky = "conky -c ~/.xmonad/conkyrc | dzen2 -x 900 -w 300 -ta r -h 18 -bg black"
+--myDzenConky = "conky -c ~/.xmonad/conkyrc | dzen2 -x 900 -w 300 -ta r -h 18 -bg black"
 
 ------------------------------------------------------------------------
 -- Scratchpads
 --
 -- The used programs obviously need to be installed on the system,
--- namely: urxvt, pcmanfm, mutt, tmux
+-- namely: xterm, pcmanfm, mutt, tmux
 --
 myScratchpads =
     [ NS "term" "xterm -class ScratchIt -e tmux new-session -s 00tau" (className =? "ScratchIt")
           (customFloating $ W.RationalRect (1%16) (1%32) (7%8) (2%3))
     , NS "fold" "pcmanfm --no-desktop" (className =? "Pcmanfm")
           (customFloating $ W.RationalRect (1%2) 0 (1%2) 1)
-    , NS "mail" "xterm -class MuttMail -e mutt" (className =? "MuttMail")
-          (customFloating $ W.RationalRect (1%2) 0 (1%2) (1%2))
+    , NS "mail" mailclient (className =? "MuttMail")
+          (customFloating $ W.RationalRect 0 (1%32) (1%2) (30%32))
+    , NS "chat" chatclient (className =? "FreeTalk")
+          (customFloating $ W.RationalRect (1%2) (1%32) (1%2) (1%2))
     ]
 
 ------------------------------------------------------------------------
@@ -168,6 +173,7 @@ myManageHook = manageDocks <+> namedScratchpadManageHook myScratchpads <+> compo
     , className =? "Gvim"            --> doShift "editing"
     , className =? "Xpdf"            --> doShift "editing"
     , className =? "Evince"          --> doShift "editing"
+    --, className =? "MuttMail"        --> doShift "mailing"
     --, className =? "Pidgin"          --> doShift "chatting"
     --, className =? "Skype"           --> doShift "chatting"
     , className =? "Vlc"             --> doShift "listening"
@@ -246,7 +252,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
       , ((modm, xK_period    ), prevWS) 
       , ((modm, xK_p         ), nextWS)
       , ((modm, xK_y         ), moveTo Next NonEmptyWS)
---      , ((modm, xK_f         ),
+      , ((modm, xK_f         ), rChat)
       , ((modm, xK_g         ), sendMessage ToggleLayout)
       , ((modm, xK_c         ), windows W.focusUp)
       , ((modm, xK_r         ), rotSlavesUp)
@@ -302,6 +308,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm})
           rBib      = raiseNext (className =? "Mendeleydesktop")
           rTerm = namedScratchpadAction myScratchpads "term"
           rMail = namedScratchpadAction myScratchpads "mail"
+          rChat = namedScratchpadAction myScratchpads "chat"
           rFold = namedScratchpadAction myScratchpads "fold"
           swapScreens = do
             screen <- gets (listToMaybe . W.visible . windowset)
