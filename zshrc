@@ -19,7 +19,11 @@ compinit
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd extendedglob nomatch
+#setopt appendhistory autocd extendedglob nomatch
+setopt INC_APPEND_HISTORY SHARE_HISTORY HIST_IGNORE_ALL_DUPS \
+    HIST_SAVE_NO_DUPS HIST_REDUCE_BLANKS HIST_IGNORE_SPACE \
+    NO_HIST_BEEP
+setopt autocd extendedglob nomatch
 unsetopt beep notify
 
 # Setting the promt to the most simple
@@ -35,8 +39,10 @@ alias edit="gvim --servername EDIT --remote-tab "
 alias R="R --no-save -q "
 alias C="source /opt/context-minimals/setuptex"
 alias lido="ssh friedric@lidong1.itmc.tu-dortmund.de"
-alias diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/2010-Dissertation/
-#alias steam='WINEDEBUG=-all wine ~.local/share/wineprefixes/steam/drive_c/Program Files (x86)/Steam/steam 2>&1 &'
+
+# Named directories
+diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/2010-Dissertation/
+code=~diss/src-r/
 
 # Run skype as user skype
 alias skype='xhost +local: && su skype -c skype'

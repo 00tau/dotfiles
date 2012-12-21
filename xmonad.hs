@@ -104,7 +104,6 @@ myLogHook h = dynamicLogWithPP $ defaultPP
                                     (\x -> case x of
                                        "Tile" -> "^i(" ++ myIcons ++ "empty.xbm)"
                                        "Pane" -> "^i(" ++ myIcons ++ "half.xbm)"
-                                       "Tabd" -> "^i(" ++ myIcons ++ "info_01.xbm)"
                                        "Full" -> "^i(" ++ myIcons ++ "full.xbm)"
                                        "Grid" -> "^i(" ++ myIcons ++ "cpu.xbm)"
                                        _      -> x
@@ -194,16 +193,15 @@ myManageHook = manageDocks <+> namedScratchpadManageHook myScratchpads <+> compo
 -- where (1)+(2) can be toggeled into fullscreen.
 --
 myLayout = smartBorders $ avoidStrutsOn [] $
-               toggleLayouts Full mMail
-               ||| toggleLayouts Full tMail
-               ||| toggleLayouts Grid bMail
+               toggleLayouts Full layoutTile
+               ||| toggleLayouts Full layoutPane
+               ||| toggleLayouts Full layoutGrid
     where
     msepane  = mouseResizableTile {draggerType = BordersDragger}
     twopane  = TwoPane (1%100) (1%2)
-    tabpane  = tabbed shrinkText tabConfig
-    mMail    = named "Tile" $ withIM (1%2) (ClassName "MuttMail") msepane
-    tMail    = named "Pane" $ withIM (1%2) (ClassName "MuttMail") twopane
-    bMail    = named "Tabd" $ withIM (1%2) (ClassName "MuttMail") tabpane
+    layoutTile = named "Tile" $ withIM (1%2) (ClassName "MuttMail") msepane
+    layoutPane = named "Pane" $ withIM (1%2) (ClassName "MuttMail") twopane
+    layoutGrid = named "Grid" $ withIM (1%2) (ClassName "MuttMail") Grid
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
 tabConfig = defaultTheme
