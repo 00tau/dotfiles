@@ -87,4 +87,4 @@ source $alias_file
 # Colours
 #
 #source ~/.dotfiles/mutt-colour-theme
-source ~/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+source ~/.dotfiles/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
