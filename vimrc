@@ -14,12 +14,7 @@ call pathogen#infect()
 " Eye candy
 "------------------------------------
 syntax enable
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
-colorscheme solarized
+colorscheme wombat256mod
 
 set cursorline
 set number
@@ -45,9 +40,9 @@ set encoding=utf-8
 "------------------------------------
 " Behaviour
 "------------------------------------
-set directory=~/.tmp/vimswap
-set backupdir=~/.tmp/vimbackups
-set undodir=~/.tmp/vimundo
+set directory=/tmp
+set backupdir=/tmp
+set undodir=/tmp
 set undofile
 set undolevels=1000
 set undoreload=1000
