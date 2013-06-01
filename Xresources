@@ -114,7 +114,9 @@ Xft.hintstyle:  hintslight
 ! xterm settings
 
 xterm*geometry:           80x25
-xterm*faceName:           Inconsolata
+!xterm*faceName:          Inconsolata
+xterm*faceName:           DejaVu Sans Mono
+xterm*faceNameDoublesize: DejaVu Sans Mono
 xterm*faceSize:           11
 xterm*dynamicColors:      true
 xterm*utf8:               2

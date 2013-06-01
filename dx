@@ -25,10 +25,10 @@ xkb_symbols "basic" {
     key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] }; 
 		                                             
     // Keyboard row number: +1
-    key <TAB>  { [ question, exclam, degree ] };
-    key <AD01> { [ odiaeresis, Odiaeresis, bracketleft ] };
-    key <AD02> { [ comma, semicolon, plus ] };
-    key <AD03> { [ period, colon, dollar ] };
+    key <TAB>  { [ odiaeresis, Odiaeresis, degree ] };
+    key <AD01> { [ colon, semicolon, bracketleft ] };
+    key <AD02> { [ comma, exclam, plus ] };
+    key <AD03> { [ period, question, dollar ] };
     key <AD04> { [ p, P, bracketright, Greek_pi ] };
     key <AD05> { [ y, Y, acute, Greek_psi ] };
     key <AD06> { [ f, F, grave, Greek_phi ] };
@@ -114,10 +114,10 @@ xkb_symbols "kinesis" {
     key <AE11> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
 
     // Keyboard row number: +1
-    key <TAB>  { [ question, exclam, degree ] };
-    key <AD01> { [ odiaeresis, Odiaeresis, bracketleft ] };
-    key <AD02> { [ comma, semicolon, plus ] };
-    key <AD03> { [ period, colon, dollar ] };
+    key <TAB>  { [ odiaeresis, Odiaeresis, degree ] };
+    key <AD01> { [ colon, semicolon, bracketleft ] };
+    key <AD02> { [ comma, exclam, plus ] };
+    key <AD03> { [ period, question, dollar ] };
     key <AD04> { [ p, P, bracketright, Greek_pi ] };
     key <AD05> { [ y, Y, acute, Greek_psi ] };
     key <AD06> { [ f, F, grave, Greek_phi ] };
@@ -125,7 +125,7 @@ xkb_symbols "kinesis" {
     key <AD08> { [ c, C, underscore, Greek_chi ] };
     key <AD09> { [ r, R, ampersand, Greek_rho ] };
     key <AD10> { [ l, L, percent, Greek_lambda ] };
-    key <BKSL> { [ apostrophe, quotedbl ] };
+    key <BKSL> { [ udiaeresis, Udiaeresis, section ] };
 
     // Keyboard row number: 0
     key <CAPS> { [ Shift_L ] };
@@ -143,7 +143,7 @@ xkb_symbols "kinesis" {
 
     // Keyboard row number: -1
     key <LFSH> { [ adiaeresis, Adiaeresis ] };
-    key <AB01> { [ udiaeresis, Udiaeresis, section ] };
+    key <AB01> { [ z, Z, degree, Greek_zeta ] };
     key <AB02> { [ q, Q, colon ] };
     key <AB03> { [ j, J, equal ] };
     key <AB04> { [ k, K, asterisk, Greek_kappa ] };
@@ -152,7 +152,7 @@ xkb_symbols "kinesis" {
     key <AB07> { [ m, M, numbersign, Greek_mu ] };
     key <AB08> { [ w, W, quotedbl, Greek_omega ] };
     key <AB09> { [ v, V, apostrophe, Greek_theta ] };
-    key <AB10> { [ z, Z, degree, Greek_zeta ] };
+    key <AB10> { [ apostrophe, quotedbl ] };
     key <RTSH> { [ ssharp, at ] };
 
     // Keyboard row number: -2

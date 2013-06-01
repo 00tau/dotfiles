@@ -13,6 +13,7 @@ call pathogen#infect()
 "------------------------------------
 " Eye candy
 "------------------------------------
+set t_Co=256
 syntax enable
 colorscheme wombat256mod
 

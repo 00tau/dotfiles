@@ -2,12 +2,12 @@
 #author: Thomas Friedrich
 #year: 2012
 
-source "gpg2 -dq ~/.my-pwds.gpg |"
+#source "gpg2 -dq ~/.my-pwds.gpg |"
 
 # IMAP settings
 #
 set imap_user = "generalmodels@gmail.com"
-set imap_pass = $my_pw_gmail
+#set imap_pass = $my_pw_gmail
 
 set smtp_url = "smtp://generalmodels@smtp.gmail.com:587/"
 set smtp_pass = $my_pw_gmail 
@@ -87,4 +87,4 @@ source $alias_file
 # Colours
 #
 #source ~/.dotfiles/mutt-colour-theme
-source ~/.dotfiles/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+#source ~/.dotfiles/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
