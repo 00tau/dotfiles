@@ -11,7 +11,7 @@ fi
 
 # activate compositing
 if [ -x /usr/bin/compton ] ; then
-    compton -cC -i 0.9 -e 0.6 -f &
+    compton -cC -i 1.0 -e 0.6 -m 0.9 -f &
 fi
 
 # hide the mouse pointer when not needed
