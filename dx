@@ -91,7 +91,7 @@ xkb_symbols "kinesis" {
 
     // Thumb row: left-low
     key <PGDN> { [ Alt_L, Meta_L ] };
-    key <SPCE> { [ space ] };
+    key <SPCE> { [ space, space, Escape, Escape ] };
     key <RTRN> { [ Return ] };
 
     // Thumb row: left-low
