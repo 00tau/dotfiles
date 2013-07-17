@@ -1,21 +1,9 @@
-"let $TEXMFOS="/opt/context-minimals/texmf-linux-64"
-"let $TEXMFCACHE="$HOME/texmf-cache"
-"let $PATH.=":/opt/context-minimals/texmf-linux-64/bin"
-"let $OSFONTDIR="$HOME/.fonts;/usr/share/fonts;"
-
-" compile the document to pdf
-"imap <F5> <ESC>:make all<CR>
-"nmap <F5> :make all<CR>
-
-" plot the document to the screen
-"imap <F6> <ESC>:make show<CR>
-"nmap <F6> :make show<CR>
-
-" place a formula
-iabbr $$ \placeformula<cr><cr>\startformula<cr>\stopformula<esc>O
-
 " local mappings
-let maplocalleader = "&"
+let maplocalleader = ","
+
+" compile the current file with mkiv
+nnoremap <buffer> <LocalLeader>c :exe 'w<Bar>silent !tmux send-keys -t "$(cat /tmp/cur-context-pane)" context " " % C-m'<Bar>redraw!<Cr>
+imap <buffer> <LocalLeader>c <esc><LocalLeader>c
 
 " start-stop formula-block
 nnoremap <buffer> <LocalLeader>ff A\placeformula<cr><cr>\startformula<cr>\stopformula<esc>O
@@ -26,6 +14,7 @@ nnoremap <buffer> <LocalLeader>fa A\placeformula<cr><cr>\startformula\startalign
 inoremap <buffer> <LocalLeader>fa \placeformula<cr><cr>\startformula\startalign<cr>\stopalign \stopformula<esc>O
 
 " Make start-stop block out of the previous word
+nnoremap <buffer> <LocalLeader>ta ea\start<Cr>\stop<Cr><Esc>4bhdiw$pj$pO
 inoremap <buffer> <LocalLeader>ta \start<Cr>\stop<Cr><Esc>4bhdiw$pj$pO
 
 " itemize/enumerate
