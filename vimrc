@@ -180,9 +180,11 @@ au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
 nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
 nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
-"" function! RepeatChar(char, count)
-""     return repeat(a:char, a:count)
-"" endfunction
-"" 
-"" nnoremap s :<C-U>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
-"" nnoremap S :<C-U>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
+" Unbind the cursor keys in insert, normal and visual modes.
+"  either use: for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+"  or:         for key in ['<Up>', '<Down>']
+for prefix in ['i', 'n', 'v']
+  for key in ['<Up>', '<Down>', '<Del>', '<BS>']
+    exe prefix . "noremap " . key . " <Nop>"
+  endfor
+endfor
