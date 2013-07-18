@@ -57,6 +57,7 @@ bindkey "^T" vi-cmd-mode
 
 # PATH
 export PATH=~/Spiele/bin:$PATH
+export EDITOR=vim
 
 # Start an SSH agent
 #eval $(ssh-agent)
