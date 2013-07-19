@@ -32,7 +32,7 @@ promptinit
 prompt off
 
 # Aliases
-alias ls="ls -h --color=auto "
+alias ls="ls -h --time-style=iso --color=auto "
 alias ll="ls -l "
 alias la="ls -la "
 alias hc="herbstclient "
@@ -56,7 +56,8 @@ bindkey -v
 bindkey "^T" vi-cmd-mode
 
 # PATH
-export PATH=~/.cabal/bin:$PATH
+export PATH=~/Spiele/bin:$PATH
+export EDITOR=vim
 
 # Start an SSH agent
 #eval $(ssh-agent)
