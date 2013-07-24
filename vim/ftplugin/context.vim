@@ -27,5 +27,12 @@ inoremap <buffer> <LocalLeader>em {\em }<Left>
 inoremap <buffer> <LocalLeader>sc {\sc }<Left>
 inoremap <buffer> <LocalLeader>tt {\tt }<Left>
 
+" stop smart indentation, does not work well with TeX
+set autoindent
+set nocindent
+set nosmartindent
+
 " enable spellcheck
-syn spell toplevel
+"syn spell toplevel
+setlocal spell spelllang=en_gb
+set spell
