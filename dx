@@ -23,9 +23,9 @@ xkb_symbols "basic" {
     key <AE10> { [ 6 ] };                                    
     key <AE11> { [ 8 ] };                                    
     key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] }; 
-		                                             
+
     // Keyboard row number: +1
-    key <TAB>  { [ odiaeresis, Odiaeresis, degree ] };
+    key <TAB>  { [ udiaeresis, Udiaeresis ] }; 
     key <AD01> { [ colon, semicolon, bracketleft ] };
     key <AD02> { [ comma, exclam, plus ] };
     key <AD03> { [ period, question, dollar ] };
@@ -36,7 +36,7 @@ xkb_symbols "basic" {
     key <AD08> { [ c, C, underscore, Greek_chi ] };
     key <AD09> { [ r, R, ampersand, Greek_rho ] };
     key <AD10> { [ l, L, percent, Greek_lambda ] };
-    key <AD11> { [ apostrophe, quotedbl ] };
+    key <AD11> { [ odiaeresis, Odiaeresis ] };
     key <AD12> { [ slash, backslash ] };
 
     // Keyboard row number: 0
@@ -56,16 +56,16 @@ xkb_symbols "basic" {
 
     // Keyboard row number: -1
     key <LSGT> { [ adiaeresis, Adiaeresis, bar ] };
-    key <AB01> { [ udiaeresis, Udiaeresis, section ] };
-    key <AB02> { [ q, Q, colon ] };
+    key <AB01> { [ z, Z, degree, Greek_zeta ] };
+    key <AB02> { [ q, Q, at ] };
     key <AB03> { [ j, J, equal ] };
     key <AB04> { [ k, K, asterisk, Greek_kappa ] };
     key <AB05> { [ x, X, bar, Greek_xi ] };
     key <AB06> { [ b, B, brokenbar, Greek_beta ] };
     key <AB07> { [ m, M, numbersign, Greek_mu ] };
-    key <AB08> { [ w, W, quotedbl, Greek_omega ] };
-    key <AB09> { [ v, V, apostrophe, Greek_theta ] };
-    key <AB10> { [ z, Z, degree, Greek_zeta ] };
+    key <AB08> { [ w, W, at, Greek_omega ] };
+    key <AB09> { [ v, V, section, Greek_theta ] };
+    key <AB10> { [ apostrophe, quotedbl ] };
 
     include "level3(ralt_switch)"
 };
@@ -152,7 +152,7 @@ xkb_symbols "kinesis" {
     key <AB07> { [ m, M, numbersign, Greek_mu ] };
     key <AB08> { [ w, W, at, Greek_omega ] };
     key <AB09> { [ v, V, section, Greek_theta ] };
-    key <AB10> { [ apostrophe, quotedbl ] };
+    key <AB10> { [ apostrophe, quotedbl, degree ] };
     key <RTSH> { [ ssharp ] };
 
     // Keyboard row number: -2

@@ -1,6 +1,6 @@
 #/bin/bash
 
-files=(Rprofile Xresources gtkrc-2.0 gvimrc muttrc tmux.conf vim vimrc xsession zshrc)
+files=(Rprofile Xresources gtkrc-2.0 gvimrc tmux.conf vim vimrc xsession zshrc)
 
 dir=`pwd`
 
