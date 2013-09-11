@@ -51,7 +51,7 @@ xkb_symbols "basic" {
     key <AC08> { [ t, T, backslash, Greek_tau ] };
     key <AC09> { [ n, N, braceleft, Greek_nu ] };
     key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
-    key <AC11> { [ ssharp, at ] };
+    key <AC11> { [ ssharp ] };
     key <BKSL> { [ minus, underscore ] };
 
     // Keyboard row number: -1
