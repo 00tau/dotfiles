@@ -56,7 +56,7 @@ bindkey -v
 bindkey "^T" vi-cmd-mode
 
 # PATH
-export PATH=~/Spiele/bin:$PATH
+export PATH=~/Spiele/bin:~/src/tmuxinator/bin:$PATH
 export EDITOR=vim
 
 # Start an SSH agent
