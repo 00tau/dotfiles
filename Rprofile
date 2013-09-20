@@ -27,7 +27,7 @@ if(interactive()) {
 
   require("vimcom")
   require("setwidth")
-  require("BBmisc")
+#  require("BBmisc")
 
   if(require("utils")) {
     message("R history enabled")
