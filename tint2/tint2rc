@@ -43,7 +43,7 @@ tooltip_background_id = 0
 battery_background_id = 2
 
 # Panel
-panel_monitor = all
+panel_monitor = 1 #all
 panel_position = top center horizontal
 panel_size = 0 22
 panel_margin = 0 0
