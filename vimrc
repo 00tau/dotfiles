@@ -7,7 +7,7 @@ set nocompatible
 " vim.  Simply copy new skipts to the .vim/bundle/
 " directory.  They get loaded automatically.
 runtime bundle/pathogen/autoload/pathogen.vim
-let g:pathogen_disabled = [ ]
+let g:pathogen_disabled = ['yankstack']
 call pathogen#infect()
 
 "------------------------------------
@@ -37,16 +37,17 @@ filetype plugin on
 filetype indent on
 set fileformat=unix
 set encoding=utf-8
+set textwidth=72
 
 "------------------------------------
 " Behaviour
 "------------------------------------
-set directory=/tmp
-set backupdir=/tmp
-set undodir=/tmp
-set undofile
+set directory=~/.tmp
+set backupdir=~/.tmp
+set undodir=~/.tmp
 set undolevels=1000
 set undoreload=1000
+set undofile
 set history=50
 set showcmd
 set hidden
@@ -137,8 +138,10 @@ let g:vimrplugin_tmux = 1
 let g:vimrplugin_routmorecolors = 1
 let g:vimrplugin_underscore = 0
 let g:vimrplugin_indent_commented = 1
-
+let vimrplugin_notmuxconf = 1
 let vimrplugin_screenplugin = 0
+
+au FileType r :nmap <buffer> <space> <LocalLeader>lj
 
 "------------------------------------
 " ConTeXt
