@@ -32,12 +32,11 @@ promptinit
 prompt off
 
 # Aliases
-alias ls="ls -h --time-style=iso --color=auto "
-alias ll="ls -l "
-alias la="ls -la "
+alias e="ls -h --time-style=iso --color=auto "
+alias eu="ls -l "
+alias ey="ls -la "
 alias hc="herbstclient "
 alias hcs="herbstclient spawn "
-alias hcl="herbstclient spawn luakit "
 alias tmux="tmux -2 "
 alias edit="gvim --servername EDIT "
 alias R="R --no-save -q "
