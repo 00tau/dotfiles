@@ -16,7 +16,7 @@ hc keyunbind --all
 # keybindings
 Mod=Mod4
 hc keybind $Mod-Shift-q quit
-hc keybind $Mod-Shift-r reload
+hc keybind $Mod-colon reload
 hc keybind $Mod-Shift-d close
 hc keybind $Mod-Return spawn xterm
 
@@ -39,6 +39,9 @@ hc keybind $Mod-r     use_index +1 --skip-visible
 hc keybind $Mod-g     use_index -1 --skip-visible
 hc keybind $Mod-Right use_index +1 --skip-visible
 hc keybind $Mod-Left  use_index -1 --skip-visible
+
+# switch foctused monitor to previous tags 
+hc keybind $Mod-a use_previous
 
 # move clients to different tags
 hc keybind $Mod-p           move_index +1 --skip-visible
@@ -80,8 +83,10 @@ hc keybind $Mod-f pseudotile toggle
 hc keybind $Mod-Shift-f floating toggle
 hc keybind $Mod-m fullscreen toggle
 
-# move aronud monitors
-hc keybind $Mod-BackSpace   cycle_monitor
+# move around monitors
+hc keybind $Mod-BackSpace cycle_monitor
+hc keybind $Mod-Shift-g focus_monitor -1
+hc keybind $Mod-Shift-r focus_monitor +1
 
 # cycle through clients
 hc keybind $Mod-Tab         cycle_all +1
