@@ -2,7 +2,7 @@
 
 xrandr --auto --output DVI-I-1 --left-of DVI-I-2
 
-setxkbmap dx dell
+setxkbmap dx kinesis
 xsetroot -cursor_name left_ptr
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 

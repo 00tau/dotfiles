@@ -142,6 +142,8 @@ let vimrplugin_notmuxconf = 1
 let vimrplugin_screenplugin = 0
 
 au FileType r :nmap <buffer> <space> <LocalLeader>lj
+au FileType rmd :nmap <buffer> <space> <LocalLeader>cd
+au FileType rmd :nmap <buffer> <cr> <LocalLeader>lj
 
 "------------------------------------
 " ConTeXt
@@ -163,7 +165,6 @@ let hs_allow_hash_operator = 1  " highlight # as operators instead
 "---------------------------------------
 let g:NERDTreeHijackNetrw=0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-"autocmd vimenter * if !argc() | NERDTree ~/Dropbox | endif
 
 map <f5> :NERDTreeToggle<cr>
 
@@ -180,8 +181,8 @@ au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
 " Inserts a single character when in command-mode.
 " Use the synonyms 'cl' and 'cc' for the standard
 " 's' and 'S' instead.
-nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
-nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
+"nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
+"nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 " Unbind the cursor keys in insert, normal and visual modes.
 "  either use: for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -191,3 +192,6 @@ for prefix in ['i', 'n', 'v']
     exe prefix . "noremap " . key . " <Nop>"
   endfor
 endfor
+
+nnoremap <up> {dd
+nnoremap <down> o<esc>
