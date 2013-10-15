@@ -33,8 +33,8 @@ prompt off
 
 # Aliases
 alias e="ls -h --time-style=iso --color=auto "
-alias eu="ls -l "
-alias ey="ls -la "
+alias eu="e -l "
+alias ey="e -la "
 alias hc="herbstclient "
 alias hcs="herbstclient spawn "
 alias tmux="tmux -2 "

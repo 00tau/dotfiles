@@ -154,17 +154,18 @@ xkb_symbols "kinesis" {
     key <ESC>  { [ Caps_Lock ] };
 
     // Thumb row: left-high
-    key <LCTL> { [ yen ] };
-    //key <LALT> { [ at ] };
-    key <HOME> { [ copyright ] };
+    key <LCTL> { [ at ] };
+    //key <LALT> { [ ] };
+    //key <HOME> { [ ] };
 
     // Thumb row: right-high
-    key <RCTL> { [ sterling ] };
-    //key <RALT> { [ at ] };
-    key <PGUP> { [ registered ] };
+    //key <RCTL> { [ ] };
+    //key <RALT> { [ Alt_L, Meta_L, Alt_L, Meta_L ] };
+    //key <PGUP> { [ ] };
 
-    // Thumb row: left-low
-    key <PGDN> { [ Alt_L, Meta_L ] };
+    // Thumb row: right-low
+
+    key <PGDN> { [ Delete, Delete, BackSpace, BackSpace ] };
     key <SPCE> { [ space, space, Escape, Escape ] };
     key <RTRN> { [ Return ] };
 
@@ -177,14 +178,14 @@ xkb_symbols "kinesis" {
     key <AE12> { [ Escape ] };
     key <AE01> { [ 7 ] };
     key <AE02> { [ 5 ] };
-    key <AE03> { [ 3 ] };
-    key <AE04> { [ 1 ] };
+    key <AE03> { [ 3, registered ] };
+    key <AE04> { [ 1, Home ] };
     key <AE05> { [ 9 ] };
     key <AE06> { [ 0 ] };
-    key <AE07> { [ 2 ] };
+    key <AE07> { [ 2, End ] };
     key <AE08> { [ 4 ] };
-    key <AE09> { [ 6 ] };
-    key <AE10> { [ 8 ] };
+    key <AE09> { [ 6, sterling ] };
+    key <AE10> { [ 8, yen ] };
     key <AE11> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
 
     // Keyboard row number: +1
@@ -195,8 +196,8 @@ xkb_symbols "kinesis" {
     key <AD04> { [ p, P, bracketright, Greek_pi ] };
     key <AD05> { [ y, Y, acute, Greek_psi ] };
     key <AD06> { [ f, F, grave, Greek_phi ] };
-    key <AD07> { [ g, G, slash, Greek_gamma ] };
-    key <AD08> { [ c, C, underscore, Greek_chi ] };
+    key <AD07> { [ g, G, braceright, Greek_gamma ] };
+    key <AD08> { [ c, C, braceleft, Greek_chi ] };
     key <AD09> { [ r, R, ampersand, Greek_rho ] };
     key <AD10> { [ l, L, percent, Greek_lambda ] };
     key <BKSL> { [ odiaeresis, Odiaeresis ] };
@@ -209,9 +210,9 @@ xkb_symbols "kinesis" {
     key <AC04> { [ u, U, greater, Greek_upsilon ] };
     key <AC05> { [ i, I, parenleft, Greek_iota ] };
     key <AC06> { [ d, D, parenright, Greek_delta ] };
-    key <AC07> { [ h, H, braceright, Greek_eta ] };
+    key <AC07> { [ h, H, slash, Greek_eta ] };
     key <AC08> { [ t, T, backslash, Greek_tau ] };
-    key <AC09> { [ n, N, braceleft, Greek_nu ] };
+    key <AC09> { [ n, N, underscore, Greek_nu ] };
     key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
     key <AC11> { [ Shift_R ] };
 
@@ -230,10 +231,10 @@ xkb_symbols "kinesis" {
     key <RTSH> { [ ssharp ] };
 
     // Keyboard row number: -2
-    key <TLDE> { [ Home ] };
-    key <LSGT> { [ Delete ] };
-    key <AD11> { [ BackSpace ] };
-    key <AD12> { [ End ] };
+    key <TLDE> { [ ] };
+    key <LSGT> { [ ] };
+    key <AD11> { [ ] };
+    key <AD12> { [ ] };
 
     include "level3(ralt_switch)"
 };
