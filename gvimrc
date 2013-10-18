@@ -1,11 +1,8 @@
 " Set font and size
-set guifont=Inconsolata\ 12
+"set guifont=Inconsolata\ 12
 
-" Remove menu bar
-set guioptions-=m
-
-" Remove toolbar
-set guioptions-=T
+" Remove everything
+set guioptions=a
 
 " Don't show path information in tabs
 " Show numbers in tab title

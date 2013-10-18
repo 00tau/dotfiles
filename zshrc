@@ -1,6 +1,6 @@
 #file: ~/.zshrc
 #author: Thomas Friedrich (00tau@suud.de)
-#year: 2011,2012
+#year: 2011,2012,2013
 
 # Completion
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
@@ -55,7 +55,7 @@ bindkey -v
 bindkey "^T" vi-cmd-mode
 
 # PATH
-export PATH=~/Spiele/bin:~/src/tmuxinator/bin:$PATH
+export PATH=~/scripts:~/Spiele/bin:~/src/tmuxinator/bin:$PATH
 export EDITOR=vim
 
 # Start an SSH agent

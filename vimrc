@@ -27,7 +27,7 @@ set showmatch
 "------------------------------------
 " Spellchecking settings
 "------------------------------------
-set spelllang=de,en
+set spelllang=en
 set spellsuggest=10
 
 "------------------------------------
@@ -143,6 +143,7 @@ let vimrplugin_screenplugin = 0
 
 au FileType r :nmap <buffer> <space> <LocalLeader>lj
 au FileType rmd :nmap <buffer> <space> <LocalLeader>cd
+au FileType rmd :nmap <buffer> <C-space> gwap
 au FileType rmd :nmap <buffer> <cr> <LocalLeader>lj
 
 "------------------------------------
@@ -177,6 +178,7 @@ map <C-q> :bd<cr>
 " Nicer movement with wrapped lines
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
+au FileType tex,context,txt noremap <buffer> <space> gwap
 
 " Inserts a single character when in command-mode.
 " Use the synonyms 'cl' and 'cc' for the standard
