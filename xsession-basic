@@ -22,9 +22,20 @@ if [ -x /usr/bin/unclutter ] ; then
     unclutter &
 fi
 
-# start the dropbox client
+# start a dropbox client if present
 if [ -x /opt/bin/dropbox ] ; then
     dropbox &
+fi
+
+# if gnome is installed, then use its session settings
+if [ -x /usr/bin/gnome-settings-daemon ] ; then
+    gnome-settings-daemon &
+fi
+
+# if gnome is installed, start its keyring daemon
+if [ -x /usr/bin/gnome-keyring-daemon ] ; then
+    gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
+    export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 fi
 
 exec dbus-launch herbstluftwm
