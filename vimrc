@@ -116,7 +116,9 @@ endif
 "----------------------------------------
 " Deal with unwanted spaces
 "----------------------------------------
-autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst,hs,lhs autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+"autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst,hs,lhs,context
+
+autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
 "---------------------------------------
 " Turn off the annoing beeb
@@ -150,6 +152,7 @@ au FileType r :nmap <buffer> <space> <LocalLeader>lj
 au FileType rmd :nmap <buffer> <space> <LocalLeader>cd
 au FileType rmd :nmap <buffer> <C-space> gwap
 au FileType rmd :nmap <buffer> <cr> <LocalLeader>lj
+au FileType rmd :compiler r2html 
 
 "------------------------------------
 " ConTeXt
@@ -192,12 +195,6 @@ noremap , ;
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
 au FileType txt noremap <buffer> <space> gwap
-
-" Inserts a single character when in command-mode.
-" Use the synonyms 'cl' and 'cc' for the standard
-" 's' and 'S' instead.
-"nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
-"nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 " Unbind the cursor keys in insert, normal and visual modes.
 "  either use: for key in ['<Up>', '<Down>', '<Left>', '<Right>']
