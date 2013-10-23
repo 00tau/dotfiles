@@ -124,6 +124,11 @@ autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst,hs,lhs autocmd BufWritePr
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
+"---------------------------------------
+" Set leader / localleader
+"---------------------------------------
+let maplocalleader = "\\"
+
 "------------------------------------
 " Mutt
 "------------------------------------
@@ -167,18 +172,26 @@ let hs_allow_hash_operator = 1  " highlight # as operators instead
 let g:NERDTreeHijackNetrw=0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-map <f5> :NERDTreeToggle<cr>
+noremap l :NERDTreeToggle<cr>
+
+let NERDTreeIgnore = ['\.log$', '\.tuc$', '\.pdf$']
 
 "---------------------------------------
 " Custom Keys
 "---------------------------------------
-map <cr> o<Esc>
-map <C-q> :bd<cr>
+noremap <cr> o<Esc>
+noremap <C-q> :bd<cr>
+
+noremap h F
+noremap t f
+noremap H T
+noremap T t
+noremap , ;
 
 " Nicer movement with wrapped lines
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
-au FileType tex,context,txt noremap <buffer> <space> gwap
+au FileType txt noremap <buffer> <space> gwap
 
 " Inserts a single character when in command-mode.
 " Use the synonyms 'cl' and 'cc' for the standard
