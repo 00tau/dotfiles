@@ -13,12 +13,16 @@ hc emit_hook reload
 # remove all existing keybindings
 hc keyunbind --all
 
+# use the some swap functions to give hc some tiling gimmics
+swap=~/.config/herbstluftwm/swap
+
 # keybindings
 Mod=Mod4
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-colon reload
-hc keybind $Mod-Shift-d close
-hc keybind $Mod-Return spawn xterm
+hc keybind $Mod-d spawn $swap auto
+hc keybind $Mod-Shift-d spawn $swap close
+hc keybind $Mod-Return spawn $swap stack_spawn xterm
 
 # tags
 TAG_NAMES=( {7,5,3,1,2,4,6,8} )
@@ -40,7 +44,7 @@ hc keybind $Mod-g     use_index -1 --skip-visible
 hc keybind $Mod-Right use_index +1 --skip-visible
 hc keybind $Mod-Left  use_index -1 --skip-visible
 
-# switch foctused monitor to previous tags 
+# switch foctused monitor to previous tags
 hc keybind $Mod-a use_previous
 
 # move clients to different tags
@@ -62,8 +66,9 @@ hc keybind $Mod-period  shift up
 hc keybind $Mod-u       shift right
 
 # change pane configuration: adding and removing
-hc keybind $Mod-w split vertical 0.5
-hc keybind $Mod-v split horizontal 0.5
+#   values are multiples of the golden fraction
+hc keybind $Mod-w split vertical  0.7669549  # =1-(8/13)^3
+hc keybind $Mod-v split horizontal 0.6213018 # =1-(8/13)^2
 hc keybind $Mod-q remove
 
 # change pane configuration: resize
@@ -109,7 +114,7 @@ hc set frame_bg_active_color      '#565656'
 hc set window_border_normal_color '#454545'
 hc set window_border_active_color '#9fbc00'
 
-# transparity 
+# transparity
 hc set frame_bg_transparent 1
 hc set frame_active_opacity 0
 hc set frame_normal_opacity 0
@@ -127,7 +132,7 @@ hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
 
 # menu
-hc keybind $Mod-b spawn dmenu_run -nb "#535353" -nf "#EEEEEE" -sf "#EEEEEE" -sb "#53BBCB"
+hc keybind $Mod-b spawn $swap master_spawn dmenu_run -nb "#535353" -nf "#EEEEEE" -sf "#EEEEEE" -sb "#53BBCB"
 
 # sound
 hc keybind $Mod-k spawn "amixer -- sset PCM playback 5%+"
