@@ -37,11 +37,12 @@ if [ -x /usr/bin/gnome-settings-daemon ] ; then
 fi
 
 # if gnome is installed, start its keyring daemon
-if [ -x /usr/bin/gnome-keyring-daemon ] ; then
-    gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
-    export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
-fi
+#if [ -x /usr/bin/gnome-keyring-daemon ] ; then
+#    gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
+#    export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
+#fi
 
+export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export HTTP_PROXY="http://do2-dansguardian.isas.de:3128"
 
