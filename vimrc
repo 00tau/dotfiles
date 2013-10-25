@@ -116,9 +116,8 @@ endif
 "----------------------------------------
 " Deal with unwanted spaces
 "----------------------------------------
-"autocmd FileType c,cpp,java,php,r,tex,noweb,rnoweb,rst,hs,lhs,context
 
-autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+autocmd BufWritePre * :%s/\s\+$//e
 
 "---------------------------------------
 " Turn off the annoing beeb
@@ -135,7 +134,7 @@ let maplocalleader = "\\"
 " Mutt
 "------------------------------------
 " set up syntax highlighting for my e-mail
-au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail | :set spell 
+au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail | :set spell
 
 "------------------------------------
 " R-plugin
@@ -152,7 +151,7 @@ au FileType r :nmap <buffer> <space> <LocalLeader>lj
 au FileType rmd :nmap <buffer> <space> <LocalLeader>cd
 au FileType rmd :nmap <buffer> <C-space> gwap
 au FileType rmd :nmap <buffer> <cr> <LocalLeader>lj
-au FileType rmd :compiler r2html 
+au FileType rmd :compiler r2html
 
 "------------------------------------
 " ConTeXt
