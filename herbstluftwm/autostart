@@ -18,6 +18,7 @@ swap=~/.config/herbstluftwm/swap
 
 # keybindings
 Mod=Mod4
+hc keybind $Mod-a spawn xscreensaver-command -lock
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-colon reload
 hc keybind $Mod-d spawn $swap auto
@@ -45,7 +46,7 @@ hc keybind $Mod-Right use_index +1 --skip-visible
 hc keybind $Mod-Left  use_index -1 --skip-visible
 
 # switch foctused monitor to previous tags
-hc keybind $Mod-a use_previous
+hc keybind $Mod-i use_previous
 
 # move clients to different tags
 hc keybind $Mod-p           move_index +1 --skip-visible
@@ -89,7 +90,7 @@ hc keybind $Mod-Shift-f floating toggle
 hc keybind $Mod-m fullscreen toggle
 
 # move around monitors
-hc keybind $Mod-BackSpace cycle_monitor
+hc keybind $Mod-Shift-space cycle_monitor
 hc keybind $Mod-Shift-g focus_monitor -1
 hc keybind $Mod-Shift-r focus_monitor +1
 
@@ -97,7 +98,6 @@ hc keybind $Mod-Shift-r focus_monitor +1
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-space       cycle
-hc keybind $Mod-Shift-space cycle -1
 #hc keybind $Mod-q jumpto urgent
 
 # mouse
