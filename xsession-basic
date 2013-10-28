@@ -23,7 +23,7 @@ fi
 
 # start screensaver daemon
 if [ -x /usr/bin/xscreensaver ] ; then
-    xscreensaver &
+    xscreensaver -nosplash &
 fi
 
 # start a dropbox client if present
