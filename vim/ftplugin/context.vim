@@ -1,7 +1,7 @@
 " local mappings
 compiler context
 
-nnoremap <buffer> <space> gwap:w<cr>:silent make %<cr>:silent ! xdotool search --class mupdf key r<cr>
+nnoremap <buffer> <space> gwap:w<cr>:silent make %<cr>:silent ! xdotool search --class mupdf key --window \%\@ r<cr>
 
 " start-stop formula-block
 nnoremap <buffer> <LocalLeader>ff A\placeformula<cr><cr>\startformula<cr>\stopformula<esc>O

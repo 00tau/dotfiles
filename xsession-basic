@@ -46,4 +46,4 @@ export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export HTTP_PROXY="http://do2-dansguardian.isas.de:3128"
 
-exec dbus-launch herbstluftwm
+exec dbus-launch herbstluftwm --locked

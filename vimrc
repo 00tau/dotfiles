@@ -147,7 +147,7 @@ let g:vimrplugin_indent_commented = 1
 let vimrplugin_notmuxconf = 1
 let vimrplugin_screenplugin = 0
 
-au FileType r :nmap <buffer> <space> <LocalLeader>lj
+au FileType r,rdoc :nmap <buffer> <space> <LocalLeader>lj
 au FileType rmd :nmap <buffer> <space> <LocalLeader>cd
 au FileType rmd :nmap <buffer> <C-space> gwap
 au FileType rmd :nmap <buffer> <cr> <LocalLeader>lj
@@ -172,11 +172,22 @@ let hs_allow_hash_operator = 1  " highlight # as operators instead
 " NERDTree
 "---------------------------------------
 let g:NERDTreeHijackNetrw=0
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeIgnore = ['\.log$', '\.tuc$', '\.pdf$', '\.html$', '\.rdat$', '\.aux', '\.bbl', '\.blg', '\.tuc']
+
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
 
 noremap l :NERDTreeToggle<cr>
 
-let NERDTreeIgnore = ['\.log$', '\.tuc$', '\.pdf$']
+"---------------------------------------
+" Cntr-P
+"---------------------------------------
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.aux,*.bbl,*.blg,*.tuc
 
 "---------------------------------------
 " Custom Keys
