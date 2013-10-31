@@ -12,20 +12,20 @@ xkb_symbols "basic" {
     // Keyboard row number: +2
     key <TLDE> { [ Home ] };
     key <AE01> { [ Super_L ] };
-    key <AE02> { [ 7 ] };                                    
-    key <AE03> { [ 5 ] };                                    
-    key <AE04> { [ 3 ] };                                    
-    key <AE05> { [ 1 ] };                                    
-    key <AE06> { [ 9 ] };                                    
-    key <AE07> { [ 0 ] };                                    
-    key <AE08> { [ 2 ] };                                    
-    key <AE09> { [ 4 ] };                                    
-    key <AE10> { [ 6 ] };                                    
-    key <AE11> { [ 8 ] };                                    
-    key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] }; 
+    key <AE02> { [ 7 ] };
+    key <AE03> { [ 5 ] };
+    key <AE04> { [ 3 ] };
+    key <AE05> { [ 1 ] };
+    key <AE06> { [ 9 ] };
+    key <AE07> { [ 0 ] };
+    key <AE08> { [ 2 ] };
+    key <AE09> { [ 4 ] };
+    key <AE10> { [ 6 ] };
+    key <AE11> { [ 8 ] };
+    key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
 
     // Keyboard row number: +1
-    key <TAB>  { [ udiaeresis, Udiaeresis ] }; 
+    key <TAB>  { [ udiaeresis, Udiaeresis ] };
     key <AD01> { [ colon, semicolon, bracketleft ] };
     key <AD02> { [ comma, exclam, plus ] };
     key <AD03> { [ period, question, dollar ] };
@@ -86,20 +86,20 @@ xkb_symbols "dell" {
     // Keyboard row number: +2
     key <TLDE> { [ Home ] };
     key <AE01> { [ Super_L ] };
-    key <AE02> { [ 7 ] };                                    
-    key <AE03> { [ 5 ] };                                    
-    key <AE04> { [ 3 ] };                                    
-    key <AE05> { [ 1 ] };                                    
-    key <AE06> { [ 9 ] };                                    
-    key <AE07> { [ 0 ] };                                    
-    key <AE08> { [ 2 ] };                                    
-    key <AE09> { [ 4 ] };                                    
-    key <AE10> { [ 6 ] };                                    
-    key <AE11> { [ 8 ] };                                    
-    key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] }; 
+    key <AE02> { [ 7 ] };
+    key <AE03> { [ 5 ] };
+    key <AE04> { [ 3 ] };
+    key <AE05> { [ 1 ] };
+    key <AE06> { [ 9 ] };
+    key <AE07> { [ 0 ] };
+    key <AE08> { [ 2 ] };
+    key <AE09> { [ 4 ] };
+    key <AE10> { [ 6 ] };
+    key <AE11> { [ 8 ] };
+    key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
 
     // Keyboard row number: +1
-    key <TAB>  { [ udiaeresis, Udiaeresis ] }; 
+    key <TAB>  { [ udiaeresis, Udiaeresis ] };
     key <AD01> { [ colon, semicolon, bracketleft ] };
     key <AD02> { [ comma, exclam, plus ] };
     key <AD03> { [ period, question, dollar ] };
@@ -154,14 +154,14 @@ xkb_symbols "kinesis" {
     key <ESC>  { [ Caps_Lock ] };
 
     // Thumb row: left-high
-    key <LCTL> { [ at ] };
-    //key <LALT> { [ ] };
-    //key <HOME> { [ ] };
+    key <LCTL> { [  BackSpace ] };
+    //key <LALT> { [] };
+    //key <HOME> { [] };
 
     // Thumb row: right-high
-    //key <RCTL> { [ ] };
-    //key <RALT> { [ Alt_L, Meta_L, Alt_L, Meta_L ] };
-    //key <PGUP> { [ ] };
+    key <RCTL> { [ Delete ] };
+    //key <RALT> { [] };
+    //key <PGUP> { [] };
 
     // Thumb row: right-low
 
@@ -189,7 +189,7 @@ xkb_symbols "kinesis" {
     key <AE11> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
 
     // Keyboard row number: +1
-    key <TAB>  { [ udiaeresis, Udiaeresis ] }; 
+    key <TAB>  { [ udiaeresis, Udiaeresis ] };
     key <AD01> { [ colon, semicolon, bracketleft ] };
     key <AD02> { [ comma, exclam, plus ] };
     key <AD03> { [ period, question, dollar ] };
