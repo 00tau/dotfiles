@@ -147,10 +147,9 @@ let g:vimrplugin_indent_commented = 1
 let vimrplugin_notmuxconf = 1
 let vimrplugin_screenplugin = 0
 
-au FileType r,rdoc :nmap <buffer> <space> <LocalLeader>lj
-au FileType rmd :nmap <buffer> <space> <LocalLeader>cd
-au FileType rmd :nmap <buffer> <C-space> gwap
-au FileType rmd :nmap <buffer> <cr> <LocalLeader>lj
+au FileType r,rdoc,rmd :nmap <buffer> <space> <LocalLeader>lj
+au FileType rmd :nmap <buffer> <cr> <LocalLeader>cd
+au FileType rmd :nmap <buffer> <C-space> gwap:w<cr>
 au FileType rmd :compiler r2html
 
 "------------------------------------
@@ -206,9 +205,7 @@ au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
 au FileType txt noremap <buffer> <space> gwap
 
-" Unbind the cursor keys in insert, normal and visual modes.
-"  either use: for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-"  or:         for key in ['<Up>', '<Down>']
+" Unbind some keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Del>', '<BS>']
     exe prefix . "noremap " . key . " <Nop>"
@@ -216,4 +213,4 @@ for prefix in ['i', 'n', 'v']
 endfor
 
 nnoremap <up> {dd
-nnoremap <down> o<esc>
+nnoremap <down> {o<esc>

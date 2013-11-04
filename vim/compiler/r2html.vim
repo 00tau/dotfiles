@@ -12,6 +12,6 @@ if exists(":CompilerSet") != 2
     command -nargs=* CompilerSet setlocal <args>
 endif
 CompilerSet errorformat&
-CompilerSet makeprg="Rscript -e 'library(knitr); knit(\"%\")'"
+CompilerSet makeprg="Rscript -e 'library(knitr); knit2html(\"%\")'"
 
-let &l:makeprg ="Rscript -e 'library(knitr); knit(\"%\")'"
+let &l:makeprg ="Rscript -e 'library(knitr); knit2html(\"%\")'"

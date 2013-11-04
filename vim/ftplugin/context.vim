@@ -2,6 +2,9 @@
 compiler context
 
 nnoremap <buffer> <space> gwap:w<cr>:silent make %<cr>:silent ! xdotool search --class mupdf key --window \%\@ r<cr>
+nnoremap <buffer> <LocalLeader>vv :silent ! mupdf %<cr>
+
+"herbstclient chain , spawn mupdf ~/Dokumente/Fortschritt/2013-10-14-intensities.pdf , cycle_monitor
 
 " start-stop formula-block
 nnoremap <buffer> <LocalLeader>ff A\placeformula<cr><cr>\startformula<cr>\stopformula<esc>O
