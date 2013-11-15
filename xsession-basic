@@ -2,7 +2,7 @@
 
 xrandr --auto --output DVI-I-1 --left-of DVI-I-2
 
-setxkbmap dx kinesis
+setxkbmap dz kinesis
 xsetroot -cursor_name left_ptr
 xrdb -merge ~/.Xresources
 
