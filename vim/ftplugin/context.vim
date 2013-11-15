@@ -2,7 +2,9 @@
 compiler context
 
 nnoremap <buffer> <space> gwap:w<cr>:silent make %<cr>:silent ! xdotool search --class mupdf key --window \%\@ r<cr>
-nnoremap <buffer> <LocalLeader>vv :silent ! mupdf %<cr>
+nnoremap <buffer> <space> gwap:w<cr>:silent make %<cr>:silent ! xdotool search --class mupdf key --window \%\@ r<cr>
+nnoremap <buffer> <LocalLeader>, :silent ! xdotool search --class mupdf key --window \%\@ comma<cr>
+nnoremap <buffer> <LocalLeader>. :silent ! xdotool search --class mupdf key --window \%\@ period<cr>
 
 "herbstclient chain , spawn mupdf ~/Dokumente/Fortschritt/2013-10-14-intensities.pdf , cycle_monitor
 

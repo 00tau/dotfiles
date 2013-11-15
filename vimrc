@@ -191,14 +191,21 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.aux,*.bbl,*.blg,*.tuc
 "---------------------------------------
 " Custom Keys
 "---------------------------------------
-noremap <cr> o<Esc>
-noremap <C-q> :bd<cr>
+noremap <cr> :nohl<cr>
+noremap <C-q> :w<bar>bp<bar>sp<bar>bn<bar>bd<cr>
+" noremap <C-q> :b#<bar>bd#<cr>
 
 noremap h F
 noremap t f
 noremap H T
 noremap T t
 noremap , ;
+noremap ; ,
+noremap f }k$
+nmap F fa<space>
+inoremap <c-f> <right><space>
+inoremap <c-b> <c-h>~$$<left>
+
 
 " Nicer movement with wrapped lines
 au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
@@ -207,7 +214,7 @@ au FileType txt noremap <buffer> <space> gwap
 
 " Unbind some keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
-  for key in ['<Up>', '<Down>', '<Del>', '<BS>']
+  for key in ['<Up>', '<Down>', '<Left>', '<Right>', '<Del>', '<BS>']
     exe prefix . "noremap " . key . " <Nop>"
   endfor
 endfor
