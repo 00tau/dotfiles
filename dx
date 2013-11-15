@@ -9,78 +9,6 @@ xkb_symbols "basic" {
     key <LCTL> { [ Caps_Lock ] };
     key <RALT> { [ Alt_L ] };
 
-    // Keyboard row number: +2
-    key <TLDE> { [ Home ] };
-    key <AE01> { [ Super_L ] };
-    key <AE02> { [ 7 ] };
-    key <AE03> { [ 5 ] };
-    key <AE04> { [ 3 ] };
-    key <AE05> { [ 1 ] };
-    key <AE06> { [ 9 ] };
-    key <AE07> { [ 0 ] };
-    key <AE08> { [ 2 ] };
-    key <AE09> { [ 4 ] };
-    key <AE10> { [ 6 ] };
-    key <AE11> { [ 8 ] };
-    key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
-
-    // Keyboard row number: +1
-    key <TAB>  { [ udiaeresis, Udiaeresis ] };
-    key <AD01> { [ colon, semicolon, bracketleft ] };
-    key <AD02> { [ comma, exclam, plus ] };
-    key <AD03> { [ period, question, dollar ] };
-    key <AD04> { [ p, P, bracketright, Greek_pi ] };
-    key <AD05> { [ y, Y, acute, Greek_psi ] };
-    key <AD06> { [ f, F, grave, Greek_phi ] };
-    key <AD07> { [ g, G, slash, Greek_gamma ] };
-    key <AD08> { [ c, C, underscore, Greek_chi ] };
-    key <AD09> { [ r, R, ampersand, Greek_rho ] };
-    key <AD10> { [ l, L, percent, Greek_lambda ] };
-    key <AD11> { [ odiaeresis, Odiaeresis ] };
-    key <AD12> { [ slash, backslash ] };
-
-    // Keyboard row number: 0
-    key <CAPS> { [ Control_L ] };
-    key <AC01> { [ a, A, asciitilde, Greek_alpha ] };
-    key <AC02> { [ o, O, less, Greek_omicron ] };
-    key <AC03> { [ e, E, minus, Greek_epsilon ] };
-    key <AC04> { [ u, U, greater, Greek_upsilon ] };
-    key <AC05> { [ i, I, parenleft, Greek_iota ] };
-    key <AC06> { [ d, D, parenright, Greek_delta ] };
-    key <AC07> { [ h, H, braceright, Greek_eta ] };
-    key <AC08> { [ t, T, backslash, Greek_tau ] };
-    key <AC09> { [ n, N, braceleft, Greek_nu ] };
-    key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
-    key <AC11> { [ ssharp ] };
-    key <BKSL> { [ minus, underscore ] };
-
-    // Keyboard row number: -1
-    key <LSGT> { [ adiaeresis, Adiaeresis, bar ] };
-    key <AB01> { [ z, Z, degree, Greek_zeta ] };
-    key <AB02> { [ q, Q, at ] };
-    key <AB03> { [ j, J, equal ] };
-    key <AB04> { [ k, K, asterisk, Greek_kappa ] };
-    key <AB05> { [ x, X, bar, Greek_xi ] };
-    key <AB06> { [ b, B, brokenbar, Greek_beta ] };
-    key <AB07> { [ m, M, numbersign, Greek_mu ] };
-    key <AB08> { [ w, W, at, Greek_omega ] };
-    key <AB09> { [ v, V, section, Greek_theta ] };
-    key <AB10> { [ apostrophe, quotedbl ] };
-
-    include "level3(ralt_switch)"
-};
-
-partial alphanumeric_keys
-xkb_symbols "dell" {
-
-    name[Group1]="Dvorak - Testing";
-
-    // Alphanumeric section
-
-    key <ESC>  { [ Escape ] };
-    key <LCTL> { [ Caps_Lock ] };
-    key <RALT> { [ Alt_L ] };
-
     key <SPCE> { [ space, space, Escape, Escape ] };
 
     // Keyboard row number: +2
@@ -165,14 +93,14 @@ xkb_symbols "kinesis" {
 
     // Thumb row: right-low
 
-    key <PGDN> { [ Delete, Delete, BackSpace, BackSpace ] };
     key <SPCE> { [ space, space, Escape, Escape ] };
     key <RTRN> { [ Return ] };
+    key <PGDN> { [ Alt_L ] };
 
     // Thumb row: left-low
-    key <END>  { [ Super_L ] };
     key <BKSP> { [ ISO_Level3_Shift ] };
     key <DELE> { [ Control_L ] };
+    key <END>  { [ Super_L ] };
 
     // Keyboard row number: +2
     key <AE12> { [ Escape ] };
@@ -196,8 +124,8 @@ xkb_symbols "kinesis" {
     key <AD04> { [ p, P, bracketright, Greek_pi ] };
     key <AD05> { [ y, Y, acute, Greek_psi ] };
     key <AD06> { [ f, F, grave, Greek_phi ] };
-    key <AD07> { [ g, G, braceright, Greek_gamma ] };
-    key <AD08> { [ c, C, braceleft, Greek_chi ] };
+    key <AD07> { [ g, G, slash, Greek_gamma ] };
+    key <AD08> { [ c, C, backslash, Greek_chi ] };
     key <AD09> { [ r, R, ampersand, Greek_rho ] };
     key <AD10> { [ l, L, percent, Greek_lambda ] };
     key <BKSL> { [ odiaeresis, Odiaeresis ] };
@@ -210,8 +138,8 @@ xkb_symbols "kinesis" {
     key <AC04> { [ u, U, greater, Greek_upsilon ] };
     key <AC05> { [ i, I, parenleft, Greek_iota ] };
     key <AC06> { [ d, D, parenright, Greek_delta ] };
-    key <AC07> { [ h, H, slash, Greek_eta ] };
-    key <AC08> { [ t, T, backslash, Greek_tau ] };
+    key <AC07> { [ h, H, braceright, Greek_eta ] };
+    key <AC08> { [ t, T, braceleft, Greek_tau ] };
     key <AC09> { [ n, N, underscore, Greek_nu ] };
     key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
     key <AC11> { [ Shift_R ] };
