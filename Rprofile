@@ -10,6 +10,10 @@ Sys.setenv(http_proxy="http://do2-dansguardian.isas.de:3128")
 options(BioC_mirror = "http://bioconductor.statistik.tu-dortmund.de")
 options(browserNLdisabled = TRUE)
 
+sourceBioLite <- function () {
+    source("http://bioconductor.org/biocLite.R")
+}
+
 lib = Sys.getenv("R_LIBS_USER")
 if (lib != "") {
   if (!file.exists(lib)) {

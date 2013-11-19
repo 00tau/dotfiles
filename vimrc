@@ -116,7 +116,6 @@ endif
 "----------------------------------------
 " Deal with unwanted spaces
 "----------------------------------------
-
 autocmd BufWritePre * :%s/\s\+$//e
 
 "---------------------------------------
@@ -129,6 +128,11 @@ autocmd GUIEnter * set visualbell t_vb=
 " Set leader / localleader
 "---------------------------------------
 let maplocalleader = "\\"
+
+"------------------------------------
+" Markdown
+"------------------------------------
+au BufRead,BufNewFile *.md :set ft=markdown | :set spell
 
 "------------------------------------
 " Mutt
@@ -181,7 +185,6 @@ noremap l :NERDTreeToggle<cr>
 "---------------------------------------
 " Cntr-P
 "---------------------------------------
-
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
@@ -193,7 +196,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.aux,*.bbl,*.blg,*.tuc
 "---------------------------------------
 noremap <cr> :nohl<cr>
 noremap <C-q> :w<bar>bp<bar>sp<bar>bn<bar>bd<cr>
-" noremap <C-q> :b#<bar>bd#<cr>
 
 noremap h F
 noremap t f
@@ -206,11 +208,10 @@ nmap F fa<space>
 inoremap <c-f> <right><space>
 inoremap <c-b> <c-h>~$$<left>
 
-
 " Nicer movement with wrapped lines
-au FileType html,tex,context,noweb,rnoweb noremap <buffer> j gj
-au FileType html,tex,context,noweb,rnoweb noremap <buffer> k gk
-au FileType txt noremap <buffer> <space> gwap
+au FileType html,tex,context,noweb,rnoweb,markdown noremap <buffer> j gj
+au FileType html,tex,context,noweb,rnoweb,markdown noremap <buffer> k gk
+au FileType txt,markdown noremap <buffer> <space> gwap
 
 " Unbind some keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
