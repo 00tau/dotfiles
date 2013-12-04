@@ -53,9 +53,13 @@ alias skype='xhost +local: && su skype -c skype'
 # Keybindings
 bindkey -v
 bindkey "^T" vi-cmd-mode
+#bindkey "up" history-search-backward
+#bindkey "down" history-search-forward
+#bindkey '\e[A' history-search-backward
+#bindkey '\e[B' history-search-forward
 
 # PATH
-export PATH=~/scripts:~/Spiele/bin:~/src/tmuxinator/bin:$PATH
+export PATH=~/Dokumente/scripts:~/Spiele/bin:~/src/tmuxinator/bin:$PATH
 export EDITOR=vim
 
 # Start an SSH agent
