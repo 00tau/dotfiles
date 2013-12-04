@@ -5,6 +5,10 @@ nnoremap <buffer> <space> gwap:w<cr>:silent make %<cr>:silent ! xdotool search -
 nnoremap <buffer> <space> gwap:w<cr>:silent make %<cr>:silent ! xdotool search --class mupdf key --window \%\@ r<cr>
 nnoremap <buffer> <LocalLeader>, :silent ! xdotool search --class mupdf key --window \%\@ comma<cr>
 nnoremap <buffer> <LocalLeader>. :silent ! xdotool search --class mupdf key --window \%\@ period<cr>
+nnoremap <buffer> <LocalLeader>k :silent ! xdotool search --class mupdf key --window \%\@ k<cr>
+nnoremap <buffer> <LocalLeader>j :silent ! xdotool search --class mupdf key --window \%\@ j<cr>
+nnoremap <buffer> <LocalLeader>W :silent ! xdotool search --class mupdf key --window \%\@ W<cr>
+nnoremap <buffer> <LocalLeader>H :silent ! xdotool search --class mupdf key --window \%\@ H<cr>
 
 "herbstclient chain , spawn mupdf ~/Dokumente/Fortschritt/2013-10-14-intensities.pdf , cycle_monitor
 " Moving around
@@ -20,8 +24,8 @@ nnoremap <buffer> <LocalLeader>fa A\placeformula<cr><cr>\startformula\startalign
 inoremap <buffer> <LocalLeader>fa \placeformula<cr><cr>\startformula\startalign<cr>\stopalign \stopformula<esc>O
 
 " Make start-stop block out of the previous word
-nnoremap <buffer> <LocalLeader>b ea\start<Cr>\stop<Cr><Esc>4bhdiw$pj$pO
-inoremap <buffer> <LocalLeader>b \start<Cr>\stop<Cr><Esc>4bhdiw$pj$pO
+nnoremap <buffer> <LocalLeader>bb ea\start<Cr>\stop<Cr><Esc>4bhdiw$pj$pO
+inoremap <buffer> <LocalLeader>bb \start<Cr>\stop<Cr><Esc>4bhdiw$pj$pO
 
 " itemize/enumerate
 inoremap <buffer> <LocalLeader>en \startitemize<cr><cr>\stopitemize<Up>\item<Space>

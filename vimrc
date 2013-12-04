@@ -151,9 +151,15 @@ let g:vimrplugin_indent_commented = 1
 let vimrplugin_notmuxconf = 1
 let vimrplugin_screenplugin = 0
 
+"let vimrplugin_pandoc_args = "--toc -V lang=german"
+let vimrplugin_pandoc_args = "--toc -V"
+
 au FileType r,rdoc,rmd :nmap <buffer> <space> <LocalLeader>lj
 au FileType rmd :nmap <buffer> <cr> <LocalLeader>cd
-au FileType rmd :nmap <buffer> <C-space> gwap:w<cr>
+au FileType tex,context,rmd :nmap <buffer> <C-space> gwap:w<cr>
+au FileType rmd :nnoremap <buffer> ]] /^#<cr>
+au FileType rmd :nnoremap <buffer> [[ ?^#<cr>
+
 au FileType rmd :compiler r2html
 
 "------------------------------------
@@ -220,5 +226,5 @@ for prefix in ['i', 'n', 'v']
   endfor
 endfor
 
-nnoremap <up> {dd
-nnoremap <down> {o<esc>
+nnoremap <up> {dd}
+nnoremap <down> {o<esc>}
