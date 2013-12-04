@@ -132,7 +132,7 @@ let maplocalleader = "\\"
 "------------------------------------
 " Markdown
 "------------------------------------
-au BufRead,BufNewFile *.md :set ft=markdown | :set spell
+"au BufRead,BufNewFile *.md :set ft=markdown | :set spell
 
 "------------------------------------
 " Mutt
@@ -157,8 +157,8 @@ let vimrplugin_pandoc_args = "--toc -V"
 au FileType r,rdoc,rmd :nmap <buffer> <space> <LocalLeader>lj
 au FileType rmd :nmap <buffer> <cr> <LocalLeader>cd
 au FileType tex,context,rmd :nmap <buffer> <C-space> gwap:w<cr>
-au FileType rmd :nnoremap <buffer> ]] /^#<cr>
-au FileType rmd :nnoremap <buffer> [[ ?^#<cr>
+"au FileType rmd :nnoremap <buffer> ]] /^#<cr>
+"au FileType rmd :nnoremap <buffer> [[ ?^#<cr>
 
 au FileType rmd :compiler r2html
 

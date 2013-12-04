@@ -43,3 +43,12 @@
 [submodule "vim/bundle/haskellmode-vim"]
 	path = vim/bundle/haskellmode-vim
 	url = https://github.com/lukerandall/haskellmode-vim.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim/bundle/vim-pandoc"]
+	path = vim/bundle/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc.git
+[submodule "vim/bundle/vim-markdownfootnotes"]
+	path = vim/bundle/vim-markdownfootnotes
+	url = https://github.com/vim-pandoc/vim-markdownfootnotes.git
