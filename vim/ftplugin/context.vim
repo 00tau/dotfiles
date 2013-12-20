@@ -12,8 +12,8 @@ nnoremap <buffer> <LocalLeader>H :silent ! xdotool search --class mupdf key --wi
 
 "herbstclient chain , spawn mupdf ~/Dokumente/Fortschritt/2013-10-14-intensities.pdf , cycle_monitor
 " Moving around
-nnoremap <buffer> ]] /\\section<cr>:nohl<cr>zz
-nnoremap <buffer> [[ ?\\section<cr>:nohl<cr>zz
+nnoremap <buffer> ]] /\\section<cr>:nohl<cr>
+nnoremap <buffer> [[ ?\\section<cr>:nohl<cr>
 
 " start-stop formula-block
 nnoremap <buffer> <LocalLeader>ff A\placeformula<cr><cr>\startformula<cr>\stopformula<esc>O

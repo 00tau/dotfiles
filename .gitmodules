@@ -52,3 +52,9 @@
 [submodule "vim/bundle/vim-markdownfootnotes"]
 	path = vim/bundle/vim-markdownfootnotes
 	url = https://github.com/vim-pandoc/vim-markdownfootnotes.git
+[submodule "vim/bundle/vim-swap"]
+	path = vim/bundle/vim-swap
+	url = https://github.com/kurkale6ka/vim-swap.git
+[submodule "vim/bundle/vim-ipython"]
+	path = vim/bundle/vim-ipython
+	url = https://github.com/ivanov/vim-ipython.git

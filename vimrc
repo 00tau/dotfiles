@@ -7,7 +7,7 @@ set nocompatible
 " vim.  Simply copy new skipts to the .vim/bundle/
 " directory.  They get loaded automatically.
 runtime bundle/pathogen/autoload/pathogen.vim
-let g:pathogen_disabled = ['vim-markdown']
+let g:pathogen_disabled = ['vim-pandoc', 'vim-markdown', 'vim-markdownfootnotes']
 call pathogen#infect()
 
 "------------------------------------
@@ -133,6 +133,11 @@ let maplocalleader = "\\"
 " Markdown
 "------------------------------------
 "au BufRead,BufNewFile *.md :set ft=markdown | :set spell
+let g:vim_markdown_folding_disabled=1
+
+let g:pandoc_no_empty_implicits = 1
+let g:pandoc_no_folding = 1
+let vimrplugin_pandoc_args = "--toc"
 
 "------------------------------------
 " Mutt
@@ -150,15 +155,6 @@ let g:vimrplugin_underscore = 0
 let g:vimrplugin_indent_commented = 1
 let vimrplugin_notmuxconf = 1
 let vimrplugin_screenplugin = 0
-
-"let vimrplugin_pandoc_args = "--toc -V lang=german"
-let vimrplugin_pandoc_args = "--toc -V"
-
-au FileType r,rdoc,rmd :nmap <buffer> <space> <LocalLeader>lj
-au FileType rmd :nmap <buffer> <cr> <LocalLeader>cd
-au FileType tex,context,rmd :nmap <buffer> <C-space> gwap:w<cr>
-"au FileType rmd :nnoremap <buffer> ]] /^#<cr>
-"au FileType rmd :nnoremap <buffer> [[ ?^#<cr>
 
 au FileType rmd :compiler r2html
 
@@ -186,8 +182,6 @@ let NERDTreeIgnore = ['\.log$', '\.tuc$', '\.pdf$', '\.html$', '\.rdat$', '\.aux
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
 
-noremap l :NERDTreeToggle<cr>
-
 "---------------------------------------
 " Cntr-P
 "---------------------------------------
@@ -200,8 +194,29 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.aux,*.bbl,*.blg,*.tuc
 "---------------------------------------
 " Custom Keys
 "---------------------------------------
+let g:swap_custom_ops = ['~']
+
+" Unbind some keys in insert, normal and visual modes.
+for prefix in ['i', 'n', 'v']
+  for key in ['<Up>', '<Down>', '<Left>', '<Right>', '<Del>', '<BS>']
+    exe prefix . "noremap " . key . " <nop>"
+  endfor
+endfor
+
+for prefix in ['n', 'v']
+  for key in ['+', '-', 'h', 'l']
+    exe prefix . "noremap " . key . " <nop>"
+  endfor
+endfor
+
+noremap l :NERDTreeToggle<cr>
+
+noremap <C-space> gwap:w<bar>nohl<cr>
 noremap <cr> :nohl<cr>
-noremap <C-q> :w<bar>bp<bar>sp<bar>bn<bar>bd<cr>
+noremap <C-cr> :nohl<cr>
+noremap <C-q> :bns<bar>bd#<cr>
+noremap <C-k> :bp<cr>
+noremap <C-j> :bn<cr>
 
 noremap h F
 noremap t f
@@ -219,12 +234,10 @@ au FileType html,tex,context,noweb,rnoweb,markdown noremap <buffer> j gj
 au FileType html,tex,context,noweb,rnoweb,markdown noremap <buffer> k gk
 au FileType txt,markdown noremap <buffer> <space> gwap
 
-" Unbind some keys in insert, normal and visual modes.
-for prefix in ['i', 'n', 'v']
-  for key in ['<Up>', '<Down>', '<Left>', '<Right>', '<Del>', '<BS>']
-    exe prefix . "noremap " . key . " <Nop>"
-  endfor
-endfor
+au FileType r,rdoc,rmd map <buffer> <space> <LocalLeader>lj
+au FileType r,rdoc,rmd map <buffer> <cr> <LocalLeader>cd
+"au FileType rmd :nnoremap <buffer> ]] /^#<cr>
+"au FileType rmd :nnoremap <buffer> [[ ?^#<cr>
 
 nnoremap <up> {dd}
 nnoremap <down> {o<esc>}
