@@ -29,8 +29,11 @@ set showmatch
 "------------------------------------
 " Spellchecking settings
 "------------------------------------
-set spelllang=en
+set spelllang=en_gb,de
 set spellsuggest=10
+
+au FileType text,tex,context,markdown set spell
+au FileType text,tex,context,markdown set nosmartindent
 
 "------------------------------------
 " File type handling
