@@ -27,13 +27,12 @@ set title
 set showmatch
 
 "------------------------------------
-" Spellchecking settings
+" Spellcheck settings
 "------------------------------------
 set spelllang=en_gb,de
 set spellsuggest=10
 
 au FileType text,tex,context,markdown set spell
-au FileType text,tex,context,markdown set nosmartindent
 
 "------------------------------------
 " File type handling
@@ -43,6 +42,8 @@ filetype indent on
 set fileformat=unix
 set encoding=utf-8
 set textwidth=72
+
+au FileType text,tex,context,markdown set nosmartindent
 
 "------------------------------------
 " Behaviour
@@ -77,7 +78,7 @@ if has("autocmd")
   autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
 endif
 
-set grepprg=grep\ -nH\ $*
+"set grepprg=grep\ -nH\ $*
 
 "------------------------------------
 " Indentation
@@ -164,6 +165,15 @@ let vimrplugin_screenplugin = 0
 
 au FileType rmd :compiler r2html
 
+let g:tagbar_type_r = {
+    \ 'ctagstype' : 'r',
+    \ 'kinds'     : [
+        \ 'f:Functions',
+        \ 'g:GlobalVariables',
+        \ 'v:FunctionVariables',
+    \ ]
+\ }
+
 "------------------------------------
 " ConTeXt
 "------------------------------------
@@ -216,6 +226,7 @@ for prefix in ['n', 'v']
 endfor
 
 noremap l :NERDTreeToggle<cr>
+noremap <C-g> :Gstatus<cr>
 
 noremap <C-space> gwap:w<bar>nohl<cr>
 noremap <cr> :nohl<cr>
