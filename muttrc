@@ -5,20 +5,24 @@
 #source "gpg2 -dq ~/.my-pwds.gpg |"
 
 # IMAP settings
-#
-set imap_user = "generalmodels@gmail.com"
-#set imap_pass = $my_pw_gmail
 
-set smtp_url = "smtp://generalmodels@smtp.gmail.com:587/"
-set smtp_pass = $my_pw_gmail 
-set ssl_force_tls = yes
-set from = "friedrich@statistik.tu-dortmund.de"
-set realname = "Thomas Friedrich"
-
-set folder = "imaps://imap.gmail.com:993"
+set imap_user = "thomas.moebius@isas.de"
+set folder = "imaps://mail.isas.de:993"
 set spoolfile = "+INBOX"
-set postponed="+[Gmail]/Drafts"
+set postponed="+Drafts"
 
+# SMTP settings
+
+set smtp_url = "smtp://mail.isas.de:465"
+set ssl_force_tls = yes
+set from = "thomas.moebius@isas.de"
+set realname = "Thomas W. D. Möbius"
+
+#set imap_pass = $my_pw_gmail
+#set smtp_pass = $my_pw_gmail
+
+# General settings
+#
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
@@ -53,7 +57,7 @@ set send_charset="utf-8"
 # Pager
 #
 set tilde # vim-style
-set mailcap_path = ~/.dotfiles/mailcap
+set mailcap_path = ~/.dotfiles/mutt/mailcap
 auto_view text/html application/pdf application/x-tex
 alternative_order text/plain text/html application/pdf application/x-tex
 
@@ -75,16 +79,15 @@ set print = yes
 set attribution="Hallo %v,\n\n* %n [%[%d.%m.%y %H:%M]]:\n"
 
 # Der Absender steht nicht in der Group-Reply-Liste
-unset metoo 
+unset metoo
 
 # Aliases
 #
-set alias_file = "~/Dropbox/.aliases"
+set alias_file = "~/Dokumente/.aliases"
 set sort_alias = alias
 set reverse_alias = yes
 source $alias_file
 
 # Colours
 #
-#source ~/.dotfiles/mutt-colour-theme
-#source ~/.dotfiles/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+source ~/.dotfiles/mutt/mutt-colours-theme
