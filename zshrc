@@ -59,7 +59,7 @@ bindkey "^T" vi-cmd-mode
 #bindkey '\e[B' history-search-forward
 
 # PATH
-export PATH=~/Dokumente/scripts:~/Spiele/bin:~/src/tmuxinator/bin:$PATH
+export PATH=~/.dotfiles/scripts:~/Dokumente/scripts:~/Spiele/bin:~/src/tmuxinator/bin:$PATH
 export EDITOR=vim
 
 # Start an SSH agent

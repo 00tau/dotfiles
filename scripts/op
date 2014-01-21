@@ -1,0 +1,24 @@
+#! /bin/sh
+
+# NAME
+#      op - simple script for opening a file in vim
+#
+# SYNOPSIS
+#      op SERVERNAME FILENAME
+#
+# Description
+#      Opens a file FILENAME in vim running as a server with
+#      name SERVERNAME.  If the server does not exists, it
+#      is created.
+#
+# SEE ALSO
+#      VIM(1)
+#
+# AUTHOR
+#      Thomas W. D. Möbius (kontakt@thomasmoebius)
+
+if vim --serverlist | grep -i $1 ; then
+  vim --servername $1 --remote $2
+else
+  vim --servername $1 $2
+fi
