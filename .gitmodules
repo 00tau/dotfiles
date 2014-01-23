@@ -34,9 +34,6 @@
 [submodule "vim/bundle/wombat256"]
 	path = vim/bundle/wombat256
 	url = https://github.com/vim-scripts/wombat256.vim.git
-[submodule "vim/bundle/yankstack"]
-	path = vim/bundle/yankstack
-	url = https://github.com/vim-scripts/yankstack.git
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git

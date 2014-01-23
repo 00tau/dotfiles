@@ -1,6 +1,6 @@
 #file: ~/.zshrc
-#author: Thomas Friedrich (00tau@suud.de)
-#year: 2011,2012,2013
+#author: Thomas W. D. Moebius (00tau@suud.de)
+#year: 2011,2012,2013,2014
 
 # Completion
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
@@ -10,16 +10,17 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' max-errors 2 numeric
 zstyle ':completion:*' prompt '%e'
 zstyle ':completion:*' substitute 1
-zstyle :compinstall filename '/home/friedrich/.zshrc'
 
-autoload -Uz compinit
-compinit
+autoload -U colors && colors
+autoload -Uz compinit && compinit
+
+setopt menu_complete
 
 # Settings
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-#setopt appendhistory autocd extendedglob nomatch
+#setopt appendhistory
 setopt INC_APPEND_HISTORY SHARE_HISTORY HIST_IGNORE_ALL_DUPS \
     HIST_SAVE_NO_DUPS HIST_REDUCE_BLANKS HIST_IGNORE_SPACE \
     NO_HIST_BEEP
@@ -62,5 +63,10 @@ bindkey "^T" vi-cmd-mode
 export PATH=~/.dotfiles/scripts:~/Dokumente/scripts:~/Spiele/bin:~/src/tmuxinator/bin:$PATH
 export EDITOR=vim
 
-# Start an SSH agent
-#eval $(ssh-agent)
+# Following: Zsh-Gem-1 at refining-linux.org
+autoload -U zmv
+alias mmv='noglob zmv -W'
+
+# Following: Zsh-Gem-4 at refining-linux.org
+setopt correct
+export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r?$reset_color (Yes, No, Abort, Edit) "

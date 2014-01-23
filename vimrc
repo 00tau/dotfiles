@@ -1,5 +1,7 @@
 set nocompatible
 
+set guioptions=a
+
 "------------------------------------
 " Pathogen
 "------------------------------------
@@ -7,7 +9,7 @@ set nocompatible
 " vim.  Simply copy new skipts to the .vim/bundle/
 " directory.  They get loaded automatically.
 runtime bundle/pathogen/autoload/pathogen.vim
-let g:pathogen_disabled = ['vim-pandoc', 'vim-markdown', 'vim-markdownfootnotes']
+let g:pathogen_disabled = ['vim-pandoc', 'vim-markdown', 'vim-markdownfootnotes', 'tmuxline']
 call pathogen#infect()
 
 "------------------------------------
@@ -227,7 +229,7 @@ endfor
 noremap l :NERDTreeToggle<cr>
 noremap <C-g> :Gstatus<cr>
 
-noremap <C-space> gwap:w<bar>nohl<cr>
+noremap <C-space> gw}:w<bar>nohl<cr>
 noremap <cr> :nohl<cr>
 noremap <C-cr> :nohl<cr>
 noremap <C-q> :bns<bar>bd#<cr>

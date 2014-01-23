@@ -14,11 +14,11 @@ endif
 CompilerSet errorformat&
 CompilerSet makeprg="context"
 
-let &l:makeprg = "context"
+let &l:makeprg = "context --batchmode"
 
 " let s:cpo_save = &cpo
 " set cpo-=C
-" 
+"
 " CompilerSet errorformat=
 "       \%E%>%f:%l:\ %m,
 "       \%Cl.%l\ %m,
@@ -30,6 +30,6 @@ let &l:makeprg = "context"
 "       \%+C<%.%#>%.%#,
 "       \%GOutput\ written\ on\ %m,
 "       \%GTeXExec\ \|\ run%m
-" 
+"
 " let &cpo = s:cpo_save
 " unlet s:cpo_save

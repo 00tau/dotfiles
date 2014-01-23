@@ -1,25 +1,29 @@
 #file: ~/.muttrc
-#author: Thomas Friedrich
-#year: 2012
-
-#source "gpg2 -dq ~/.my-pwds.gpg |"
+#author: Thomas Möbius
+#year: 2012,2013
 
 # IMAP settings
-
+#
 set imap_user = "thomas.moebius@isas.de"
 set folder = "imaps://mail.isas.de:993"
 set spoolfile = "+INBOX"
-set postponed="+Drafts"
+set postponed = "+Drafts"
 
 # SMTP settings
-
-set smtp_url = "smtp://mail.isas.de:465"
+#
+set sendmail = "/usr/sbin/sendmail -oi"
+set smtp_url = "smtps://thomas.moebius@isas.de@smtps.isas.de:465"
 set ssl_force_tls = yes
 set from = "thomas.moebius@isas.de"
 set realname = "Thomas W. D. Möbius"
 
-#set imap_pass = $my_pw_gmail
-#set smtp_pass = $my_pw_gmail
+# PASSWD
+#
+#source "gpg2 -dq ~/.my-pwds.gpg |"
+#set imap_pass = $my_pw
+#set smtp_pass = $my_pw
+source "~/.my-pwds"
+
 
 # General settings
 #

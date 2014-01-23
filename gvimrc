@@ -2,7 +2,8 @@
 "set guifont=Inconsolata\ 12
 
 " Remove everything
-set guioptions=a
+"set guioptions=a
+colorscheme base16-tomorrow
 
 " Don't show path information in tabs
 " Show numbers in tab title

@@ -1,4 +1,4 @@
-text/plain; ~/.dotfiles/mutt/umutt_bgrun luakit %s; test=test -n "$DISPLAY"
+text/plain; ~/.dotfiles/mutt/mutt_bgrun luakit %s; test=test -n "$DISPLAY"
 text/html; ~/.dotfiles/mutt/mutt_bgrun luakit %s; test=test -n "$DISPLAY"; nametemplate=%s.html
 text/html; w3m -I %{charset} -T text/html -dump
 text/html; w3m -I %{charset} -T text/html -dump; copiousoutput
