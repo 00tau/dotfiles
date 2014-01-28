@@ -235,6 +235,7 @@ noremap <C-cr> :nohl<cr>
 noremap <C-q> :bns<bar>bd#<cr>
 noremap <C-k> :bp<cr>
 noremap <C-j> :bn<cr>
+noremap <C-n> :b#<cr>
 
 noremap h F
 noremap t f

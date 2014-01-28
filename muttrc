@@ -12,7 +12,7 @@ set postponed = "+Drafts"
 # SMTP settings
 #
 set sendmail = "/usr/sbin/sendmail -oi"
-set smtp_url = "smtps://thomas.moebius@isas.de@smtps.isas.de:465"
+set smtp_url = "smtps://thomas.moebius@isas.de@mail.isas.de:465"
 set ssl_force_tls = yes
 set from = "thomas.moebius@isas.de"
 set realname = "Thomas W. D. Möbius"

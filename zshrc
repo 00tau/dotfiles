@@ -24,7 +24,7 @@ SAVEHIST=1000
 setopt INC_APPEND_HISTORY SHARE_HISTORY HIST_IGNORE_ALL_DUPS \
     HIST_SAVE_NO_DUPS HIST_REDUCE_BLANKS HIST_IGNORE_SPACE \
     NO_HIST_BEEP
-setopt autocd extendedglob nomatch
+setopt autocd nomatch
 unsetopt beep notify
 
 # Setting the promt to the most simple
@@ -63,10 +63,13 @@ bindkey "^T" vi-cmd-mode
 export PATH=~/.dotfiles/scripts:~/Dokumente/scripts:~/Spiele/bin:~/src/tmuxinator/bin:$PATH
 export EDITOR=vim
 
-# Following: Zsh-Gem-1 at refining-linux.org
+# Following: Zsh Gem #1 at refining-linux.org
 autoload -U zmv
 alias mmv='noglob zmv -W'
 
-# Following: Zsh-Gem-4 at refining-linux.org
+# Following: Zsh Gem #2 at refining-linux.org
+setopt extendedglob
+
+# Following: Zsh Gem #4 at refining-linux.org
 setopt correct
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r?$reset_color (Yes, No, Abort, Edit) "
