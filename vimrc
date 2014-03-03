@@ -206,7 +206,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.aux,*.bbl,*.blg,*.tuc
+set wildignore+=*/tmp/*,*/pkg/*,*.so,*.swp,*.zip,*.pdf,*.aux,*.bbl,*.blg,*.tuc
 
 "---------------------------------------
 " Custom Keys
@@ -232,7 +232,7 @@ noremap <C-g> :Gstatus<cr>
 noremap <C-space> gw}:w<bar>nohl<cr>
 noremap <cr> :nohl<cr>
 noremap <C-cr> :nohl<cr>
-noremap <C-q> :bns<bar>bd#<cr>
+noremap <C-q> :sbn<bar>bd#<cr>
 noremap <C-k> :bp<cr>
 noremap <C-j> :bn<cr>
 noremap <C-n> :b#<cr>

@@ -20,8 +20,8 @@ nnoremap <buffer> <LocalLeader>ff A\placeformula<cr><cr>\startformula<cr>\stopfo
 inoremap <buffer> <LocalLeader>ff \placeformula<cr><cr>\startformula<cr>\stopformula<esc>O
 
 " start-stop aligned formula-block
-nnoremap <buffer> <LocalLeader>fa A\placeformula<cr><cr>\startformula\startalign<cr>\stopalign\stopformula<esc>O
-inoremap <buffer> <LocalLeader>fa \placeformula<cr><cr>\startformula\startalign<cr>\stopalign \stopformula<esc>O
+nnoremap <buffer> <LocalLeader>fa A\placeformula<cr><cr>\startformula \startalign<cr>\stopalign \stopformula<esc>O
+inoremap <buffer> <LocalLeader>fa \placeformula<cr><cr>\startformula \startalign<cr>\stopalign \stopformula<esc>O
 
 " Make start-stop block out of the previous word
 nnoremap <buffer> <LocalLeader>bb ea\start<Cr>\stop<Cr><Esc>4bhdiw$pj$pO
@@ -37,7 +37,8 @@ nnoremap <buffer> <LocalLeader>ii o\item<Space>
 inoremap <buffer> <LocalLeader>em {\em }<Left>
 inoremap <buffer> <LocalLeader>bf {\bf }<Left>
 inoremap <buffer> <LocalLeader>sc {\sc }<Left>
-inoremap <buffer> <LocalLeader>tt {\tt }<Left>
+inoremap <buffer> <LocalLeader>tt {\ss }<Left>
+inoremap <buffer> <LocalLeader>ss {\tt }<Left>
 
 nnoremap <buffer> <LocalLeader>bf Bi{\bf <esc>wf:a}<esc>
 
@@ -45,6 +46,7 @@ nnoremap <buffer> <LocalLeader>bf Bi{\bf <esc>wf:a}<esc>
 set autoindent
 set nocindent
 set nosmartindent
+set textwidth=72
 
 " enable spellchecking
 syn spell toplevel
