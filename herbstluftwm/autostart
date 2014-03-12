@@ -8,8 +8,6 @@ hc() {
 
 hc emit_hook reload
 
-#xsetroot -solid '#5A8E3A'
-
 # remove all existing keybindings
 hc keyunbind --all
 
@@ -80,9 +78,8 @@ hc keybind $Mod-Shift-c resize up +$RESIZESTEP
 hc keybind $Mod-Shift-n resize right +$RESIZESTEP
 
 # change pane configuration: layout
-hc keybind $Mod-s cycle_layout 1 grid max
+hc keybind $Mod-s cycle_layout 1 max grid
 hc keybind $Mod-l cycle_layout 1 horizontal vertical
-#hc keybind $Mod-z cycle_layout 1
 
 # change pane configuration: tiling, floating and fullscreen
 hc keybind $Mod-f pseudotile toggle

@@ -32,37 +32,6 @@ autoload -U promptinit
 promptinit
 prompt off
 
-# Aliases
-alias e="ls -h --time-style=iso --color=auto "
-alias eu="e -l "
-alias ey="e -la "
-alias hc="herbstclient "
-alias hcs="herbstclient spawn "
-alias tmux="tmux -2 "
-alias edit="gvim --servername EDIT "
-alias R="R --no-save -q "
-alias C="source /opt/context-minimals/setuptex"
-alias lido="ssh friedric@lidong1.itmc.tu-dortmund.de"
-
-# Named directories
-diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/2010-Dissertation/
-code=~diss/src-r/
-
-# Run skype as user skype
-alias skype='xhost +local: && su skype -c skype'
-
-# Keybindings
-bindkey -v
-bindkey "^T" vi-cmd-mode
-#bindkey "up" history-search-backward
-#bindkey "down" history-search-forward
-#bindkey '\e[A' history-search-backward
-#bindkey '\e[B' history-search-forward
-
-# PATH
-export PATH=~/.dotfiles/scripts:~/Dokumente/scripts:~/Spiele/bin:~/src/tmuxinator/bin:$PATH
-export EDITOR=vim
-
 # Following: Zsh Gem #1 at refining-linux.org
 autoload -U zmv
 alias mmv='noglob zmv -W'
@@ -73,3 +42,37 @@ setopt extendedglob
 # Following: Zsh Gem #4 at refining-linux.org
 setopt correct
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r?$reset_color (Yes, No, Abort, Edit) "
+
+# Aliases
+alias e="ls -h --time-style=iso --color=auto "
+alias eu="e -l "
+alias ey="e -la "
+alias hc="herbstclient "
+alias hcs="herbstclient spawn "
+alias tmux="tmux -2 "
+alias R="R --no-save -q "
+alias running="htop -u $(whoami)"
+
+#alias C="source /opt/context-minimals/setuptex"
+#alias lido="ssh friedric@lidong1.itmc.tu-dortmund.de"
+
+# Named directories
+#diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/2010-Dissertation/
+#code=~diss/src-r/
+
+# Run skype as user skype
+#alias skype='xhost +local: && su skype -c skype'
+
+# Keybindings
+bindkey -v
+bindkey "^T" vi-cmd-mode
+#bindkey "up" history-search-backward
+#bindkey "down" history-search-forward
+#bindkey '\e[A' history-search-backward
+#bindkey '\e[B' history-search-forward
+
+# PATH
+#export PATH=~/.dotfiles/scripts:~/documents/scripts:~/games/bin:~/src/tmuxinator/bin:$PATH
+export PATH=~/.dotfiles/scripts:~/documents/scripts:~/games/bin:$PATH
+export EDITOR=vim
+

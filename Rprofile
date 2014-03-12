@@ -6,7 +6,7 @@ rm(tmp)
 # Set proxy
 Sys.setenv(http_proxy="http://do2-dansguardian.isas.de:3128")
 
-#options(repos = c(CRAN = "http://cran.r-mirror.de"))
+options(repos = c(CRAN = "http://ftp5.gwdg.de/pub/misc/cran"))
 options(BioC_mirror = "http://bioconductor.statistik.tu-dortmund.de")
 options(browserNLdisabled = TRUE)
 
