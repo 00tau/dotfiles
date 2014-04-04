@@ -140,7 +140,7 @@ let maplocalleader = "\\"
 "------------------------------------
 " Markdown
 "------------------------------------
-"au BufRead,BufNewFile *.md :set ft=markdown | :set spell
+au BufRead,BufNewFile *.md :set ft=markdown | :set spell
 let g:vim_markdown_folding_disabled=1
 
 let g:pandoc_no_empty_implicits = 1

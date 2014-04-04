@@ -59,6 +59,7 @@ alias running="htop -u $(whoami)"
 # Named directories
 #diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/2010-Dissertation/
 #code=~diss/src-r/
+xch=~/exchange/User/Moebius_Thomas/
 
 # Run skype as user skype
 #alias skype='xhost +local: && su skype -c skype'
