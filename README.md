@@ -1,40 +1,61 @@
 dotfiles
 ========
 
-As the name suggests, this is my personal collection of dotfiles.  I use these on a laptop and two stand-alone pc's each running ArchLinux, Xmonad and dzen2 together with a Dvorak Keyboard Layout variant for easy programming and typing Umlauts that is suitable for a Kinesis Advantage Ergonomic Keyboard (see the dx-file).
-
-In order to get the full Xmonad experience from the configuration files, you should make sure that at least the following programs are installed.
-
-- gvim
-- xterm
-- zsh
-- tmux
-- ghc, xmonad, xmonad-contrib
-- dmenu
-- dzen2
-- xscreensaver
-- pcmanfm
-- xpdf or evince
-- firefox (or equivalent, I use Pentadactyl)
-- trayer
-- unclutter
-
-Also make sure that you have a dbus-daemon running.
+As the name suggests, this is my personal collection of dotfiles.  I use these
+on a laptop and two stand-alone PC's each running (L)ubuntu as the underlying
+core system.  But instead of running LXDE, I use herbustluftwm as my window
+manager with a tint2 panel.  Together with a custom Dvorak Keyboard Layout
+variant for easy programming, typing Umlauts, and tailored to the Kinesis
+Advantage Ergonomic Keyboard (see the dx-file), it yields a fruitful touch-typing
+DE.
 
 Install
 =======
 
-Run ./create-links from the folder into which you cloned the git repository.  Copy xmonad.hs into ~/.xmonad/.  Copy dx into /usr/share/X11/xkb/symbols/ and change the file /etc/X11/xorg.conf.d/10-evdev.conf appropriately, so you have something such as
+Packages
+--------
 
-~~~~~
-Section "InputClass"
-        Identifier "evdev keyboard catchall"
-        MatchIsKeyboard "on"
-        MatchDevicePath "/dev/input/event*"
-        Driver "evdev"
-        Option "XkbLayout" "dx"
-        Option "XkbVariant" "kinesis"
-EndSection
-~~~~~
+```
+# apt-get install git vim-gtk zsh tmux herbstluftwm tint2 dmenu feh mupdf xdotool unclutter
 
-in the file.
+```
+
+Zsh
+---
+
+```
+$ which zsh
+$ chsh
+```
+
+Clone Dotfiles
+--------------
+
+```
+$ git clone https://github.com/00tau/dotfiles.git ~/.dotfiles
+$ git submodule update --init --recursive
+$ cd .dotfiles
+$ ./create-links
+$ ln -s tint2 ~/.config/tint2
+$ ln -s herbstluftwm ~/.config/herbstluftwm
+$ mkdir ~/.tmp # for vim's backup files
+```
+
+LightDM configuration
+---------------------
+
+```
+# cp custom.desktop /usr/share/X11/xkb/sysmbols
+```
+
+DvoraX -- Dvorak Keyboard Layout for Kinesis Advantage
+------------------------------------------------------
+
+```
+# cp dx /usr/share/X11/xkb/symbols/
+```
+
+Firefox
+-------
+
+Don't forget to get the coolest Add-On to Firefox: [Pentadactyl](http://5digits.org/pentadactyl/)
