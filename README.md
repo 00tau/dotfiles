@@ -52,7 +52,7 @@ DvoraX -- Dvorak Keyboard Layout for Kinesis Advantage
 ------------------------------------------------------
 
 ```
-# cp dx /usr/share/X11/xkb/symbols/
+# ln -s dx /usr/share/X11/xkb/symbols/dx
 ```
 
 Firefox

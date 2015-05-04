@@ -58,7 +58,7 @@ xkb_symbols "basic" {
 
     // Keyboard row number: -1
     key <LSGT> { [ adiaeresis, Adiaeresis, bar ] };
-    key <AB01> { [ z, Z, degree, Greek_zeta ] };
+    key <AB01> { [ apostrophe, quotedbl ] };
     key <AB02> { [ q, Q, at ] };
     key <AB03> { [ j, J, equal ] };
     key <AB04> { [ k, K, asterisk, Greek_kappa ] };
@@ -67,7 +67,7 @@ xkb_symbols "basic" {
     key <AB07> { [ m, M, numbersign, Greek_mu ] };
     key <AB08> { [ w, W, at, Greek_omega ] };
     key <AB09> { [ v, V, section, Greek_theta ] };
-    key <AB10> { [ apostrophe, quotedbl ] };
+    key <AB10> { [ z, Z, degree, Greek_zeta ] };
 
     include "level3(ralt_switch)"
 };
