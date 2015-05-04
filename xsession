@@ -8,7 +8,7 @@ xsetroot -solid '#5A8E3A'
 
 # set the wallpaper
 if [ -x /usr/bin/feh ] ; then
-    feh --bg-fill ~/Dropbox/.wallpaper/paraglider.jpg
+    feh --bg-fill ~/Bilder/.wallpaper/paraglider.jpg
 fi
 
 # activate compositing

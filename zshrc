@@ -73,7 +73,6 @@ bindkey "^T" vi-cmd-mode
 #bindkey '\e[B' history-search-forward
 
 # PATH
-#export PATH=~/.dotfiles/scripts:~/documents/scripts:~/games/bin:~/src/tmuxinator/bin:$PATH
-export PATH=~/.dotfiles/scripts:~/documents/scripts:~/games/bin:$PATH
+export PATH=~/.dotfiles/scripts:$PATH
 export EDITOR=vim
 
