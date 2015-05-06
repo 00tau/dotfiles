@@ -11,6 +11,8 @@ keyboard layout variant for easy programming, typing umlauts, and tailored to a
 non-staggered keyboard -- such as the Kinesis Advantage Ergonomic Keyboard (see
 the dx-file) -- it yields a fruitful touch-typing environment.
 
+![screenshot][screenshot]
+
 Installation process
 ====================
 
@@ -68,3 +70,5 @@ Firefox
 -------
 
 Don't forget to get the coolest Add-On to Firefox: [Pentadactyl](http://5digits.org/pentadactyl/)
+
+[screenshot]: https://lh3.googleusercontent.com/-sTswtdTJSn8/VUoppqaEcTI/AAAAAAAAAKM/8DOzbbkGxkI/w506-h285/test.png
