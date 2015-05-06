@@ -146,7 +146,7 @@ xkb_symbols "kinesis" {
 
     // Keyboard row number: -1
     key <LFSH> { [ adiaeresis, Adiaeresis ] };
-    key <AB01> { [ z, Z, degree, Greek_zeta ] };
+    key <AB01> { [ apostrophe, quotedbl, degree ] };
     key <AB02> { [ q, Q, at ] };
     key <AB03> { [ j, J, equal ] };
     key <AB04> { [ k, K, asterisk, Greek_kappa ] };
@@ -155,7 +155,7 @@ xkb_symbols "kinesis" {
     key <AB07> { [ m, M, numbersign, Greek_mu ] };
     key <AB08> { [ w, W, at, Greek_omega ] };
     key <AB09> { [ v, V, section, Greek_theta ] };
-    key <AB10> { [ apostrophe, quotedbl, degree ] };
+    key <AB10> { [ z, Z, degree, Greek_zeta ] };
     key <RTSH> { [ ssharp ] };
 
     // Keyboard row number: -2
