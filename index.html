@@ -13,61 +13,71 @@
     <section class="page-header">
       <h1 class="project-name">Seebrise</h1>
       <h2 class="project-tagline">A fruitful desktop environment for the touch-type enthusiast</h2>
-      <a href="https://github.com/00tau/dotfiles" class="btn">View on GitHub</a>
-      <a href="https://github.com/00tau/dotfiles/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/00tau/dotfiles/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="https://github.com/00tau/seebrise" class="btn">View on GitHub</a>
+      <a href="https://github.com/00tau/seebrise/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/00tau/seebrise/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
       <h1>
 <a id="seebrise" class="anchor" href="#seebrise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Seebrise</h1>
 
-<p>I use these dotfiles on a laptop and two stand-alone PC's each running (L)ubuntu as the underlying
-core system.  But instead of running LXDE, I use herbustluftwm as my window
-manager with a tint2 panel.  Together with a custom Dvorak Keyboard Layout
-variant for easy programming, typing Umlauts, and tailored to the Kinesis
-Advantage Ergonomic Keyboard (see the dx-file), it yields a fruitful touch-typing
-DE.</p>
+<p>It would be far fetched to call Seebrise an actual desktop environment. I use
+the following set-up on a laptop and two stand-alone PCs each running (L)ubuntu
+as the underlying core system.  The following installation instruction, though,
+should work with any flavour of Linux. Instead of running LXDE, I use the
+tiling window manager <a href="http://www.herbstluftwm.org/">herbustluftwm</a> with a
+<a href="http://www.herbstluftwm.org/">tint2</a> panel.  Together with a custom Dvorak
+keyboard layout variant for easy programming, typing umlauts, and tailored to a
+non-staggered keyboard -- such as the Kinesis Advantage Ergonomic Keyboard (see
+the dx-file) -- it yields a fruitful touch-typing environment.</p>
 
 <h1>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h1>
+<a id="installation-process" class="anchor" href="#installation-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation process</h1>
 
 <h2>
 <a id="packages" class="anchor" href="#packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packages</h2>
 
-<pre><code># apt-get install git vim-gtk zsh tmux herbstluftwm tint2 dmenu feh mupdf xdotool unclutter
+<p>Having a freshly installed vanilla Lubuntu in front of you, you need to install
+the following packages.</p>
 
+<pre><code># apt-get install git vim-gtk zsh tmux herbstluftwm tint2 dmenu feh mupdf xdotool unclutter
 </code></pre>
 
 <h2>
-<a id="zsh" class="anchor" href="#zsh" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zsh</h2>
+<a id="clone-the-dotfiles-from-this-repository" class="anchor" href="#clone-the-dotfiles-from-this-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clone the dotfiles from this repository</h2>
+
+<pre><code>% git clone https://github.com/00tau/dotfiles.git ~/.dotfiles
+% cd .dotfiles
+% git submodule update --init --recursive
+% ./create-links
+% ln -s ~/.dotfiles/tint2 ~/.config/tint2
+% ln -s ~/.dotfiles/herbstluftwm ~/.config/herbstluftwm
+% mkdir ~/.tmp # for vim's backup files
+</code></pre>
+
+<h2>
+<a id="make-zsh-your-primary-shell" class="anchor" href="#make-zsh-your-primary-shell" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make Zsh your primary shell</h2>
 
 <pre><code>$ which zsh
 $ chsh
 </code></pre>
 
 <h2>
-<a id="clone-dotfiles" class="anchor" href="#clone-dotfiles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clone Dotfiles</h2>
+<a id="add-seebrise-to-your-xsessions" class="anchor" href="#add-seebrise-to-your-xsessions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Seebrise to your xsessions</h2>
 
-<pre><code>$ git clone https://github.com/00tau/dotfiles.git ~/.dotfiles
-$ git submodule update --init --recursive
-$ cd .dotfiles
-$ ./create-links
-$ ln -s tint2 ~/.config/tint2
-$ ln -s herbstluftwm ~/.config/herbstluftwm
-$ mkdir ~/.tmp # for vim's backup files
+<pre><code># cp seebrise.desktop /usr/share/xsessions/
 </code></pre>
 
 <h2>
-<a id="lightdm-configuration" class="anchor" href="#lightdm-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>LightDM configuration</h2>
+<a id="dvorax" class="anchor" href="#dvorax" aria-hidden="true"><span class="octicon octicon-link"></span></a>DvoraX</h2>
 
-<pre><code># cp custom.desktop /usr/share/X11/xkb/sysmbols
-</code></pre>
+<p>A Dvorak keyboard layout tailored to non-staggerd keyboards with a grid layout.
+Examples are the
+<a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis Advantage</a>,
+<a href="http://www.key64.org">Key64</a>, or the <a href="http://ergodox.org/">ErgoDox</a>.</p>
 
-<h2>
-<a id="dvorax----dvorak-keyboard-layout-for-kinesis-advantage" class="anchor" href="#dvorax----dvorak-keyboard-layout-for-kinesis-advantage" aria-hidden="true"><span class="octicon octicon-link"></span></a>DvoraX -- Dvorak Keyboard Layout for Kinesis Advantage</h2>
-
-<pre><code># ln -s dx /usr/share/X11/xkb/symbols/dx
+<pre><code># ln -s ~/.dotfiles/dx /usr/share/X11/xkb/symbols/dx
 </code></pre>
 
 <h2>
@@ -76,7 +86,7 @@ $ mkdir ~/.tmp # for vim's backup files
 <p>Don't forget to get the coolest Add-On to Firefox: <a href="http://5digits.org/pentadactyl/">Pentadactyl</a></p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/00tau/dotfiles">Seebrise</a> is maintained by <a href="https://github.com/00tau">00tau</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/00tau/seebrise">Seebrise</a> is maintained by <a href="https://github.com/00tau">00tau</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
