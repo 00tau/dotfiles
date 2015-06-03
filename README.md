@@ -57,13 +57,16 @@ Add Seebrise to the list of sessions
 DvoraX
 ------------------------------------------------------
 
-A classic Dvorak keyboard layout tailored to non-staggered keyboards with a
-grid layout.  Examples of grid keyboards are the [Kinesis
+A classic [Dvorak keyboard
+layout](https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Original_Dvorak_layout)
+tailored to non-staggered keyboards with a grid layout.  Examples of grid
+keyboards are the [Kinesis
 Advantage](https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/), the
 [Key64](http://www.key64.org), or the [ErgoDox](http://ergodox.org/).
 
 ```
-# ln -s ~/.dotfiles/dx /usr/share/X11/xkb/symbols/dx
+# cd /usr/share/X11/xkb/symbols/dx
+# ln -s ~/.dotfiles/dx dx
 ```
 
 This is the *alpha-numeric* layer of the grid: Note that the SHIFT-keys lie on
