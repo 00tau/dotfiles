@@ -68,6 +68,14 @@ Examples of grid keyboards are the
 
 This is the alpha-numeric layer of the grid:
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+and
+
 |L5|L5|L4|L3|L2|L1|L1|R1|R1|R2|R3|R4|R5|R5|
 |----:|----|----|----|----|----|----|----|----|----|----|:----|
 |ESC|7|5|3|1|9|0|2|4|6|8|TAB|
