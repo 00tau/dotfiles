@@ -16,7 +16,7 @@ swap=~/.config/herbstluftwm/swap
 
 # keybindings
 Mod=Mod4
-hc keybind $Mod-a spawn xscreensaver-command -lock
+hc keybind $Mod-a spawn cinnamon-screensaver-command -l
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-colon reload
 hc keybind $Mod-d spawn $swap auto
@@ -129,7 +129,7 @@ hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
 
 # menu
-hc keybind $Mod-b spawn $swap master_spawn dmenu_run -nb "#535353" -nf "#EEEEEE" -sf "#EEEEEE" -sb "#53BBCB"
+hc keybind $Mod-b spawn dmenu_run -nb "#535353" -nf "#EEEEEE" -sf "#EEEEEE" -sb "#53BBCB"
 
 # sound
 hc keybind $Mod-k spawn "amixer -- sset PCM playback 5%+"

@@ -75,4 +75,5 @@ bindkey "^T" vi-cmd-mode
 # PATH
 export PATH=~/.dotfiles/scripts:$PATH
 export EDITOR=vim
+export R_LIBS_USER=~/software/R
 

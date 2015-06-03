@@ -4,7 +4,7 @@ tmp = Sys.setlocale("LC_CTYPE", "en_GB.UTF-8")
 rm(tmp)
 
 # Set proxy
-Sys.setenv(http_proxy="http://do2-dansguardian.isas.de:3128")
+#Sys.setenv(http_proxy="http://do2-dansguardian.isas.de:3128")
 
 options(repos = c(CRAN = "http://ftp5.gwdg.de/pub/misc/cran"))
 options(BioC_mirror = "http://bioconductor.statistik.tu-dortmund.de")
@@ -28,13 +28,17 @@ if (lib != "") {
 rm(lib)
 
 if(interactive()) {
-  options(pager = "vim -c 'set ft=rdoc' -")
-  options(editor = 'vim -c "set ft=r"')
-  options(menu.graphics = FALSE)
+    options(pager = "vim -c 'set ft=rdoc' -")
+    options(editor = 'vim -c "set ft=r"')
+    options(menu.graphics = FALSE)
 
-  require("vimcom")
-  require("setwidth")
-#  require("BBmisc")
+#    require("lhs")
+#    require("mlr")
+    require("plyr")
+    require("reshape2")
+    require("ggplot2")
+#  require("vimcom")
+#  require("setwidth")
 
   if(require("utils")) {
     message("R history enabled")

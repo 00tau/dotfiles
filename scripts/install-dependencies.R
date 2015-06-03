@@ -3,17 +3,19 @@
 # Installs common R-package to the system.
 
 install.packages(  c(  "MASS"
-                     , "plyr"
                      , "lhs"
+                     , "mlr"
+                     , "plyr"
+                     , "reshape2"
+                     , "ggplot2"
                      , "ParamHelpers"
                      , "BBmisc"
+                     , "BatchJobs"
                      , "BatchExperiments"
-                     , "ggplot2"
-                     , "reshape"
-                     , "metafor"
-                     , "metaLik"
-                     , "vimcom"
-                     , "utils"
-                     , "setwidth"
+#                     , "metafor"
+#                     , "metaLik"
+#                     , "vimcom"
+#                     , "utils"
+#                     , "setwidth"
                      , "colorout")
                  , repos = "http://ftp5.gwdg.de/pub/misc/cran/")
