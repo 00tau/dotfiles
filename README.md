@@ -66,7 +66,9 @@ Examples of grid keyboards are the
 # ln -s ~/.dotfiles/dx /usr/share/X11/xkb/symbols/dx
 ```
 
-This is the alpha-numeric layer of the grid:
+This is the alpha-numeric layer of the grid. Note that the SHIFT-key lies on
+the home-row of the layout, assuming that you are much more likely to press
+SHIFT than CAPS-LOCK:
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -85,6 +87,10 @@ When pressing SHIFT, it yields the shift layer:
 | Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | ß     |
 
 The alternative-ground layer (when pressing Alt-Gr) looks like this:
+
+| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
+|       | [  | +  | $  | ]  | ´  | `  | /  | \  | &  | %  |       |
 
 TODO
 
