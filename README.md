@@ -39,16 +39,16 @@ Clone the files from this repository
 % mkdir ~/.tmp # for vim's backup files
 ```
 
-Make Zsh your primary shell
----------------------------
+Make Zsh the primary shell
+--------------------------
 
 ```
-$ which zsh
-$ chsh
+% which zsh
+% chsh
 ```
 
-Add Seebrise to your xsessions
-------------------------------
+Add Seebrise to the list of sessions
+------------------------------------
 
 ```
 # cp seebrise.desktop /usr/share/xsessions/
@@ -58,13 +58,31 @@ DvoraX
 ------------------------------------------------------
 
 A Dvorak keyboard layout tailored to non-staggered keyboards with a grid layout.
-Examples are the
+Examples of grid keyboards are the
 [Kinesis Advantage](https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/), the
 [Key64](http://www.key64.org), or the [ErgoDox](http://ergodox.org/).
 
 ```
 # ln -s ~/.dotfiles/dx /usr/share/X11/xkb/symbols/dx
 ```
+
+This is the alpha-numeric layer of the grid:
+
+ESC|7|5|3|1|9|0|2|4|6|8|TAB
+ü|:|,|.|p|y|f|g|c|r|l|ö
+SHIFT|a|o|e|u|i|d|h|t|n|s|SHIFT
+ä|'|q|j|k|x|b|m|w|v|z|ß
+
+When pressing SHIFT, it yields the shift layer:
+
+ESC|7|5|3|1|9|0|2|4|6|8|TAB
+Ü|;|!|?|P|Y|F|G|C|R|L|Ö
+SHIFT|A|O|E|U|I|D|H|T|N|S|SHIFT
+Ä|"|Q|J|K|X|B|M|W|V|S|Z|ß
+
+The alternative-ground layer (when pressing Alt-Gr) looks like this:
+
+TODO
 
 Firefox
 -------
