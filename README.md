@@ -90,9 +90,10 @@ The alternative-ground layer (when pressing Alt-Gr) looks like this:
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
+| ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
 |       | [  | +  | $  | ]  | ´  | `  | /  | \  | &  | %  |       |
-
-TODO
+| SHIFT | ~  | <  | -  | >  | (  | )  | }  | {  | _  | ^  | SHIFT |
+|       | °  | @  | =  | *  |    | ¦  | #  | @  | §  | °  |       |
 
 Firefox
 -------
