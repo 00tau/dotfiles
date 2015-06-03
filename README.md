@@ -76,12 +76,23 @@ This is the alpha-numeric layer of the grid:
 
 and
 
-| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
-| -----:| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |:--    |
-| ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
-| ü     | :  | ,  | .  | p  | y  | f  | g  | c  | r  | l  | ö     |
-| SHIFT | a  | o  | e  | u  | i  | d  | h  | t  | n  | s  | SHIFT |
-| ä     | '  | q  | j  | k  | x  | b  | m  | w  | v  | z  | ß     |
+| L5    | L5 | L4 | L3 | L2 | L2 |
+| -----:| -- | -- | -- | -- | -- |
+| ESC   | 7  | 5  | 3  | 1  | 9  |
+| ü     | :  | ,  | .  | p  | y  |
+| SHIFT | a  | o  | e  | u  | i  |
+| ä     | '  | q  | j  | k  | x  |
+
+or
+
+R2 | R2 | R3 | R4 | R5 | R5    |
+-- | -- | -- | -- | -- |:--    |
+0  | 2  | 4  | 6  | 8  | TAB   |
+f  | g  | c  | r  | l  | ö     |
+d  | h  | t  | n  | s  | SHIFT |
+b  | m  | w  | v  | z  | ß     |
+
+
 
 When pressing SHIFT, it yields the shift layer:
 
