@@ -26,7 +26,7 @@
 environment. In another sense, though, one may say that Seebrise is also more than just a desktop environment.  It is a collection of dot-files following a common theme for key strokes, short-cuts and a pleasing colour scheme. The following
 installation instruction should work with any flavour of Linux.
 Essentially, Seebrise is the tiling window manager
-<a href="http://www.herbstluftwm.org/">herbustluftwm</a> together with a
+<a href="http://www.herbstluftwm.org/">HerbustluftWM</a> together with a
 <a href="http://www.herbstluftwm.org/">tint2</a> panel.  With a custom Dvorak
 keyboard layout variant for easy programming, typing umlauts, and tailored to a
 non-staggered keyboard -- such as the Kinesis Advantage Ergonomic Keyboard (see
@@ -74,12 +74,15 @@ install the following packages.</p>
 <h2>
 <a id="dvorax" class="anchor" href="#dvorax" aria-hidden="true"><span class="octicon octicon-link"></span></a>DvoraX</h2>
 
-<p>A classic Dvorak keyboard layout tailored to non-staggered keyboards with a
-grid layout.  Examples of grid keyboards are the <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis
+<p>A classic <a href="https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Original_Dvorak_layout">Dvorak keyboard
+layout</a>
+tailored to non-staggered keyboards with a grid layout.  Examples of grid
+keyboards are the <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis
 Advantage</a>, the
 <a href="http://www.key64.org">Key64</a>, or the <a href="http://ergodox.org/">ErgoDox</a>.</p>
 
-<pre><code># ln -s ~/.dotfiles/dx /usr/share/X11/xkb/symbols/dx
+<pre><code># cd /usr/share/X11/xkb/symbols/dx
+# ln -s ~/.dotfiles/dx dx
 </code></pre>
 
 <p>This is the <em>alpha-numeric</em> layer of the grid: Note that the SHIFT-keys lie on
