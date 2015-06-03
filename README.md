@@ -103,8 +103,8 @@ are dead, such that these can be used to type letters `é` and `è`, as in
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
-|       | [  | +  | $  | ]  | ´  | `  | /  | \  | &  | °  |       |
-| SHIFT | ~  | <  | -  | >  | (  | )  | }  | {  | _  | ^  | SHIFT |
+|       | }  | +  | $  | {  | ´  | `  | ]  | [  | &  | °  |       |
+| SHIFT | ~  | <  | -  | >  | (  | )  | /  | \  | _  | ^  | SHIFT |
 |       | ´  | @  | =  | *  | ¦  | ¦  | #  | %  | §  | `  |       |
 
 In grid layouts, the thumbs can do a lot more than just pressing space:
