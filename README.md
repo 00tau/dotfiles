@@ -68,11 +68,11 @@ Examples of grid keyboards are the
 
 This is the alpha-numeric layer of the grid:
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Tables        | Are           | Cool  |Cool  |Cool  |
+| ------------- |:-------------:| -----:|-----:|-----:|
+| col 3 is      | right-aligned | $1600 |$1600 |$1600 |
+| col 2 is      | centered      |   $12 |  $12 |  $12 |
+| zebra stripes | are neat      |    $1 |   $1 |   $1 |
 
 and
 
