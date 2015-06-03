@@ -92,8 +92,10 @@ When pressing SHIFT, it yields the *shift* layer:
 
 The alternative-ground or *symbol* layer (when pressing Alt-Gr) looks like
 this: Note how easy it is to press combinations such as `<-` or `->` or `~/`.
-The acute and grave signs above the home row are non-dead.  The acute and grave
-signs on the bottom row are dead.
+The acute and grave signs above the home row are non-dead, such that they can
+be used in keyboard short cuts.  The acute and grave signs on the bottom row
+are dead, such that these can be used to type letters `é` and `è`, as in
+*Café*.  The left broken bar `¦` is actually a pipe: `|`.
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
