@@ -92,13 +92,15 @@ When pressing SHIFT, it yields the *shift* layer:
 
 The alternative-ground or *symbol* layer (when pressing Alt-Gr) looks like
 this: Note how easy it is to press combinations such as `<-` or `->` or `~/`.
+The acute and grave signs above the home row are non-dead.  The acute and grave
+signs on the bottom row are dead.
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
 |       | [  | +  | $  | ]  | ´  | `  | /  | \  | &  | °  |       |
 | SHIFT | ~  | <  | -  | >  | (  | )  | }  | {  | _  | ^  | SHIFT |
-|       | ´  | @  | =  | *  | |  | ¦  | #  | %  | §  | `  |       |
+|       | ´  | @  | =  | *  | ¦  | ¦  | #  | %  | §  | `  |       |
 
 Firefox
 -------
