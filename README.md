@@ -5,7 +5,7 @@ It would be far fetched to call Seebrise an actual full fledged desktop
 environment. In another sense, though, one may say that Seebrise is also more than just a desktop environment.  It is a collection of dot-files following a common theme for key strokes, short-cuts and a pleasing colour scheme. The following
 installation instruction should work with any flavour of Linux.
 Essentially, Seebrise is the tiling window manager
-[herbustluftwm](http://www.herbstluftwm.org/) together with a
+[HerbustluftWM](http://www.herbstluftwm.org/) together with a
 [tint2](http://www.herbstluftwm.org/) panel.  With a custom Dvorak
 keyboard layout variant for easy programming, typing umlauts, and tailored to a
 non-staggered keyboard -- such as the Kinesis Advantage Ergonomic Keyboard (see
