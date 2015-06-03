@@ -76,21 +76,21 @@ This is the alpha-numeric layer of the grid:
 
 and
 
-|L5|L5|L4|L3|L2|L1|L1|R1|R1|R2|R3|R4|R5|R5|
-|----:|----|----|----|----|----|----|----|----|----|----|:----|
-|ESC|7|5|3|1|9|0|2|4|6|8|TAB|
-|ü|:|,|.|p|y|f|g|c|r|l|ö|
-|SHIFT|a|o|e|u|i|d|h|t|n|s|SHIFT|
-|ä|'|q|j|k|x|b|m|w|v|z|ß|
+| L5 | L5 | L4 | L3 | L2 | L1 | L1 | R1 | R1 | R2 | R3 | R4 | R5 | R5 |
+| ----: | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | :---- |
+| ESC | 7 | 5 | 3 | 1 | 9 | 0 | 2 | 4 | 6 | 8 | TAB |
+| ü | : | , | . | p | y | f | g | c | r | l | ö |
+| SHIFT | a | o | e | u | i | d | h | t | n | s | SHIFT |
+| ä | ' | q | j | k | x | b | m | w | v | z | ß |
 
 When pressing SHIFT, it yields the shift layer:
 
-|L5|L5|L4|L3|L2|L1|L1|R1|R1|R2|R3|R4|R5|R5|
-|----:|----|----|----|----|----|----|----|----|----|----|:----|
-|ESC|7|5|3|1|9|0|2|4|6|8|TAB|
-|Ü|;|!|?|P|Y|F|G|C|R|L|Ö|
-|SHIFT|A|O|E|U|I|D|H|T|N|S|SHIFT|
-|Ä|"|Q|J|K|X|B|M|W|V|S|Z|ß|
+| L5    | L5 | L4 | L3 | L2 | L1 | L1 | R1 | R1 | R2 | R3 | R4 | R5 | R5 |
+| ----: | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | :---- |
+| ESC   | 7 | 5 | 3 | 1 | 9 | 0 | 2 | 4 | 6 | 8 | TAB |
+| Ü     | ; | ! | ? | P | Y | F | G | C | R | L | Ö |
+| SHIFT | A | O | E | U | I | D | H | T | N | S | SHIFT |
+| Ä     | " | Q | J | K | X | B | M | W | V | S | Z | ß |
 
 The alternative-ground layer (when pressing Alt-Gr) looks like this:
 
