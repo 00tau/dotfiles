@@ -66,9 +66,13 @@ Examples of grid keyboards are the
 # ln -s ~/.dotfiles/dx /usr/share/X11/xkb/symbols/dx
 ```
 
-This is the alpha-numeric layer of the grid. Note that the SHIFT-key lies on
+This is the *alpha-numeric* layer of the grid: Note that the SHIFT-keys lie on
 the home-row of the layout, assuming that you are much more likely to press
-SHIFT than CAPS-LOCK:
+SHIFT than CAPS-LOCK.  Also, the ESCAPE-key has moved to a more prominent
+position, and is now on the same level has the numeric keys.  It is much more
+convenient to have the TABULATOR-key on the right side of the board and so
+close to the numerics, too.  When entering long rows of digital numbers, it is
+nice to have `,` and `.` right below.
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -77,7 +81,7 @@ SHIFT than CAPS-LOCK:
 | SHIFT | a  | o  | e  | u  | i  | d  | h  | t  | n  | s  | SHIFT |
 | ä     | '  | q  | j  | k  | x  | b  | m  | w  | v  | z  | ß     |
 
-When pressing SHIFT, it yields the shift layer:
+When pressing SHIFT, it yields the *shift* layer:
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -86,14 +90,15 @@ When pressing SHIFT, it yields the shift layer:
 | SHIFT | A  | O  | E  | U  | I  | D  | H  | T  | N  | S  | SHIFT |
 | Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | ß     |
 
-The alternative-ground layer (when pressing Alt-Gr) looks like this:
+The alternative-ground or *symbol* layer (when pressing Alt-Gr) looks like
+this: Note how easy it is to press combinations such as `<-` or `->` or `~/`.
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
-|       | [  | +  | $  | ]  | ´  | `  | /  | \  | &  | %  |       |
+|       | [  | +  | $  | ]  | ´  | `  | /  | \  | &  | °  |       |
 | SHIFT | ~  | <  | -  | >  | (  | )  | }  | {  | _  | ^  | SHIFT |
-|       | °  | @  | =  | *  |    | ¦  | #  | @  | §  | °  |       |
+|       | ´  | @  | =  | *  | |  | ¦  | #  | %  | §  | `  |       |
 
 Firefox
 -------
