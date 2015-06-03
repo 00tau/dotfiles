@@ -57,9 +57,9 @@ Add Seebrise to the list of sessions
 DvoraX
 ------------------------------------------------------
 
-A Dvorak keyboard layout tailored to non-staggered keyboards with a grid layout.
-Examples of grid keyboards are the
-[Kinesis Advantage](https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/), the
+A classic Dvorak keyboard layout tailored to non-staggered keyboards with a
+grid layout.  Examples of grid keyboards are the [Kinesis
+Advantage](https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/), the
 [Key64](http://www.key64.org), or the [ErgoDox](http://ergodox.org/).
 
 ```
@@ -69,10 +69,10 @@ Examples of grid keyboards are the
 This is the *alpha-numeric* layer of the grid: Note that the SHIFT-keys lie on
 the home-row of the layout, assuming that you are much more likely to press
 SHIFT than CAPS-LOCK.  Also, the ESCAPE-key has moved to a more prominent
-position, and is now on the same level has the numeric keys.  It is much more
-convenient to have the TABULATOR-key on the right side of the board and so
-close to the numerics, too.  When entering long rows of digital numbers, it is
-nice to have `,` and `.` right below.
+position and is now on the same level as the numeric keys.  It is much more
+convenient to have the TABULATOR-key on the right side of the board and close
+to the numerics, too.  A side effect of the layout: when entering long rows of
+digital numbers, it is nice to have `,` and `.` right below.
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -95,7 +95,7 @@ this: Note how easy it is to press combinations such as `<-` or `->` or `~/`.
 The acute and grave signs above the home row are non-dead, such that they can
 be used in keyboard short cuts.  The acute and grave signs on the bottom row
 are dead, such that these can be used to type letters `é` and `è`, as in
-*Café*.  The left broken bar `¦` is actually a pipe: `|`.
+*Café*.  The left broken bar `¦` on the bottom row is actually a pipe: `|`.
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -103,6 +103,12 @@ are dead, such that these can be used to type letters `é` and `è`, as in
 |       | [  | +  | $  | ]  | ´  | `  | /  | \  | &  | °  |       |
 | SHIFT | ~  | <  | -  | >  | (  | )  | }  | {  | _  | ^  | SHIFT |
 |       | ´  | @  | =  | *  | ¦  | ¦  | #  | %  | §  | `  |       |
+
+In grid layouts, the thumb can do a lot more than just pressing space:
+
+| L1 | L1 | L1 | R1 | R1 | R1 |
+|----|----|----|----|----|----|
+| Alt-Gr | Control | Window | Alt | Enter | Space |
 
 Firefox
 -------
