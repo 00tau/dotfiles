@@ -104,7 +104,7 @@ are dead, such that these can be used to type letters `é` and `è`, as in
 | SHIFT | ~  | <  | -  | >  | (  | )  | }  | {  | _  | ^  | SHIFT |
 |       | ´  | @  | =  | *  | ¦  | ¦  | #  | %  | §  | `  |       |
 
-In grid layouts, the thumb can do a lot more than just pressing space:
+In grid layouts, the thumbs can do a lot more than just pressing space:
 
 | L1 | L1 | L1 | R1 | R1 | R1 |
 |----|----|----|----|----|----|
