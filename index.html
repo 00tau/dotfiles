@@ -22,12 +22,12 @@
       <h1>
 <a id="seebrise" class="anchor" href="#seebrise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Seebrise</h1>
 
-<p>It would be far fetched to call Seebrise an actual desktop environment. I use
-the following set-up on a laptop and two stand-alone PCs each running (L)ubuntu
-as the underlying core system.  The following installation instruction, though,
-should work with any flavour of Linux. Instead of running LXDE, I use the
-tiling window manager <a href="http://www.herbstluftwm.org/">herbustluftwm</a> with a
-<a href="http://www.herbstluftwm.org/">tint2</a> panel.  Together with a custom Dvorak
+<p>It would be far fetched to call Seebrise an actual full fledged desktop
+environment. In another sense, though, one may say that Seebrise is also more than just a desktop environment.  It is a collection of dot-files following a common theme for key strokes, short-cuts and a pleasing colour scheme. The following
+installation instruction should work with any flavour of Linux.
+Essentially, Seebrise is the tiling window manager
+<a href="http://www.herbstluftwm.org/">herbustluftwm</a> together with a
+<a href="http://www.herbstluftwm.org/">tint2</a> panel.  With a custom Dvorak
 keyboard layout variant for easy programming, typing umlauts, and tailored to a
 non-staggered keyboard -- such as the Kinesis Advantage Ergonomic Keyboard (see
 the dx-file) -- it yields a fruitful touch-typing environment.</p>
@@ -40,33 +40,33 @@ the dx-file) -- it yields a fruitful touch-typing environment.</p>
 <h2>
 <a id="packages" class="anchor" href="#packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packages</h2>
 
-<p>Having a freshly installed vanilla Lubuntu in front of you, you need to install
-the following packages.</p>
+<p>Having a freshly installed vanilla (Lu/Xu/U/...)buntu in front of you, you need to
+install the following packages.</p>
 
-<pre><code># apt-get install git vim-gtk zsh tmux herbstluftwm tint2 dmenu feh mupdf xdotool unclutter
+<pre><code># apt-get install git vim-gtk zsh tmux herbstluftwm tint2 dmenu feh mupdf xdotool unclutter cinnamon-screensaver
 </code></pre>
 
 <h2>
-<a id="clone-the-dotfiles-from-this-repository" class="anchor" href="#clone-the-dotfiles-from-this-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clone the dotfiles from this repository</h2>
+<a id="clone-the-files-from-this-repository" class="anchor" href="#clone-the-files-from-this-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clone the files from this repository</h2>
 
-<pre><code>% git clone https://github.com/00tau/dotfiles.git ~/.dotfiles
-% cd .dotfiles
+<pre><code>% git clone https://github.com/00tau/seebrise.git ~/.seebrise
+% cd .seebrise
 % git submodule update --init --recursive
 % ./create-links
-% ln -s ~/.dotfiles/tint2 ~/.config/tint2
-% ln -s ~/.dotfiles/herbstluftwm ~/.config/herbstluftwm
+% ln -s ~/.seebrise/tint2 ~/.config/tint2
+% ln -s ~/.seebrise/herbstluftwm ~/.config/herbstluftwm
 % mkdir ~/.tmp # for vim's backup files
 </code></pre>
 
 <h2>
-<a id="make-zsh-your-primary-shell" class="anchor" href="#make-zsh-your-primary-shell" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make Zsh your primary shell</h2>
+<a id="make-zsh-the-primary-shell" class="anchor" href="#make-zsh-the-primary-shell" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make Zsh the primary shell</h2>
 
-<pre><code>$ which zsh
-$ chsh
+<pre><code>% which zsh
+% chsh
 </code></pre>
 
 <h2>
-<a id="add-seebrise-to-your-xsessions" class="anchor" href="#add-seebrise-to-your-xsessions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Seebrise to your xsessions</h2>
+<a id="add-seebrise-to-the-list-of-sessions" class="anchor" href="#add-seebrise-to-the-list-of-sessions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Seebrise to the list of sessions</h2>
 
 <pre><code># cp seebrise.desktop /usr/share/xsessions/
 </code></pre>
@@ -74,13 +74,286 @@ $ chsh
 <h2>
 <a id="dvorax" class="anchor" href="#dvorax" aria-hidden="true"><span class="octicon octicon-link"></span></a>DvoraX</h2>
 
-<p>A Dvorak keyboard layout tailored to non-staggerd keyboards with a grid layout.
-Examples are the
-<a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis Advantage</a>,
+<p>A classic Dvorak keyboard layout tailored to non-staggered keyboards with a
+grid layout.  Examples of grid keyboards are the <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis
+Advantage</a>, the
 <a href="http://www.key64.org">Key64</a>, or the <a href="http://ergodox.org/">ErgoDox</a>.</p>
 
 <pre><code># ln -s ~/.dotfiles/dx /usr/share/X11/xkb/symbols/dx
 </code></pre>
+
+<p>This is the <em>alpha-numeric</em> layer of the grid: Note that the SHIFT-keys lie on
+the home-row of the layout, assuming that you are much more likely to press
+SHIFT than CAPS-LOCK.  Also, the ESCAPE-key has moved to a more prominent
+position and is now on the same level as the numeric keys.  It is much more
+convenient to have the TABULATOR-key on the right side of the board and close
+to the numerics, too.  A side effect of the layout: when entering long rows of
+digital numbers, it is nice to have <code>,</code> and <code>.</code> right below.</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">L5</th>
+<th>L5</th>
+<th>L4</th>
+<th>L3</th>
+<th>L2</th>
+<th>L2</th>
+<th>R2</th>
+<th>R2</th>
+<th>R3</th>
+<th>R4</th>
+<th>R5</th>
+<th align="left">R5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">ESC</td>
+<td>7</td>
+<td>5</td>
+<td>3</td>
+<td>1</td>
+<td>9</td>
+<td>0</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td align="left">TAB</td>
+</tr>
+<tr>
+<td align="right">ü</td>
+<td>:</td>
+<td>,</td>
+<td>.</td>
+<td>p</td>
+<td>y</td>
+<td>f</td>
+<td>g</td>
+<td>c</td>
+<td>r</td>
+<td>l</td>
+<td align="left">ö</td>
+</tr>
+<tr>
+<td align="right">SHIFT</td>
+<td>a</td>
+<td>o</td>
+<td>e</td>
+<td>u</td>
+<td>i</td>
+<td>d</td>
+<td>h</td>
+<td>t</td>
+<td>n</td>
+<td>s</td>
+<td align="left">SHIFT</td>
+</tr>
+<tr>
+<td align="right">ä</td>
+<td>'</td>
+<td>q</td>
+<td>j</td>
+<td>k</td>
+<td>x</td>
+<td>b</td>
+<td>m</td>
+<td>w</td>
+<td>v</td>
+<td>z</td>
+<td align="left">ß</td>
+</tr>
+</tbody>
+</table>
+
+<p>When pressing SHIFT, it yields the <em>shift</em> layer:</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">L5</th>
+<th>L5</th>
+<th>L4</th>
+<th>L3</th>
+<th>L2</th>
+<th>L2</th>
+<th>R2</th>
+<th>R2</th>
+<th>R3</th>
+<th>R4</th>
+<th>R5</th>
+<th align="left">R5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">ESC</td>
+<td>7</td>
+<td>5</td>
+<td>3</td>
+<td>1</td>
+<td>9</td>
+<td>0</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td align="left">TAB</td>
+</tr>
+<tr>
+<td align="right">Ü</td>
+<td>;</td>
+<td>!</td>
+<td>?</td>
+<td>P</td>
+<td>Y</td>
+<td>F</td>
+<td>G</td>
+<td>C</td>
+<td>R</td>
+<td>L</td>
+<td align="left">Ö</td>
+</tr>
+<tr>
+<td align="right">SHIFT</td>
+<td>A</td>
+<td>O</td>
+<td>E</td>
+<td>U</td>
+<td>I</td>
+<td>D</td>
+<td>H</td>
+<td>T</td>
+<td>N</td>
+<td>S</td>
+<td align="left">SHIFT</td>
+</tr>
+<tr>
+<td align="right">Ä</td>
+<td>"</td>
+<td>Q</td>
+<td>J</td>
+<td>K</td>
+<td>X</td>
+<td>B</td>
+<td>M</td>
+<td>W</td>
+<td>V</td>
+<td>Z</td>
+<td align="left">ß</td>
+</tr>
+</tbody>
+</table>
+
+<p>The alternative-ground or <em>symbol</em> layer (when pressing Alt-Gr) looks like
+this: Note how easy it is to press combinations such as <code>&lt;-</code> or <code>-&gt;</code> or <code>~/</code>.
+The acute and grave signs above the home row are non-dead, such that they can
+be used in keyboard short cuts.  The acute and grave signs on the bottom row
+are dead, such that these can be used to type letters <code>é</code> and <code>è</code>, as in
+<em>Café</em>.  The left broken bar <code>¦</code> on the bottom row is actually a pipe: <code>|</code>.</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">L5</th>
+<th>L5</th>
+<th>L4</th>
+<th>L3</th>
+<th>L2</th>
+<th>L2</th>
+<th>R2</th>
+<th>R2</th>
+<th>R3</th>
+<th>R4</th>
+<th>R5</th>
+<th align="left">R5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">ESC</td>
+<td>7</td>
+<td>5</td>
+<td>3</td>
+<td>1</td>
+<td>9</td>
+<td>0</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td align="left">TAB</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td>[</td>
+<td>+</td>
+<td>$</td>
+<td>]</td>
+<td>´</td>
+<td>`</td>
+<td>/</td>
+<td>\</td>
+<td>&amp;</td>
+<td>°</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right">SHIFT</td>
+<td>~</td>
+<td>&lt;</td>
+<td>-</td>
+<td>&gt;</td>
+<td>(</td>
+<td>)</td>
+<td>}</td>
+<td>{</td>
+<td>_</td>
+<td>^</td>
+<td align="left">SHIFT</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td>´</td>
+<td>@</td>
+<td>=</td>
+<td>*</td>
+<td>¦</td>
+<td>¦</td>
+<td>#</td>
+<td>%</td>
+<td>§</td>
+<td>`</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<p>In grid layouts, the thumbs can do a lot more than just pressing space:</p>
+
+<table>
+<thead>
+<tr>
+<th>L1</th>
+<th>L1</th>
+<th>L1</th>
+<th>R1</th>
+<th>R1</th>
+<th>R1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alt-Gr</td>
+<td>Control</td>
+<td>Window</td>
+<td>Alt</td>
+<td>Enter</td>
+<td>Space</td>
+</tr>
+</tbody>
+</table>
 
 <h2>
 <a id="firefox" class="anchor" href="#firefox" aria-hidden="true"><span class="octicon octicon-link"></span></a>Firefox</h2>
