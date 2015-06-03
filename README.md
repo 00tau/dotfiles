@@ -68,6 +68,8 @@ Examples of grid keyboards are the
 
 This is the alpha-numeric layer of the grid:
 
+L5|L5|L4|L3|L2|L1|L1|R1|R1|R2|R3|R4|R5|R5
+--:|---|---|---|---|---|---|---|---|---|---|:--
 ESC|7|5|3|1|9|0|2|4|6|8|TAB
 ü|:|,|.|p|y|f|g|c|r|l|ö
 SHIFT|a|o|e|u|i|d|h|t|n|s|SHIFT
@@ -75,6 +77,8 @@ SHIFT|a|o|e|u|i|d|h|t|n|s|SHIFT
 
 When pressing SHIFT, it yields the shift layer:
 
+L5|L5|L4|L3|L2|L1|L1|R1|R1|R2|R3|R4|R5|R5
+--:|---|---|---|---|---|---|---|---|---|---|:--
 ESC|7|5|3|1|9|0|2|4|6|8|TAB
 Ü|;|!|?|P|Y|F|G|C|R|L|Ö
 SHIFT|A|O|E|U|I|D|H|T|N|S|SHIFT
