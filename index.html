@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Seebrise by 00tau</title>
+    <title>Seebrise &amp; Katzenpfote by 00tau</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Seebrise</h1>
+      <h1 class="project-name">Seebrise &amp; Katzenpfote</h1>
       <h2 class="project-tagline">A fruitful desktop environment for the touch-typing enthusiast</h2>
       <a href="https://github.com/00tau/seebrise" class="btn">View on GitHub</a>
       <a href="https://github.com/00tau/seebrise/zipball/master" class="btn">Download .zip</a>
@@ -22,76 +22,45 @@
       <h1>
 <a id="seebrise" class="anchor" href="#seebrise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Seebrise</h1>
 
-<p>It would be far fetched to call Seebrise an actual full fledged desktop
-environment. In another sense, though, one may say that Seebrise is also more than just a desktop environment.  It is a collection of dot-files following a common theme for key strokes, short-cuts and a pleasing colour scheme. The following
-installation instruction should work with any flavour of Linux.
+<p>It would probably be far fetched to call Seebrise an actual desktop
+environment. In another sense, though, one may say that Seebrise is also more
+than just a desktop environment. It is a collection of dot-files following a
+common theme for key strokes, short cuts and a pleasing colour scheme.
 Essentially, Seebrise is the tiling window manager
 <a href="http://www.herbstluftwm.org/">HerbustluftWM</a> together with a
-<a href="http://www.herbstluftwm.org/">tint2</a> panel.  With a custom Dvorak
-keyboard layout variant for easy programming, typing umlauts, and tailored to a
+<a href="http://www.herbstluftwm.org/">tint2</a> panel.  With a custom Dvorak keyboard
+layout variant for easy programming, typing umlauts, and tailored to a
 non-staggered keyboard -- such as the Kinesis Advantage Ergonomic Keyboard (see
-the dx-file) -- it yields a fruitful touch-typing environment.</p>
+the section about Katzenpfote) -- it yields a fruitful touch-typing environment.</p>
 
 <p><img src="https://lh3.googleusercontent.com/-sTswtdTJSn8/VUoppqaEcTI/AAAAAAAAAKM/8DOzbbkGxkI/w506-h285/test.png" alt="screenshot"></p>
 
 <h1>
-<a id="installation-process" class="anchor" href="#installation-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation process</h1>
+<a id="katzenpfote" class="anchor" href="#katzenpfote" aria-hidden="true"><span class="octicon octicon-link"></span></a>Katzenpfote</h1>
 
-<h2>
-<a id="packages" class="anchor" href="#packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packages</h2>
-
-<p>Having a freshly installed vanilla (Lu/Xu/U/...)buntu in front of you, you need to
-install the following packages.</p>
-
-<pre><code># apt-get install git vim-gtk zsh tmux herbstluftwm tint2 dmenu feh mupdf xdotool unclutter cinnamon-screensaver
-</code></pre>
-
-<h2>
-<a id="clone-the-files-from-this-repository" class="anchor" href="#clone-the-files-from-this-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clone the files from this repository</h2>
-
-<pre><code>% git clone https://github.com/00tau/seebrise.git ~/.seebrise
-% cd .seebrise
-% git submodule update --init --recursive
-% ./create-links
-% ln -s ~/.seebrise/tint2 ~/.config/tint2
-% ln -s ~/.seebrise/herbstluftwm ~/.config/herbstluftwm
-% mkdir ~/.tmp # for vim's backup files
-</code></pre>
-
-<h2>
-<a id="make-zsh-the-primary-shell" class="anchor" href="#make-zsh-the-primary-shell" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make Zsh the primary shell</h2>
-
-<pre><code>% which zsh
-% chsh
-</code></pre>
-
-<h2>
-<a id="add-seebrise-to-the-list-of-sessions" class="anchor" href="#add-seebrise-to-the-list-of-sessions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Seebrise to the list of sessions</h2>
-
-<pre><code># cp seebrise.desktop /usr/share/xsessions/
-</code></pre>
-
-<h2>
-<a id="dvorax" class="anchor" href="#dvorax" aria-hidden="true"><span class="octicon octicon-link"></span></a>DvoraX</h2>
-
-<p>A classic <a href="https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Original_Dvorak_layout">Dvorak keyboard
+<p>Katzenpfote is a classic <a href="https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Original_Dvorak_layout">Dvorak keyboard
 layout</a>
 tailored to non-staggered keyboards with a grid layout.  Examples of grid
 keyboards are the <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis
 Advantage</a>, the
 <a href="http://www.key64.org">Key64</a>, or the <a href="http://ergodox.org/">ErgoDox</a>.</p>
 
-<pre><code># cd /usr/share/X11/xkb/symbols/dx
-# ln -s ~/.dotfiles/dx dx
-</code></pre>
+<p>The following table shows the <em>alpha-numeric</em> layer of the grid: Note that the
+SHIFT-keys lie on the home-row of the layout, assuming that you are much more
+likely to press SHIFT than CAPS-LOCK.  Also, the ESCAPE-key has moved to a more
+prominent position and is now on the same level as the numeric keys.  The
+Dvorak layout is probably most famous for its arrangement of keys on the
+home-row.  In fact, around 70% of keyboard strokes are done on the home-row
+using this layout typing an average English text.  Also note how easy it is to
+type bigrams, such as <code>th</code>, <code>eu</code> and <code>en</code> in this layout.  But also trigrams,
+such as <code>ous</code>, are a bliss to type.  If this makes you a faster typist is
+another question, but in general many people say that typing feels <em>more
+natural</em> in this layout than on the common QWERTZ layout.</p>
 
-<p>This is the <em>alpha-numeric</em> layer of the grid: Note that the SHIFT-keys lie on
-the home-row of the layout, assuming that you are much more likely to press
-SHIFT than CAPS-LOCK.  Also, the ESCAPE-key has moved to a more prominent
-position and is now on the same level as the numeric keys.  It is much more
-convenient to have the TABULATOR-key on the right side of the board and close
-to the numerics, too.  A side effect of the layout: when entering long rows of
-digital numbers, it is nice to have <code>,</code> and <code>.</code> right below.</p>
+<p>It is much more convenient to have the TABULATOR-key on the right side of the
+board and close to the numerics, too, which is why it moved there.  A side
+effect of the layout: when entering long rows of digital numbers, it is nice to
+have <code>,</code> and <code>.</code> right below this line.</p>
 
 <table>
 <thead>
@@ -359,13 +328,59 @@ as in <em>Café</em>.  The left broken bar <code>¦</code> on the bottom row is 
 </tbody>
 </table>
 
+<h1>
+<a id="installation-of-katzenpfote" class="anchor" href="#installation-of-katzenpfote" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation of Katzenpfote</h1>
+
+<pre><code># cd /usr/share/X11/xkb/symbols/dx
+# ln -s ~/.dotfiles/dx dx
+</code></pre>
+
+<h1>
+<a id="installation-of-seebriese" class="anchor" href="#installation-of-seebriese" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation of Seebriese</h1>
+
+<p>The following installation instruction should work with any flavour of Linux.</p>
+
+<h2>
+<a id="packages" class="anchor" href="#packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packages</h2>
+
+<p>Having a freshly installed vanilla (Lu/Xu/U/...)buntu in front of you, you need to
+install the following packages.</p>
+
+<pre><code># apt-get install git vim-gtk zsh tmux herbstluftwm tint2 dmenu feh mupdf xdotool unclutter cinnamon-screensaver
+</code></pre>
+
+<h2>
+<a id="clone-the-files-from-this-repository" class="anchor" href="#clone-the-files-from-this-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clone the files from this repository</h2>
+
+<pre><code>% git clone https://github.com/00tau/seebrise.git ~/.seebrise
+% cd .seebrise
+% git submodule update --init --recursive
+% ./create-links
+% ln -s ~/.seebrise/tint2 ~/.config/tint2
+% ln -s ~/.seebrise/herbstluftwm ~/.config/herbstluftwm
+% mkdir ~/.tmp # for vim's backup files
+</code></pre>
+
+<h2>
+<a id="make-zsh-the-primary-shell" class="anchor" href="#make-zsh-the-primary-shell" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make Zsh the primary shell</h2>
+
+<pre><code>% which zsh
+% chsh
+</code></pre>
+
+<h2>
+<a id="add-seebrise-to-the-list-of-sessions" class="anchor" href="#add-seebrise-to-the-list-of-sessions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Seebrise to the list of sessions</h2>
+
+<pre><code># cp seebrise.desktop /usr/share/xsessions/
+</code></pre>
+
 <h2>
 <a id="firefox" class="anchor" href="#firefox" aria-hidden="true"><span class="octicon octicon-link"></span></a>Firefox</h2>
 
 <p>Don't forget to get the coolest Add-On to Firefox: <a href="http://5digits.org/pentadactyl/">Pentadactyl</a></p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/00tau/seebrise">Seebrise</a> is maintained by <a href="https://github.com/00tau">00tau</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/00tau/seebrise">Seebrise &amp; Katzenpfote</a> is maintained by <a href="https://github.com/00tau">00tau</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
