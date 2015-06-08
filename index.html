@@ -24,13 +24,13 @@
 
 <p>It would probably be far fetched to call Seebrise an actual desktop
 environment. In another sense, though, one may say that Seebrise is also more
-than just a desktop environment. It is a collection of dot-files following a
+than just a desktop environment.  It is a collection of dot-files following a
 common theme for key strokes, short cuts and a pleasing colour scheme.
 Essentially, Seebrise is the tiling window manager
 <a href="http://www.herbstluftwm.org/">HerbustluftWM</a> together with a
 <a href="http://www.herbstluftwm.org/">tint2</a> panel.  With a custom Dvorak keyboard
 layout variant for easy programming, typing umlauts, and tailored to a
-non-staggered keyboard -- such as the Kinesis Advantage Ergonomic Keyboard (see
+non-staggered keyboard (see
 the section about Katzenpfote) -- it yields a fruitful touch-typing environment.</p>
 
 <p><img src="https://lh3.googleusercontent.com/-sTswtdTJSn8/VUoppqaEcTI/AAAAAAAAAKM/8DOzbbkGxkI/w506-h285/test.png" alt="screenshot"></p>
@@ -38,26 +38,25 @@ the section about Katzenpfote) -- it yields a fruitful touch-typing environment.
 <h1>
 <a id="katzenpfote" class="anchor" href="#katzenpfote" aria-hidden="true"><span class="octicon octicon-link"></span></a>Katzenpfote</h1>
 
-<p>Katzenpfote is a classic <a href="https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Original_Dvorak_layout">Dvorak keyboard
+<p>Katzenpfote is a variation of the classic <a href="https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Original_Dvorak_layout">Dvorak keyboard
 layout</a>
 tailored to non-staggered keyboards with a grid layout.  Examples of grid
-keyboards are the <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis
-Advantage</a>, the
-<a href="http://www.key64.org">Key64</a>, or the <a href="http://ergodox.org/">ErgoDox</a>.</p>
-
-<p>The following table shows the <em>alpha-numeric</em> layer of the grid: Note that the
-SHIFT-keys lie on the home-row of the layout, assuming that you are much more
-likely to press SHIFT than CAPS-LOCK.  Also, the ESCAPE-key has moved to a more
-prominent position and is now on the same level as the numeric keys.  The
-Dvorak layout is probably most famous for its arrangement of keys on the
-home-row.  In fact, around 70% of keyboard strokes are done on the home-row
+keyboards are the <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis Advantage
+Ergonomic</a>, the
+<a href="http://www.key64.org">Key64</a>, or the <a href="http://ergodox.org/">ErgoDox</a>.  The
+Dvorak keyboard layout is probably most famous for its arrangement of keys on
+the home-row.  In fact, around 70% of keyboard strokes are done on the home-row
 using this layout typing an average English text.  Also note how easy it is to
 type bigrams, such as <code>th</code>, <code>eu</code> and <code>en</code> in this layout.  But also trigrams,
 such as <code>ous</code>, are a bliss to type.  If this makes you a faster typist is
 another question, but in general many people say that typing feels <em>more
 natural</em> in this layout than on the common QWERTZ layout.</p>
 
-<p>It is much more convenient to have the TABULATOR-key on the right side of the
+<p>The following table shows the <em>alpha-numeric</em> layer of the grid: Note that the
+SHIFT-keys lie on the home-row of the layout, assuming that you are much more
+likely to press SHIFT than CAPS-LOCK.  Also, the ESCAPE-key has moved to a more
+prominent position and is now on the same level as the numeric keys.
+It is much more convenient to have the TABULATOR-key on the right side of the
 board and close to the numerics, too, which is why it moved there.  A side
 effect of the layout: when entering long rows of digital numbers, it is nice to
 have <code>,</code> and <code>.</code> right below this line.</p>
@@ -308,22 +307,22 @@ as in <em>Café</em>.  The left broken bar <code>¦</code> on the bottom row is 
 <table>
 <thead>
 <tr>
-<th>L1</th>
-<th>L1</th>
-<th>L1</th>
-<th>R1</th>
-<th>R1</th>
-<th>R1</th>
+<th align="left">L1</th>
+<th align="right">R1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Alt-Gr</td>
-<td>Control</td>
-<td>Window</td>
-<td>Alt</td>
-<td>Enter</td>
-<td>Space</td>
+<td align="left">Alt-Gr</td>
+<td align="right">Space</td>
+</tr>
+<tr>
+<td align="left">Control</td>
+<td align="right">Enter</td>
+</tr>
+<tr>
+<td align="left">Window</td>
+<td align="right">Alt</td>
 </tr>
 </tbody>
 </table>
@@ -331,8 +330,13 @@ as in <em>Café</em>.  The left broken bar <code>¦</code> on the bottom row is 
 <h1>
 <a id="installation-of-katzenpfote" class="anchor" href="#installation-of-katzenpfote" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation of Katzenpfote</h1>
 
+<p>The keyboard layout descriptions reside in <code>/usr/share/X11/xkb/symbols/</code> on
+most Linux distributions.  The idea is to simply copy the included layout
+description to this folder.</p>
+
 <pre><code># cd /usr/share/X11/xkb/symbols/dx
 # ln -s ~/.dotfiles/dx dx
+# setxkbmap dx grid
 </code></pre>
 
 <h1>
@@ -362,10 +366,17 @@ install the following packages.</p>
 </code></pre>
 
 <h2>
-<a id="make-zsh-the-primary-shell" class="anchor" href="#make-zsh-the-primary-shell" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make Zsh the primary shell</h2>
+<a id="the-shell----your-best-friend-forever" class="anchor" href="#the-shell----your-best-friend-forever" aria-hidden="true"><span class="octicon octicon-link"></span></a>The shell -- your Best Friend Forever</h2>
+
+<p>Make Zsh the primary login shell:</p>
 
 <pre><code>% which zsh
 % chsh
+</code></pre>
+
+<p>Change your default terminal emulator to <code>uxterm</code>:</p>
+
+<pre><code>% sudo update-alternatives --config x-terminal-emulator
 </code></pre>
 
 <h2>
