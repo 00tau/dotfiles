@@ -28,8 +28,8 @@ if (lib != "") {
 rm(lib)
 
 if(interactive()) {
-    options(pager = "vim -c 'set ft=rdoc' -")
-    options(editor = 'vim -c "set ft=r"')
+#    options(pager = "vim -c 'set ft=rdoc' -")
+#    options(editor = "vim -c 'set ft=r'")
     options(menu.graphics = FALSE)
 
 #    require("lhs")

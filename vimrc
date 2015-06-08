@@ -158,7 +158,7 @@ au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt
 "------------------------------------
 let g:vimrplugin_nosingler = 0
 let g:vimrplugin_tmux = 1
-let g:vimrplugin_routmorecolors = 1
+let g:Rout_more_colors = 1
 let g:vimrplugin_underscore = 0
 let g:vimrplugin_indent_commented = 1
 let vimrplugin_notmuxconf = 1

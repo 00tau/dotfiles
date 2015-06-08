@@ -39,12 +39,20 @@ Clone the files from this repository
 % mkdir ~/.tmp # for vim's backup files
 ```
 
-Make Zsh the primary shell
---------------------------
+Your best friend forever -- the shell
+-------------------------------------
+
+Make Zsh the primary login shell:
 
 ```
 % which zsh
 % chsh
+```
+
+And use `uxterm` as your default terminal emulator:
+
+```
+# update-alternatives --config x-terminal-emulator
 ```
 
 Add Seebrise to the list of sessions
