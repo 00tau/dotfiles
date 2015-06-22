@@ -53,17 +53,6 @@ alias tmux="tmux -2 "
 alias R="R --no-save -q "
 alias running="htop -u $(whoami)"
 
-#alias C="source /opt/context-minimals/setuptex"
-#alias lido="ssh friedric@lidong1.itmc.tu-dortmund.de"
-
-# Named directories
-#diss=~/Dropbox/Akademisches/Statistik/TU-Dortmund/2010-Dissertation/
-#code=~diss/src-r/
-xch=~/exchange/User/Moebius_Thomas/
-
-# Run skype as user skype
-#alias skype='xhost +local: && su skype -c skype'
-
 # Keybindings
 bindkey -v
 bindkey "^T" vi-cmd-mode
@@ -76,4 +65,7 @@ bindkey "^T" vi-cmd-mode
 export PATH=~/.dotfiles/scripts:$PATH
 export EDITOR=vim
 export R_LIBS_USER=~/software/R
+
+# Named directories
+data=~/documents/affective-disorders/data
 

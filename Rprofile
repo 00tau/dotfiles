@@ -1,7 +1,7 @@
 ### set locales
-tmp = Sys.setlocale("LC_MESSAGES", "en_GB.UTF-8")
-tmp = Sys.setlocale("LC_CTYPE", "en_GB.UTF-8")
-rm(tmp)
+#tmp = Sys.setlocale("LC_MESSAGES", "en_GB.UTF-8")
+#tmp = Sys.setlocale("LC_CTYPE", "en_GB.UTF-8")
+#rm(tmp)
 
 # Set proxy
 #Sys.setenv(http_proxy="http://do2-dansguardian.isas.de:3128")

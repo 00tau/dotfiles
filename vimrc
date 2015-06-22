@@ -215,7 +215,7 @@ let g:swap_custom_ops = ['~']
 
 " Unbind some keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
-  for key in ['<Up>', '<Down>', '<Left>', '<Right>', '<Del>', '<BS>']
+  for key in ['<Up>', '<Down>', '<Del>', '<BS>']
     exe prefix . "noremap " . key . " <nop>"
   endfor
 endfor

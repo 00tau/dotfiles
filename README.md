@@ -61,15 +61,15 @@ this: Note how easy it is to press combinations such as `<-` or `->` or `~/` or
 `[]`.  The acute and grave signs above the home row are non-dead, such that
 they can be used in keyboard short cuts.  The acute and grave signs on the
 bottom row are dead, such that these can be used to type letters `é` and `è`,
-as in *Café*.  The left broken bar `¦` on the bottom row is actually a pipe:
-`|`.
+as in *Café*.  The right broken bar `¦` on the top row (left index finger) is
+actually a pipe: `|`.
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
-|       | }  | +  | $  | {  | ´  | `  | ]  | [  | &  | °  |       |
+|       | ¦  | +  | $  | ¦  | [  | ]  | `  | ´  | &  | °  |       |
 | SHIFT | ~  | <  | -  | >  | (  | )  | /  | \  | _  | ^  | SHIFT |
-|       | ´  | @  | =  | *  | ¦  | ¦  | #  | %  | §  | `  |       |
+|       | ´  | @  | =  | *  | {  | }  | #  | %  | §  | `  |       |
 
 In grid layouts, the thumbs can do a lot more than just pressing space:
 
