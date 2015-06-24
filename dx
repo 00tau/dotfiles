@@ -121,11 +121,11 @@ xkb_symbols "grid" {
     key <AD01> { [ colon, semicolon, brokenbar ] };
     key <AD02> { [ comma, exclam, plus ] };
     key <AD03> { [ period, question, dollar ] };
-    key <AD04> { [ p, P, bar, Greek_pi ] };
-    key <AD05> { [ y, Y, bracketleft, Greek_psi ] };
-    key <AD06> { [ f, F, bracketright, Greek_phi ] };
-    key <AD07> { [ g, G, grave, Greek_gamma ] };
-    key <AD08> { [ c, C, acute, Greek_chi ] };
+    key <AD04> { [ p, P, bracketleft, Greek_pi ] };
+    key <AD05> { [ y, Y, at, Greek_psi ] };
+    key <AD06> { [ f, F, percent, Greek_phi ] };
+    key <AD07> { [ g, G, bracketright, Greek_gamma ] };
+    key <AD08> { [ c, C, backslash, Greek_chi ] };
     key <AD09> { [ r, R, ampersand, Greek_rho ] };
     key <AD10> { [ l, L, degree, Greek_lambda ] };
     key <BKSL> { [ odiaeresis, Odiaeresis, EuroSign ] };
@@ -135,11 +135,11 @@ xkb_symbols "grid" {
     key <AC01> { [ a, A, asciitilde, Greek_alpha ] };
     key <AC02> { [ o, O, less, Greek_omicron ] };
     key <AC03> { [ e, E, minus, Greek_epsilon ] };
-    key <AC04> { [ u, U, greater, Greek_upsilon ] };
-    key <AC05> { [ i, I, parenleft, Greek_iota ] };
-    key <AC06> { [ d, D, parenright, Greek_delta ] };
-    key <AC07> { [ h, H, slash, Greek_eta ] };
-    key <AC08> { [ t, T, backslash, Greek_tau ] };
+    key <AC04> { [ u, U, parenleft, Greek_upsilon ] };
+    key <AC05> { [ i, I, greater, Greek_iota ] };
+    key <AC06> { [ d, D, bar, Greek_delta ] };
+    key <AC07> { [ h, H, parenright, Greek_eta ] };
+    key <AC08> { [ t, T, slash, Greek_tau ] };
     key <AC09> { [ n, N, underscore, Greek_nu ] };
     key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
     key <AC11> { [ Shift_R ] };
@@ -147,14 +147,14 @@ xkb_symbols "grid" {
     // Keyboard row number: -1
     key <LFSH> { [ adiaeresis, Adiaeresis ] };
     key <AB01> { [ apostrophe, quotedbl, dead_acute ] };
-    key <AB02> { [ q, Q, at ] };
+    key <AB02> { [ q, Q, acute ] };
     key <AB03> { [ j, J, equal ] };
-    key <AB04> { [ k, K, asterisk, Greek_kappa ] };
-    key <AB05> { [ x, X, braceleft, Greek_xi ] };
-    key <AB06> { [ b, B, braceright, Greek_beta ] };
-    key <AB07> { [ m, M, numbersign, Greek_mu ] };
-    key <AB08> { [ w, W, percent, Greek_omega ] };
-    key <AB09> { [ v, V, section, Greek_theta ] };
+    key <AB04> { [ k, K, braceleft, Greek_kappa ] };
+    key <AB05> { [ x, X, asterisk, Greek_xi ] };
+    key <AB06> { [ b, B, numbersign, Greek_beta ] };
+    key <AB07> { [ m, M, braceright, Greek_mu ] };
+    key <AB08> { [ w, W, section, Greek_omega ] };
+    key <AB09> { [ v, V, grave, Greek_theta ] };
     key <AB10> { [ z, Z, dead_grave, Greek_zeta ] };
     key <RTSH> { [ ssharp ] };
 

@@ -43,7 +43,7 @@ filetype plugin on
 filetype indent on
 set fileformat=unix
 set encoding=utf-8
-set textwidth=72
+set textwidth=102
 
 au FileType text,tex,context,markdown set nosmartindent
 
