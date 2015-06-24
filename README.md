@@ -57,12 +57,12 @@ When pressing SHIFT, it yields the *shift* layer:
 | Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | ß     |
 
 The alternative-ground or *symbol* layer (when pressing Alt-Gr) looks like
-this: Note how easy it is to press combinations such as `<-` or `->` or `~/` or
-`[]`.  The inner acute and grave signs below the home row are non-dead, such
-that they can be used in keyboard short cuts.  The outer acute and grave signs
-on the bottom row are dead, such that these can be used to type letters `é` and
-`è`, as in *Café*.  The broken bar `¦` on the home row (right index finger) is
-actually a pipe: `|`.
+this: Note how easy it is to press combinations such as `<-` or `~/` or
+`[]`.  The right acute-signs on the bottom row are in fact grave-signs --
+unfortunately those did mess up the rendering of the table.  The inner acute
+and grave signs are non-dead, such that they can be used in keyboard short
+cuts.  The outer acute and grave signs on the bottom row are dead, such that
+these can be used to type letters `é` and `è`, as in *Café*.
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
