@@ -75,7 +75,7 @@ xkb_symbols "basic" {
 partial alphanumeric_keys
 xkb_symbols "grid" {
 
-    name[Group1]= "Katzenpfote -- Grid";
+    name[Group1]= "Katzenpfote Grid";
 
     // Alphanumeric section
 
@@ -96,6 +96,7 @@ xkb_symbols "grid" {
     key <SPCE> { [ space, space, Escape, Escape ] };
     key <RTRN> { [ Return ] };
     key <PGDN> { [ Alt_L ] };
+    // key <PGDN> { [ ISO_Level4_Shift ] };
 
     // Thumb row: left-low
     key <BKSP> { [ ISO_Level3_Shift ] };
@@ -150,8 +151,8 @@ xkb_symbols "grid" {
     key <AB02> { [ q, Q, acute ] };
     key <AB03> { [ j, J, equal ] };
     key <AB04> { [ k, K, braceleft, Greek_kappa ] };
-    key <AB05> { [ x, X, asterisk, Greek_xi ] };
-    key <AB06> { [ b, B, numbersign, Greek_beta ] };
+    key <AB05> { [ x, X, numbersign, Greek_xi ] };
+    key <AB06> { [ b, B, asterisk, Greek_beta ] };
     key <AB07> { [ m, M, braceright, Greek_mu ] };
     key <AB08> { [ w, W, section, Greek_omega ] };
     key <AB09> { [ v, V, grave, Greek_theta ] };

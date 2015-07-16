@@ -51,6 +51,8 @@ alias hc="herbstclient "
 alias hcs="herbstclient spawn "
 alias tmux="tmux -2 "
 alias R="R --no-save -q "
+alias p="python3"
+alias pp="ipython3 qtconsole --pylab"
 alias running="htop -u $(whoami)"
 
 # Keybindings

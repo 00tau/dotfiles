@@ -69,7 +69,7 @@ these can be used to type letters `é` and `è`, as in *Café*.
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
 |       | ¦  | +  | $  | [  | @  | %  | ]  | \  | &  | °  |       |
 | SHIFT | ~  | <  | -  | (  | >  | `|`| )  | /  | _  | ^  | SHIFT |
-|       | ´  | ´  | =  | {  | *  | #  | }  | §  | ´  | ´  |       |
+|       | ´  | ´  | =  | {  | #  | *  | }  | §  | ´  | ´  |       |
 
 In grid layouts, the thumbs can do a lot more than just pressing space:
 
