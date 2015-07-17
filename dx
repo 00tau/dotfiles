@@ -73,7 +73,7 @@ xkb_symbols "basic" {
 };
 
 partial alphanumeric_keys
-xkb_symbols "grid" {
+xkb_symbols "grid_base" {
 
     name[Group1]= "Katzenpfote Grid";
 
@@ -95,8 +95,8 @@ xkb_symbols "grid" {
 
     key <SPCE> { [ space, space, Escape, Escape ] };
     key <RTRN> { [ Return ] };
-    key <PGDN> { [ Alt_L ] };
-    // key <PGDN> { [ ISO_Level4_Shift ] };
+    // key <PGDN> { [ Alt_L ] };
+    key <PGDN> { [ Control_R ] };
 
     // Thumb row: left-low
     key <BKSP> { [ ISO_Level3_Shift ] };
@@ -125,7 +125,7 @@ xkb_symbols "grid" {
     key <AD04> { [ p, P, bracketleft, Greek_pi ] };
     key <AD05> { [ y, Y, at, Greek_psi ] };
     key <AD06> { [ f, F, percent, Greek_phi ] };
-    key <AD07> { [ g, G, bracketright, Greek_gamma ] };
+    key <AD07> { [ g, G, bracketright, Greek_gamma, Greek_Gamma ] };
     key <AD08> { [ c, C, backslash, Greek_chi ] };
     key <AD09> { [ r, R, ampersand, Greek_rho ] };
     key <AD10> { [ l, L, degree, Greek_lambda ] };
@@ -157,7 +157,7 @@ xkb_symbols "grid" {
     key <AB08> { [ w, W, section, Greek_omega ] };
     key <AB09> { [ v, V, grave, Greek_theta ] };
     key <AB10> { [ z, Z, dead_grave, Greek_zeta ] };
-    key <RTSH> { [ ssharp ] };
+    key <RTSH> { [ ssharp, 0x1001E9E ] };
 
     // Keyboard row number: -2
     key <TLDE> { [ ] };
@@ -166,4 +166,7 @@ xkb_symbols "grid" {
     key <AD12> { [ ] };
 
     include "level3(ralt_switch)"
+    include "level5(rctrl_switch)"
 };
+
+// partial alphanumeric_keys modifier_keys keypad_keys

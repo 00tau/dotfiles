@@ -11,6 +11,16 @@ zstyle ':completion:*' max-errors 2 numeric
 zstyle ':completion:*' prompt '%e'
 zstyle ':completion:*' substitute 1
 
+# Completing process IDs with menu selection:
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*'   force-list always
+
+# directory as argument, this will remove the trailing slash (usefull in ln)
+zstyle ':completion:*' squeeze-slashes true
+
+# cd will never select the parent directory (e.g.: cd ../<TAB>):
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
+
 autoload -U colors && colors
 autoload -Uz compinit && compinit
 
@@ -54,6 +64,13 @@ alias R="R --no-save -q "
 alias p="python3"
 alias pp="ipython3 qtconsole --pylab"
 alias running="htop -u $(whoami)"
+
+# Suffix Aliases
+alias -s tex=op
+alias -s html=firefox
+alias -s org=firefox
+alias -s com=firefox
+alias -s de=firefox
 
 # Keybindings
 bindkey -v
