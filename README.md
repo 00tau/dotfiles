@@ -71,13 +71,54 @@ these can be used to type letters `é` and `è`, as in *Café*.
 | SHIFT | ~  | <  | -  | (  | >  | `|`| )  | /  | _  | ^  | SHIFT |
 |       | ´  | ´  | =  | {  | #  | *  | }  | §  | ´  | ´  |       |
 
+When pressing SHIFT, it yields a *shifted symbol* layer, which is, as you may
+agree, rather empty:
+
+| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
+| ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|       | ∃  | ±  |    |    |    |    |    |    |    | ∨  |       |
+| SHIFT | ∀  | ≤  | ∈  |    | ≥  |    |    |    |    | ∧  | SHIFT |
+|       |    |    | ≈  |    |    |    |    |    |    |    |       |
+
+When using the Katzenpfote layout, however, you have access to a *greek layer*,
+too: This is particularly useful, when writing a mathematical script in TeX, as
+most TeX-dialects understand UTF-8.
+
+| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
+| ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|       |    |    |    | π  | υ  | φ  | γ  | χ  | ρ  | λ  |       |
+| SHIFT | α  | ο  | ε  | ψ  | ι  | δ  | η  | τ  | ν  | σ  | SHIFT |
+|       |    |    |    | κ  | ξ  | β  | μ  | ω  | θ  | ζ  |       |
+
+When pressing SHIFT, it yields the *shifted greek* layer:
+
+| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
+| ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|       |    |    |    | Π  | Υ  | Φ  | Γ  | Χ  | Ρ  | Λ  |       |
+| SHIFT | Α  | Ο  | Ε  | Ψ  | Ι  | Δ  | Η  | Τ  | Ν  | Σ  | SHIFT |
+|       |    |    |    | Κ  | Ξ  | Β  | Μ  | Ω  | Θ  | Ζ  |       |
+
+In fact, this layout allows you to write:
+
+```
+P(α ≤ X ≤ β) = Φ(β) - Φ(α)
+```
+
+directly into your TeX-document.
+
 In grid layouts, the thumbs can do a lot more than just pressing space:
 
 | L1 | R1 |
 |:----|----:|
-| Alt-Gr | Space |
+| *symbol* | Space |
 | Control | Enter |
-| Window | Alt |
+| **WM** | *greek* |
+
+Pressing either *symbol* or *greek* will enter the *symbol* or *greek* layer of
+the layout.  The window manager HerbustluftWM is controlled by pressing **WM**.
 
 
 Installation of Katzenpfote

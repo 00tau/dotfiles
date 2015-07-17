@@ -73,7 +73,7 @@ xkb_symbols "basic" {
 };
 
 partial alphanumeric_keys
-xkb_symbols "grid_base" {
+xkb_symbols "grid" {
 
     name[Group1]= "Katzenpfote Grid";
 
@@ -81,29 +81,28 @@ xkb_symbols "grid_base" {
 
     key <ESC>  { [ Caps_Lock ] };
 
-    // Thumb row: left-high
-    key <LCTL> { [  BackSpace ] };
-    //key <LALT> { [] };
-    //key <HOME> { [] };
-
-    // Thumb row: right-high
+    // Thumb row: upper right
     key <RCTL> { [ Delete ] };
     //key <RALT> { [] };
     //key <PGUP> { [] };
 
-    // Thumb row: right-low
+    // Thumb row: upper left
+    key <LCTL> { [  BackSpace ] };
+    //key <LALT> { [] };
+    //key <HOME> { [] };
 
+    // Thumb row: lower right
     key <SPCE> { [ space, space, Escape, Escape ] };
     key <RTRN> { [ Return ] };
-    // key <PGDN> { [ Alt_L ] };
-    key <PGDN> { [ Control_R ] };
+    key <PGDN> { type[Group1]="ONE_LEVEL", symbols[Group1] = [ ISO_Level5_Shift ] };
 
-    // Thumb row: left-low
-    key <BKSP> { [ ISO_Level3_Shift ] };
+    // Thumb row: lower left
+    key <BKSP> { type[Group1]="ONE_LEVEL", symbols[Group1] = [ ISO_Level3_Shift ] };
     key <DELE> { [ Control_L ] };
     key <END>  { [ Super_L ] };
 
     // Keyboard row number: +2
+    key.type = "ONE_LEVEL";
     key <AE12> { [ Escape ] };
     key <AE01> { [ 7 ] };
     key <AE02> { [ 5 ] };
@@ -115,58 +114,78 @@ xkb_symbols "grid_base" {
     key <AE08> { [ 4 ] };
     key <AE09> { [ 6 ] };
     key <AE10> { [ 8 ] };
-    key <AE11> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
+
+    key.type = "TWO_LEVEL";
+    key <AE11> { [ Tab, ISO_Left_Tab ] };
 
     // Keyboard row number: +1
-    key <TAB>  { [ udiaeresis, Udiaeresis ] };
-    key <AD01> { [ colon, semicolon, brokenbar ] };
-    key <AD02> { [ comma, exclam, plus ] };
-    key <AD03> { [ period, question, dollar ] };
-    key <AD04> { [ p, P, bracketleft, Greek_pi ] };
-    key <AD05> { [ y, Y, at, Greek_psi ] };
-    key <AD06> { [ f, F, percent, Greek_phi ] };
-    key <AD07> { [ g, G, bracketright, Greek_gamma, Greek_Gamma ] };
-    key <AD08> { [ c, C, backslash, Greek_chi ] };
-    key <AD09> { [ r, R, ampersand, Greek_rho ] };
-    key <AD10> { [ l, L, degree, Greek_lambda ] };
+    key.type = "FOUR_LEVEL";
+    key <TAB>  { [ udiaeresis, Udiaeresis, sterling ] };
+    key <AD01> { [ colon, semicolon, brokenbar, U2203 ] };
+    key <AD02> { [ comma, exclam, plus, plusminus ] };
+    key <AD03> { [ period, question, dollar, U22c5 ] };
+
+    key.type = "EIGHT_LEVEL";
+    key <AD04> { [ p, P, bracketleft, bracketleft, Greek_pi, Greek_PI ] };
+    key <AD05> { [ y, Y, at, at, Greek_upsilon, Greek_UPSILON ] };
+    key <AD06> { [ f, F, percent, percent, Greek_phi, Greek_PHI ] };
+    key <AD07> { [ g, G, bracketright, bracketright, Greek_gamma, Greek_GAMMA ] };
+    key <AD08> { [ c, C, backslash, backslash, Greek_chi, Greek_CHI ] };
+    key <AD09> { [ r, R, ampersand, ampersand, Greek_rho, Greek_RHO ] };
+    key <AD10> { [ l, L, degree, U2228, Greek_lambda, Greek_LAMBDA ] };
+
+    key.type = "THREE_LEVEL";
     key <BKSL> { [ odiaeresis, Odiaeresis, EuroSign ] };
 
-    // Keyboard row number: 0
+    // Keyboard row number: 0 (home row)
+    key.type = "ONE_LEVEL";
     key <CAPS> { [ Shift_L ] };
-    key <AC01> { [ a, A, asciitilde, Greek_alpha ] };
-    key <AC02> { [ o, O, less, Greek_omicron ] };
-    key <AC03> { [ e, E, minus, Greek_epsilon ] };
-    key <AC04> { [ u, U, parenleft, Greek_upsilon ] };
-    key <AC05> { [ i, I, greater, Greek_iota ] };
-    key <AC06> { [ d, D, bar, Greek_delta ] };
-    key <AC07> { [ h, H, parenright, Greek_eta ] };
-    key <AC08> { [ t, T, slash, Greek_tau ] };
-    key <AC09> { [ n, N, underscore, Greek_nu ] };
-    key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
+
+    key.type = "EIGHT_LEVEL";
+    key <AC01> { [ a, A, asciitilde, U2200, Greek_alpha, Greek_ALPHA ] };
+    key <AC02> { [ o, O, less, U2264, Greek_omicron, Greek_OMICRON ] };
+    key <AC03> { [ e, E, minus, U2208, Greek_epsilon, Greek_EPSILON ] };
+    key <AC04> { [ u, U, parenleft, parenleft, Greek_psi, Greek_PSI ] };
+    key <AC05> { [ i, I, greater, U2265, Greek_iota, Greek_IOTA ] };
+    key <AC06> { [ d, D, bar, bar, Greek_delta, Greek_DELTA ] };
+    key <AC07> { [ h, H, parenright, parenright, Greek_eta, Greek_ETA ] };
+    key <AC08> { [ t, T, slash, slash, Greek_tau, Greek_TAU ] };
+    key <AC09> { [ n, N, underscore, underscore, Greek_nu, Greek_NU ] };
+    key <AC10> { [ s, S, asciicircum, U2227, Greek_sigma, Greek_SIGMA ] };
+
+    key.type = "ONE_LEVEL";
     key <AC11> { [ Shift_R ] };
 
     // Keyboard row number: -1
+    key.type = "THREE_LEVEL";
     key <LFSH> { [ adiaeresis, Adiaeresis ] };
     key <AB01> { [ apostrophe, quotedbl, dead_acute ] };
     key <AB02> { [ q, Q, acute ] };
-    key <AB03> { [ j, J, equal ] };
-    key <AB04> { [ k, K, braceleft, Greek_kappa ] };
-    key <AB05> { [ x, X, numbersign, Greek_xi ] };
-    key <AB06> { [ b, B, asterisk, Greek_beta ] };
-    key <AB07> { [ m, M, braceright, Greek_mu ] };
-    key <AB08> { [ w, W, section, Greek_omega ] };
-    key <AB09> { [ v, V, grave, Greek_theta ] };
-    key <AB10> { [ z, Z, dead_grave, Greek_zeta ] };
-    key <RTSH> { [ ssharp, 0x1001E9E ] };
 
-    // Keyboard row number: -2
+    key.type = "FOUR_LEVEL";
+    key <AB03> { [ j, J, equal, U2248 ] };
+
+    key.type = "EIGHT_LEVEL";
+    key <AB04> { [ k, K, braceleft, braceleft, Greek_kappa, Greek_KAPPA ] };
+    key <AB05> { [ x, X, numbersign, numbersign, Greek_xi, Greek_XI ] };
+    key <AB06> { [ b, B, asterisk, asterisk, Greek_beta, Greek_BETA ] };
+    key <AB07> { [ m, M, braceright, bracketright, Greek_mu, Greek_MU ] };
+    key <AB08> { [ w, W, section, section, Greek_omega, Greek_OMEGA ] };
+    key <AB09> { [ v, V, grave, grave, Greek_theta, Greek_THETA ] };
+    key <AB10> { [ z, Z, dead_grave, dead_grave, Greek_zeta, Greek_ZETA ] };
+
+    key.type = "THREE_LEVEL";
+    key <RTSH> { [ ssharp, ssharp, cent ] };
+
+    // Keyboard row number: -2 (very bad for your tendons!)
+    key.type = "ONE_LEVEL";
     key <TLDE> { [ ] };
     key <LSGT> { [ ] };
     key <AD11> { [ ] };
     key <AD12> { [ ] };
 
-    include "level3(ralt_switch)"
-    include "level5(rctrl_switch)"
+    include "level3(modifier_mapping)"
+    include "level5(modifier_mapping)"
 };
 
 // partial alphanumeric_keys modifier_keys keypad_keys
