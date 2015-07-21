@@ -66,6 +66,7 @@ alias pp="ipython3 qtconsole --pylab"
 alias running="htop -u $(whoami)"
 
 # Suffix Aliases
+alias -s pdf=mupdf
 alias -s tex=op
 alias -s html=firefox
 alias -s org=firefox
