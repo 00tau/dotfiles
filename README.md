@@ -47,7 +47,7 @@ have `,` and `.` right below this line.
 | SHIFT | a  | o  | e  | u  | i  | d  | h  | t  | n  | s  | SHIFT |
 | ä     | '  | q  | j  | k  | x  | b  | m  | w  | v  | z  | ß     |
 
-When pressing SHIFT, it yields the *shift* layer:
+When pressing SHIFT, it yields the shifted or *capital* layer:
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -71,8 +71,8 @@ these can be used to type letters `é` and `è`, as in *Café*.
 | SHIFT | ~  | <  | -  | (  | >  | `|`| )  | /  | _  | ^  | SHIFT |
 |       | ´  | ´  | =  | {  | #  | *  | }  | §  | ´  | ´  | ¢     |
 
-When pressing SHIFT, it yields a *shifted symbol* layer, which is, as you may
-agree, rather empty:
+When additionally pressing SHIFT, it yields a *shifted symbol* layer, which is,
+as you may agree, rather empty:
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -82,10 +82,10 @@ agree, rather empty:
 |       |    |    | ≈  |    |    |    |    |    |    |    |       |
 
 When using the Katzenpfote layout, you have also access to a *greek layer*
-(when pressing R-Ctrl, the right Control key).  This layer is particularly
-useful, when writing a mathematical script in [TeX](http://tug.org/), as most
-TeX-dialects -- such as [ConTeXt](http://wiki.contextgarden.net/) or
-[LaTeX](http://www.latex-project.org/) -- understand
+(when pressing R-Ctrl, the right control key).  This layer is particularly
+useful, when writing mathematical scripts in [TeX](http://tug.org/), as most
+TeX-dialects, such as [ConTeXt](http://wiki.contextgarden.net/) and
+[LaTeX](http://www.latex-project.org/), understand
 [UTF-8](http://www.utf-8.com/).
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
@@ -95,7 +95,7 @@ TeX-dialects -- such as [ConTeXt](http://wiki.contextgarden.net/) or
 | SHIFT | α  | ο  | ε  | ψ  | ι  | δ  | η  | τ  | ν  | σ  | SHIFT |
 |       |    |    |    | κ  | ξ  | β  | μ  | ω  | θ  | ζ  |       |
 
-When additionally pressing SHIFT, it yields the *shifted greek* layer:
+When additionally pressing SHIFT, it yields the *capital greek* layer:
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -121,8 +121,8 @@ In grid layouts, the thumbs can do a lot more than just pressing space:
 | **WM** | *greek* |
 
 Pressing *symbol* (=R-Alt or Alt-Gr) or *greek* (=R-Ctrl) will enter the
-*symbol* or *greek* layer of the layout.  The window manager HerbustluftWM is
-controlled by pressing **WM** (= left Super or Window key).
+*symbol* or *greek* layer of the layout respectively.  The window manager
+HerbustluftWM is controlled by pressing **WM** (= left Super or Window key).
 
 
 Installation of Katzenpfote
