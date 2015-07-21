@@ -56,8 +56,8 @@ When pressing SHIFT, it yields the *shift* layer:
 | SHIFT | A  | O  | E  | U  | I  | D  | H  | T  | N  | S  | SHIFT |
 | Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | ß     |
 
-The alternative-ground or *symbol* layer (when pressing Alt-Gr) looks like
-this: Note how easy it is to press combinations such as `<-` or `~/` or
+The alternative-ground or *symbol* layer (when pressing Alt-Gr) looks
+like this: Note how easy it is to press combinations such as `<-` or `~/` or
 `[]`.  The right acute-signs on the bottom row are in fact grave-signs --
 unfortunately those did mess up the rendering of the table.  The inner acute
 and grave signs are non-dead, such that they can be used in keyboard short
@@ -81,9 +81,12 @@ agree, rather empty:
 | SHIFT | ∀  | ≤  | ∈  |    | ≥  |    |    |    |    | ∧  | SHIFT |
 |       |    |    | ≈  |    |    |    |    |    |    |    |       |
 
-When using the Katzenpfote layout, however, you have access to a *greek layer*,
-too: This is particularly useful, when writing a mathematical script in TeX, as
-most TeX-dialects understand UTF-8.
+When using the Katzenpfote layout, you have also access to a *greek layer*
+(when pressing R-Ctrl, the right Control key).  This layer is particularly
+useful, when writing a mathematical script in [TeX](http://tug.org/), as most
+TeX-dialects -- such as [ConTeXt](http://wiki.contextgarden.net/) or
+[LaTeX](http://www.latex-project.org/) -- understand
+[UTF-8](http://www.utf-8.com/).
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -92,7 +95,7 @@ most TeX-dialects understand UTF-8.
 | SHIFT | α  | ο  | ε  | ψ  | ι  | δ  | η  | τ  | ν  | σ  | SHIFT |
 |       |    |    |    | κ  | ξ  | β  | μ  | ω  | θ  | ζ  |       |
 
-When pressing SHIFT, it yields the *shifted greek* layer:
+When additionally pressing SHIFT, it yields the *shifted greek* layer:
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
@@ -117,8 +120,9 @@ In grid layouts, the thumbs can do a lot more than just pressing space:
 | Control | Enter |
 | **WM** | *greek* |
 
-Pressing either *symbol* or *greek* will enter the *symbol* or *greek* layer of
-the layout.  The window manager HerbustluftWM is controlled by pressing **WM**.
+Pressing *symbol* (=R-Alt or Alt-Gr) or *greek* (=R-Ctrl) will enter the
+*symbol* or *greek* layer of the layout.  The window manager HerbustluftWM is
+controlled by pressing **WM** (= left Super or Window key).
 
 
 Installation of Katzenpfote
