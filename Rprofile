@@ -1,11 +1,12 @@
 ### set locales
-#tmp = Sys.setlocale("LC_MESSAGES", "en_GB.UTF-8")
-#tmp = Sys.setlocale("LC_CTYPE", "en_GB.UTF-8")
-#rm(tmp)
+tmp = Sys.setlocale("LC_MESSAGES", "en_GB.UTF-8")
+tmp = Sys.setlocale("LC_CTYPE", "en_GB.UTF-8")
+rm(tmp)
 
-# Set proxy
-#Sys.setenv(http_proxy="http://do2-dansguardian.isas.de:3128")
+### set proxy
+#Sys.setenv(http_proxy="http://something.domain.de:3128")
 
+### set repositries
 options(repos = c(CRAN = "http://ftp5.gwdg.de/pub/misc/cran"))
 options(BioC_mirror = "http://bioconductor.statistik.tu-dortmund.de")
 options(browserNLdisabled = TRUE)
@@ -14,6 +15,7 @@ sourceBioLite <- function () {
     source("http://bioconductor.org/biocLite.R")
 }
 
+### set lib
 lib = Sys.getenv("R_LIBS_USER")
 if (lib != "") {
   if (!file.exists(lib)) {
@@ -27,24 +29,24 @@ if (lib != "") {
 }
 rm(lib)
 
+options(papersize="a4")
+options(editor="vim")
+options(pager="less")
+
+### set some defaults when running interactive
 if(interactive()) {
-#    options(pager = "vim -c 'set ft=rdoc' -")
-#    options(editor = "vim -c 'set ft=r'")
     options(menu.graphics = FALSE)
 
-#    require("lhs")
-#    require("mlr")
+    require("vimcom")
     require("plyr")
     require("reshape2")
     require("ggplot2")
-#  require("vimcom")
-#  require("setwidth")
 
-  if(require("utils")) {
-    message("R history enabled")
-    try(loadhistory("~/.Rhistory"))
-    .Last <- function() try(savehistory("~/.Rhistory"))
-  } else {
-    message("R history disabled")
-  }
+    if(require("utils")) {
+        message("R history enabled")
+        try(loadhistory("~/.Rhistory"))
+        .Last <- function() try(savehistory("~/.Rhistory"))
+    } else {
+        message("R history disabled")
+    }
 }
