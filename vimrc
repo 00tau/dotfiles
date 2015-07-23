@@ -166,6 +166,7 @@ let vimrplugin_screenplugin = 0
 
 au FileType rmd :compiler r2html
 au FileType rmd abbreviate eueu ```{r}<cr>```<C-o>O<C-o>D
+au FileType rmd abbreviate euey ```<cr><cr>```{r}<C-o>O<C-o>D
 
 let g:tagbar_type_r = {
     \ 'ctagstype' : 'r',
