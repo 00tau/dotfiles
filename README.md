@@ -150,7 +150,7 @@ Having a freshly installed vanilla (Lu/Xu/U/...)buntu in front of you, you need 
 install the following packages.
 
 ```
-# apt-get install git vim-gtk zsh tmux herbstluftwm tint2 dmenu feh mupdf xdotool unclutter cinnamon-screensaver
+# apt-get install git vim-gtk zsh tmux herbstluftwm tint2 dmenu feh mupdf xdotool unclutter cinnamon-screensaver silversearcher-ag
 ```
 
 Clone the files from this repository

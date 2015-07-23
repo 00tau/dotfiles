@@ -58,7 +58,7 @@ alias e="ls -h --time-style=iso --color=auto "
 alias eu="e -l "
 alias ey="e -la "
 alias hc="herbstclient "
-alias hcs="herbstclient spawn "
+alias ch="herbstclient spawn "
 alias tmux="tmux -2 "
 alias R="R --no-save -q "
 alias p="python3"
@@ -82,11 +82,11 @@ bindkey "^T" vi-cmd-mode
 #bindkey '\e[A' history-search-backward
 #bindkey '\e[B' history-search-forward
 
-# PATH
+# PATH and ENVIRONMENT VARIABLES
+export EDITOR=/usr/bin/vim
+export PAGER=/usr/local/bin/vimpager
 export PATH=~/.dotfiles/scripts:$PATH
-export EDITOR=vim
 export R_LIBS_USER=~/software/R
 
 # Named directories
 data=~/documents/affective-disorders/data
-
