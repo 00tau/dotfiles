@@ -72,6 +72,7 @@ alias -s html=firefox
 alias -s org=firefox
 alias -s com=firefox
 alias -s de=firefox
+alias -s plink='p-link --noweb --script'
 
 # Keybindings
 bindkey -v
