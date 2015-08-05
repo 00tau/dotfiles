@@ -21,7 +21,8 @@ hc keybind $Mod-Shift-q quit
 hc keybind $Mod-colon reload
 hc keybind $Mod-d spawn $swap auto
 hc keybind $Mod-Shift-d spawn $swap close
-hc keybind $Mod-Return spawn $swap stack_spawn xterm
+#hc keybind $Mod-Return spawn $swap stack_spawn xterm
+hc keybind $Mod-Return spawn $swap stack_spawn st -e tmux
 
 # tags
 TAG_NAMES=( {7,5,3,1,2,4,6,8} )

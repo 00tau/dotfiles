@@ -163,6 +163,9 @@ let g:vimrplugin_underscore = 0
 let g:vimrplugin_indent_commented = 1
 let vimrplugin_notmuxconf = 1
 let vimrplugin_screenplugin = 0
+let vimrplugin_assign = 0
+"let vimrplugin_term = "uxterm"
+let vimrplugin_term = "st"
 
 au FileType rmd :compiler r2html
 au FileType rmd abbreviate eueu ```{r}<cr>```<C-o>O<C-o>D

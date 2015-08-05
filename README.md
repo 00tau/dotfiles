@@ -166,6 +166,13 @@ Clone the files from this repository
 % mkdir ~/.tmp # for vim's backup files
 ```
 
+Terminal emulator
+-----------------
+
+Seebrise is using [st](http://st.suckless.org/) by default. Thus, you may
+either need to change the terminal in Seebrise's configuration file or install
+*st*.
+
 The shell -- your Best Friend Forever
 -------------------------------------
 
