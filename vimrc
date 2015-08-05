@@ -9,7 +9,6 @@ set guioptions=a
 " vim.  Simply copy new skipts to the .vim/bundle/
 " directory.  They get loaded automatically.
 runtime bundle/pathogen/autoload/pathogen.vim
-let g:pathogen_disabled = ['vim-pandoc', 'vim-markdown', 'vim-markdownfootnotes', 'tmuxline']
 call pathogen#infect()
 
 "------------------------------------
