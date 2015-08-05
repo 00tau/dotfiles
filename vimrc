@@ -137,6 +137,12 @@ autocmd GUIEnter * set visualbell t_vb=
 let maplocalleader = "\\"
 
 "------------------------------------
+" Tmuxline
+"------------------------------------
+
+let g:tmuxline_powerline_separators = 0
+
+"------------------------------------
 " Markdown
 "------------------------------------
 au BufRead,BufNewFile *.md :set ft=markdown | :set spell
