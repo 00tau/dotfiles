@@ -1,4 +1,6 @@
 set nocompatible
+set encoding=utf-8
+scriptencoding utf-8
 
 set guioptions=a
 
@@ -41,7 +43,6 @@ au FileType text,tex,context,markdown set spell
 filetype plugin on
 filetype indent on
 set fileformat=unix
-set encoding=utf-8
 set textwidth=102
 
 au FileType text,tex,context,markdown set nosmartindent
@@ -93,12 +94,6 @@ set autoindent
 set smartindent
 
 "------------------------------------
-" Statusbar
-"------------------------------------
-set statusline=%F%m%r%h%w\ type=%Y\ pos=%04l,%04v\ %p%%\ len=%L
-set laststatus=2
-
-"------------------------------------
 " Search
 "------------------------------------
 set ignorecase
@@ -137,10 +132,27 @@ autocmd GUIEnter * set visualbell t_vb=
 let maplocalleader = "\\"
 
 "------------------------------------
+" Lightline
+"------------------------------------
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
+"      \ 'separator': { 'left': '#', 'right': '|' },
+"      \ 'subseparator': { 'left': '*', 'right': 'r' }
+
+"------------------------------------
 " Tmuxline
 "------------------------------------
 
 let g:tmuxline_powerline_separators = 0
+
+"------------------------------------
+" Statusbar
+"------------------------------------
+"set statusline=%F%m%r%h%w\ type=%Y\ pos=%04l,%04v\ %p%%\ len=%L
+set laststatus=2
 
 "------------------------------------
 " Markdown
