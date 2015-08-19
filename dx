@@ -120,22 +120,22 @@ xkb_symbols "grid" {
 
     // Keyboard row number: +1
     key.type = "FOUR_LEVEL";
-    key <TAB>  { [ udiaeresis, Udiaeresis, sterling ] };
-    key <AD01> { [ colon, semicolon, brokenbar, U2203 ] };
-    key <AD02> { [ comma, exclam, plus, U22c1 ] };
+    key <TAB>  { [ udiaeresis, Udiaeresis, sterling, U2213 ] };
+    key <AD01> { [ colon, semicolon, brokenbar, U2124 ] };
+    key <AD02> { [ comma, exclam, plus, U2228 ] };
     key <AD03> { [ period, question, dollar, U2026 ] };
 
     key.type = "EIGHT_LEVEL";
-    key <AD04> { [ p, P, bracketleft, U2286, Greek_pi, Greek_PI ] };
-    key <AD05> { [ y, Y, at, at, Greek_upsilon, Greek_UPSILON ] };
-    key <AD06> { [ f, F, percent, percent, Greek_phi, Greek_PHI ] };
-    key <AD07> { [ g, G, bracketright, U228A, Greek_gamma, Greek_GAMMA ] };
+    key <AD04> { [ p, P, bracketleft, U228A, Greek_pi, Greek_PI ] };
+    key <AD05> { [ y, Y, at, U2115, Greek_upsilon, Greek_UPSILON ] };
+    key <AD06> { [ f, F, percent, U211D, Greek_phi, Greek_PHI ] };
+    key <AD07> { [ g, G, bracketright, U2286, Greek_gamma, Greek_GAMMA ] };
     key <AD08> { [ c, C, backslash, U2219, Greek_chi, Greek_CHI ] };
-    key <AD09> { [ r, R, ampersand, U22c0, Greek_rho, Greek_RHO ] };
-    key <AD10> { [ l, L, degree, U2228, Greek_lambda, Greek_LAMBDA ] };
+    key <AD09> { [ r, R, ampersand, U2227, Greek_rho, Greek_RHO ] };
+    key <AD10> { [ l, L, degree, U211A, Greek_lambda, Greek_LAMBDA ] };
 
-    key.type = "THREE_LEVEL";
-    key <BKSL> { [ odiaeresis, Odiaeresis, EuroSign ] };
+    key.type = "FOUR_LEVEL";
+    key <BKSL> { [ odiaeresis, Odiaeresis, EuroSign, plusminus ] };
 
     // Keyboard row number: 0 (home row)
     key.type = "ONE_LEVEL";
@@ -144,35 +144,35 @@ xkb_symbols "grid" {
     key.type = "EIGHT_LEVEL";
     key <AC01> { [ a, A, asciitilde, U2248, Greek_alpha, Greek_ALPHA ] };
     key <AC02> { [ o, O, less, U2264, Greek_omicron, Greek_OMICRON ] };
-    key <AC03> { [ e, E, minus, U2218, Greek_epsilon, Greek_EPSILON ] };
-    key <AC04> { [ u, U, parenleft, U2208, Greek_psi, Greek_PSI ] };
+    key <AC03> { [ e, E, minus, U2205, Greek_epsilon, Greek_EPSILON ] };
+    key <AC04> { [ u, U, parenleft, U2209, Greek_psi, Greek_PSI ] };
     key <AC05> { [ i, I, section, U221E, Greek_iota, Greek_IOTA ] };
-    key <AC06> { [ d, D, underscore, U2219, Greek_delta, Greek_DELTA ] };
-    key <AC07> { [ h, H, parenright, U2209, Greek_eta, Greek_ETA ] };
-    key <AC08> { [ t, T, slash, U2219, Greek_tau, Greek_TAU ] };
+    key <AC06> { [ d, D, underscore, U2AEB, Greek_delta, Greek_DELTA ] };
+    key <AC07> { [ h, H, parenright, U2208, Greek_eta, Greek_ETA ] };
+    key <AC08> { [ t, T, slash, U2218, Greek_tau, Greek_TAU ] };
     key <AC09> { [ n, N, greater, U2265, Greek_nu, Greek_NU ] };
-    key <AC10> { [ s, S, asciicircum, U2227, Greek_sigma, Greek_SIGMA ] };
+    key <AC10> { [ s, S, asciicircum, U221D, Greek_sigma, Greek_SIGMA ] };
 
     key.type = "ONE_LEVEL";
     key <AC11> { [ Shift_R ] };
 
     // Keyboard row number: -1
-    key.type = "THREE_LEVEL";
+    key.type = "TWO_LEVEL";
     key <LFSH> { [ adiaeresis, Adiaeresis ] };
-    key <AB01> { [ apostrophe, quotedbl, dead_acute ] };
-    key <AB02> { [ q, Q, acute ] };
 
     key.type = "FOUR_LEVEL";
+    key <AB01> { [ apostrophe, quotedbl, dead_acute, U2203 ] };
+    key <AB02> { [ q, Q, acute, U2225 ] };
     key <AB03> { [ j, J, equal, U2260 ] };
 
     key.type = "EIGHT_LEVEL";
-    key <AB04> { [ k, K, braceleft, U2200, Greek_kappa, Greek_KAPPA ] };
-    key <AB05> { [ x, X, numbersign, numbersign, Greek_xi, Greek_XI ] };
-    key <AB06> { [ b, B, asterisk, U22c5, Greek_beta, Greek_BETA ] };
-    key <AB07> { [ m, M, braceright, U2203, Greek_mu, Greek_MU ] };
-    key <AB08> { [ w, W, bar, U222B, Greek_omega, Greek_OMEGA ] };
-    key <AB09> { [ v, V, grave, grave, Greek_theta, Greek_THETA ] };
-    key <AB10> { [ z, Z, dead_grave, dead_grave, Greek_zeta, Greek_ZETA ] };
+    key <AB04> { [ k, K, braceleft, U222B, Greek_kappa, Greek_KAPPA ] };
+    key <AB05> { [ x, X, numbersign, U2207, Greek_xi, Greek_XI ] };
+    key <AB06> { [ b, B, asterisk, U2206, Greek_beta, Greek_BETA ] };
+    key <AB07> { [ m, M, braceright, U22A4, Greek_mu, Greek_MU ] };
+    key <AB08> { [ w, W, bar, U22C5, Greek_omega, Greek_OMEGA ] };
+    key <AB09> { [ v, V, grave, U22A5, Greek_theta, Greek_THETA ] };
+    key <AB10> { [ z, Z, dead_grave, U2200, Greek_zeta, Greek_ZETA ] };
 
     key.type = "THREE_LEVEL";
     key <RTSH> { [ ssharp, ssharp, cent ] };

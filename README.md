@@ -68,18 +68,27 @@ these can be used to type letters `é` and `è`, as in *Café*.
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
 | £     | ¦  | +  | $  | [  | @  | %  | ]  | \  | &  | °  | €     |
-| SHIFT | ~  | <  | -  | (  | >  | `|`| )  | /  | _  | ^  | SHIFT |
-|       | ´  | ´  | =  | {  | #  | *  | }  | §  | ´  | ´  | ¢     |
+| SHIFT | ~  | <  | -  | (  | §  | _  | )  | /  | >  | ^  | SHIFT |
+|       | ´  | ´  | =  | {  | #  | *  | }  | `|`| ´  | ´  | ¢     |
 
-When additionally pressing SHIFT, it yields a *shifted symbol* layer, which is,
-as you may agree, rather empty:
+When additionally pressing SHIFT, it yields a *shifted symbol* layer, which is
+full of UTF-8 characters:
 
 | L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
-|       | ∃  | ±  |    |    |    |    |    |    |    | ∨  |       |
-| SHIFT | ∀  | ≤  | ∈  |    | ≥  |    |    |    |    | ∧  | SHIFT |
-|       |    |    | ≈  |    |    |    |    |    |    |    |       |
+| -+    | u2124 | u2228 | u2026 | u228A | u2115 | u211D | u2286 | u2219 | u2227 | u211A | +-    |
+| SHIFT | u2248 | u2264 | u2205 | u2209 | u221E | u2AEB | u2208 | u2218 | u2265 | u221D | SHIFT |
+|       | u2203 | u2225 | u2260 | u222B | u2207 | u2206 | u22A4 | u22C5 | u22A5 | u2200 |       |
+
+Which translate to these symbols:
+
+| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
+| ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+| ∓     | ℤ  | ∨  | …  | ⊊  | ℕ  | ℝ  | ⊆  | ∙  | ∧  | ℚ  | ±     |
+| SHIFT | ≈  | ≤  | ∅  | ∉  | ∞  | ⫫  | ∈  | ∘  | ≥  | ∝  | SHIFT |
+|       | ∃  | ∥  | ≠  | ∫  | ∇  | ∆  | ⊤  | ⋅  | ⊥  | ∀  |       |
 
 When using the Katzenpfote layout, you have also access to a *greek layer*
 (when pressing R-Ctrl, the right control key).  This layer is particularly
@@ -135,7 +144,12 @@ description to this folder.
 ```
 # cd /usr/share/X11/xkb/symbols/dx
 # ln -s ~/.dotfiles/dx dx
-# setxkbmap dx grid
+```
+
+And then apply the layout.
+
+```
+% setxkbmap dx grid
 ```
 
 Installation of Seebriese
@@ -170,8 +184,21 @@ Terminal emulator
 -----------------
 
 Seebrise is using [st](http://st.suckless.org/) by default. Thus, you may
-either need to change the terminal in Seebrise's configuration file or install
+either need to change the terminal in Seebrise's configuration or install
 *st*.
+
+In contrast to *st*'s README, I needed the following packages installed on Ubuntu to compile st:
+
+    libx11-dev: Xlib header fils
+    libxft-dev: freetype-based font drawing
+    libxext-dev: X11 miscellaneous extensions
+
+```
+# apt-get install libx11-dev libxft-dev libxext-dev
+```
+
+Then simply clone the source code of *st* and compile:
+
 
 The shell -- your Best Friend Forever
 -------------------------------------
