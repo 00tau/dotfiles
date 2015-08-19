@@ -106,13 +106,18 @@ When additionally pressing SHIFT, it yields the *capital greek* layer:
 | SHIFT | Α  | Ο  | Ε  | Ψ  | Ι  | Δ  | Η  | Τ  | Ν  | Σ  | SHIFT |
 |       |    |    |    | Κ  | Ξ  | Β  | Μ  | Ω  | Θ  | Ζ  |       |
 
-In fact, this layout allows you to write:
+In fact, this layout allows you to directly write
 
 ```
-P(α ≤ X ≤ β) = Φ(β) - Φ(α)
+P(α ≤ X ≤ β) = Φ(β) - Φ(α) = ∫_α^β Φ(x) dx
 ```
 
-directly into your TeX-document.
+into your TeX-document, and it will be rendered correctly. And, well, which
+just looks so much nicer and is just so much more readable than this:
+
+```
+P(\alpha \leq X \leq \beta) = \Phi(\beta) - \Phi(\alpha) = \int_{\alpha}^{\beta} \Phi(x) dx
+```
 
 In grid layouts, the thumbs can do a lot more than just pressing space:
 
