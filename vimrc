@@ -136,11 +136,8 @@ let maplocalleader = "\\"
 "------------------------------------
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-
-"      \ 'separator': { 'left': '#', 'right': '|' },
-"      \ 'subseparator': { 'left': '*', 'right': 'r' }
+            \ 'colorscheme': 'wombat',
+            \ }
 
 "------------------------------------
 " Tmuxline
@@ -160,15 +157,24 @@ set laststatus=2
 au BufRead,BufNewFile *.md :set ft=markdown | :set spell
 let g:vim_markdown_folding_disabled=1
 
+"------------------------------------
+" Pandoc
+"------------------------------------
 let g:pandoc_no_empty_implicits = 1
 let g:pandoc_no_folding = 1
-let vimrplugin_pandoc_args = "--toc"
+let g:vimrplugin_pandoc_args = "--toc"
 
 "------------------------------------
 " Mutt
 "------------------------------------
-" set up syntax highlighting for my e-mail
+" set up syntax highlighting for e-mail
 au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail | :set spell
+
+"------------------------------------
+" vim-ipython
+"------------------------------------
+au FileType python map <buffer> <space> <c-s>j
+au FileType python nmap <buffer> <cr> v}<c-s>
 
 "------------------------------------
 " R-plugin
@@ -178,15 +184,11 @@ let g:vimrplugin_tmux = 1
 let g:Rout_more_colors = 1
 let g:vimrplugin_underscore = 0
 let g:vimrplugin_indent_commented = 1
-let vimrplugin_notmuxconf = 1
-let vimrplugin_screenplugin = 0
-let vimrplugin_assign = 0
-"let vimrplugin_term = "uxterm"
-let vimrplugin_term = "st"
-
-au FileType rmd :compiler r2html
-au FileType rmd abbreviate eueu ```{r}<cr>```<C-o>O<C-o>D
-au FileType rmd abbreviate euey ```<cr><cr>```{r}<C-o>O<C-o>D
+let g:vimrplugin_notmuxconf = 1
+let g:vimrplugin_screenplugin = 0
+let g:vimrplugin_assign = 0
+let g:vimrplugin_term = "st"
+let g:vimrplugin_vimpager = "vertical"
 
 let g:tagbar_type_r = {
     \ 'ctagstype' : 'r',
@@ -196,6 +198,13 @@ let g:tagbar_type_r = {
         \ 'v:FunctionVariables',
     \ ]
 \ }
+
+au FileType rmd :compiler r2html
+au FileType rmd abbreviate eueu ```{r}<cr>```<C-o>O<C-o>D
+au FileType rmd abbreviate euey ```<cr><cr>```{r}<C-o>O<C-o>D
+
+au FileType r,rdoc,rmd map <buffer> <space> <LocalLeader>lj
+au FileType r,rdoc,rmd map <buffer> <cr> <LocalLeader>cd
 
 "------------------------------------
 " ConTeXt
@@ -251,34 +260,44 @@ endfor
 noremap l :NERDTreeToggle<cr>
 noremap <C-g> :Gstatus<cr>
 
-noremap <C-space> gw}:w<bar>nohl<cr>
-noremap <cr> :nohl<cr>
-noremap <C-cr> :nohl<cr>
+" Navigate buffers
 noremap <C-q> :sbn<bar>bd#<cr>
 noremap <C-k> :bp<cr>
 noremap <C-j> :bn<cr>
 noremap <C-n> :b#<cr>
 
+" Quick movements within a line
 noremap h F
 noremap t f
 noremap H T
 noremap T t
 noremap , ;
 noremap ; ,
+
+" Move to the last character of the paragraph,
+" enter insert mode, and add a space
 noremap f }k$
 nmap F fa<space>
-inoremap <c-f> <right><space>
-inoremap <c-b> <c-h>~$$<left>
 
 " Nicer movement with wrapped lines
 au FileType html,tex,context,noweb,rnoweb,markdown noremap <buffer> j gj
 au FileType html,tex,context,noweb,rnoweb,markdown noremap <buffer> k gk
-au FileType txt,markdown noremap <buffer> <space> gwap
 
-au FileType r,rdoc,rmd map <buffer> <space> <LocalLeader>lj
-au FileType r,rdoc,rmd map <buffer> <cr> <LocalLeader>cd
-"au FileType rmd :nnoremap <buffer> ]] /^#<cr>
-"au FileType rmd :nnoremap <buffer> [[ ?^#<cr>
+" Useful bindings when writing prose
+noremap <space> gw$
+noremap <cr> gwap
+noremap <c-space> gw}
+noremap <c-cr> :nohl<cr>
 
-nnoremap <up> {dd}
-nnoremap <down> {o<esc>}
+au FileType tex,context,latex inoremap <c-f> <right><space>
+au FileType tex,context,latex inoremap <c-b> <c-h>~$$<left>
+
+au FileType rmd nnoremap <buffer> ]] /^#<cr>
+au FileType rmd nnoremap <buffer> [[ ?^#<cr>
+
+" Movement keys in normal mode are free to bind. Let us use those to turn
+" pages in the PDF with the tutorial/help/info-material you are reading.
+nnoremap <left> :silent ! xdotool search --class mupdf key --window \%\@ comma<cr>
+nnoremap <right> :silent ! xdotool search --class mupdf key --window \%\@ period<cr>
+nnoremap <up> :silent ! xdotool search --class mupdf key --window \%\@ H<cr>
+nnoremap <down> :silent ! xdotool search --class mupdf key --window \%\@ W<cr>

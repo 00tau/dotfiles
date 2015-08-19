@@ -61,8 +61,8 @@ alias hc="herbstclient "
 alias ch="herbstclient spawn "
 alias tmux="tmux -2 "
 alias R="R --no-save -q "
-alias p="python3"
-alias pp="ipython3 qtconsole --pylab"
+alias p="ipython3 qtconsole --pylab"
+alias pk="ipython3 kernel --pylab"
 alias running="htop -u $(whoami)"
 
 # Suffix Aliases
