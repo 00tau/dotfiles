@@ -40,18 +40,16 @@ board and close to the numerics, too, which is why it moved there.  A side
 effect of the layout: when entering long rows of digital numbers, it is nice to
 have `,` and `.` right below this line.
 
-| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ü     | :  | ,  | .  | p  | y  | f  | g  | c  | r  | l  | ö     |
 | SHIFT | a  | o  | e  | u  | i  | d  | h  | t  | n  | s  | SHIFT |
 | ä     | '  | q  | j  | k  | x  | b  | m  | w  | v  | z  | ß     |
 
 When pressing SHIFT, it yields the shifted or *capital* layer:
 
-| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | Ü     | ;  | !  | ?  | P  | Y  | F  | G  | C  | R  | L  | Ö     |
 | SHIFT | A  | O  | E  | U  | I  | D  | H  | T  | N  | S  | SHIFT |
 | Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | ß     |
@@ -64,9 +62,8 @@ and grave signs are non-dead, such that they can be used in keyboard short
 cuts.  The outer acute and grave signs on the bottom row are dead, such that
 these can be used to type letters `é` and `è`, as in *Café*.
 
-| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | £     | ¦  | +  | $  | [  | @  | %  | ]  | \  | &  | °  | €     |
 | SHIFT | ~  | <  | -  | (  | §  | _  | )  | /  | >  | ^  | SHIFT |
 |       | ´  | ´  | =  | {  | #  | *  | }  | `|`| ´  | ´  | ¢     |
@@ -74,18 +71,16 @@ these can be used to type letters `é` and `è`, as in *Café*.
 When additionally pressing SHIFT, it yields a *shifted symbol* layer, which is
 full of UTF-8 characters:
 
-| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | -+    | u2124 | u2228 | u2026 | u228A | u2115 | u211D | u2286 | u2219 | u2227 | u211A | +-    |
 | SHIFT | u2248 | u2264 | u2205 | u2209 | u221E | u2AEB | u2208 | u2218 | u2265 | u221D | SHIFT |
 |       | u2203 | u2225 | u2260 | u222B | u2207 | u2206 | u22A4 | u22C5 | u22A5 | u2200 |       |
 
 Which translate to these symbols:
 
-| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ∓     | ℤ  | ∨  | …  | ⊊  | ℕ  | ℝ  | ⊆  | ∙  | ∧  | ℚ  | ±     |
 | SHIFT | ≈  | ≤  | ∅  | ∉  | ∞  | ⫫  | ∈  | ∘  | ≥  | ∝  | SHIFT |
 |       | ∃  | ∥  | ≠  | ∫  | ∇  | ∆  | ⊤  | ⋅  | ⊥  | ∀  |       |
@@ -97,18 +92,16 @@ TeX-dialects, such as [ConTeXt](http://wiki.contextgarden.net/) and
 [LaTeX](http://www.latex-project.org/), understand
 [UTF-8](http://www.utf-8.com/).
 
-| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
 |       |    |    |    | π  | υ  | φ  | γ  | χ  | ρ  | λ  |       |
 | SHIFT | α  | ο  | ε  | ψ  | ι  | δ  | η  | τ  | ν  | σ  | SHIFT |
 |       |    |    |    | κ  | ξ  | β  | μ  | ω  | θ  | ζ  |       |
 
 When additionally pressing SHIFT, it yields the *capital greek* layer:
 
-| L5    | L5 | L4 | L3 | L2 | L2 | R2 | R2 | R3 | R4 | R5 | R5    |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
+|------:|----|----|----|----|----|----|----|----|----|----|:------|
 |       |    |    |    | Π  | Υ  | Φ  | Γ  | Χ  | Ρ  | Λ  |       |
 | SHIFT | Α  | Ο  | Ε  | Ψ  | Ι  | Δ  | Η  | Τ  | Ν  | Σ  | SHIFT |
 |       |    |    |    | Κ  | Ξ  | Β  | Μ  | Ω  | Θ  | Ζ  |       |
@@ -123,7 +116,7 @@ directly into your TeX-document.
 
 In grid layouts, the thumbs can do a lot more than just pressing space:
 
-| L1 | R1 |
+| left thumb | right thumb |
 |:----|----:|
 | *symbol* | Space |
 | Control | Enter |
