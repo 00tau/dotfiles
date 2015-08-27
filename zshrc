@@ -61,7 +61,8 @@ alias hc="herbstclient "
 alias ch="herbstclient spawn "
 alias tmux="tmux -2 "
 alias R="R --no-save -q "
-alias p="ipython3 qtconsole --pylab"
+alias p="source ~/software/python-environments/nmf/bin/activate"
+alias pc="ipython3 qtconsole --pylab"
 alias pk="ipython3 kernel --pylab"
 alias running="htop -u $(whoami)"
 
@@ -74,6 +75,7 @@ alias -s org=firefox
 alias -s com=firefox
 alias -s de=firefox
 alias -s plink='p-link --noweb --script'
+alias -s ine=lrs
 
 # Keybindings
 bindkey -v
