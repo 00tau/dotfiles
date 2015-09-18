@@ -11,6 +11,7 @@ set guioptions=a
 " vim.  Simply copy new skipts to the .vim/bundle/
 " directory.  They get loaded automatically.
 runtime bundle/pathogen/autoload/pathogen.vim
+let g:pathogen_disabled = ['tmuxline.vim', 'vim-ipython']
 call pathogen#infect()
 
 "------------------------------------
@@ -154,6 +155,17 @@ set laststatus=2
 "------------------------------------
 " Markdown
 "------------------------------------
+
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
+
+au FileType python vnoremap <buffer> <cr>    :call SendToTmux(@")<cr>
+au FileType python nnoremap <buffer> <space> yy:call SendToTmux(@")<cr>j
+
+"------------------------------------
+" Markdown
+"------------------------------------
 au BufRead,BufNewFile *.md :set ft=markdown | :set spell
 let g:vim_markdown_folding_disabled=1
 
@@ -169,12 +181,6 @@ let g:vimrplugin_pandoc_args = "--toc"
 "------------------------------------
 " set up syntax highlighting for e-mail
 au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail | :set spell
-
-"------------------------------------
-" vim-ipython
-"------------------------------------
-au FileType python map <buffer> <space> <c-s>j
-au FileType python nmap <buffer> <cr> v}<c-s>
 
 "------------------------------------
 " R-plugin
@@ -274,6 +280,8 @@ noremap T t
 noremap , ;
 noremap ; ,
 
+noremap M `
+
 " Move to the last character of the paragraph,
 " enter insert mode, and add a space
 noremap f }k$
@@ -284,8 +292,8 @@ au FileType html,tex,context,noweb,rnoweb,markdown noremap <buffer> j gj
 au FileType html,tex,context,noweb,rnoweb,markdown noremap <buffer> k gk
 
 " Useful bindings when writing prose
-noremap <space> gw$
-noremap <cr> gwap
+"noremap <space> gw$
+"noremap <cr> gwap
 noremap <c-space> gw}
 noremap <c-cr> :nohl<cr>
 
