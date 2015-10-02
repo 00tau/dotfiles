@@ -68,6 +68,9 @@ alias running="htop -u $(whoami)"
 
 # Suffix Aliases
 alias -s pdf=mupdf
+alias -s png=sxiv
+alias -s jpg=sxiv
+alias -s jpeg=sxiv
 alias -s tex=op
 alias -s md=vimpager
 alias -s html=firefox
