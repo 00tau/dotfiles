@@ -149,7 +149,8 @@ let g:tmuxline_powerline_separators = 0
 "------------------------------------
 " Statusbar
 "------------------------------------
-"set statusline=%F%m%r%h%w\ type=%Y\ pos=%04l,%04v\ %p%%\ len=%L
+" set statusline=%F%m%r%h%w\ type=%Y\ pos=%04l,%04v\ %p%%\ len=%L
+" set statusline=%{fugitive#statusline()}
 set laststatus=2
 
 "------------------------------------
@@ -167,6 +168,7 @@ au FileType python nnoremap <buffer> <space> yy:call SendToTmux(@")<cr>j
 " Markdown
 "------------------------------------
 au BufRead,BufNewFile *.md :set ft=markdown | :set spell
+au BufRead,BufNewFile README :set ft=markdown | :set spell
 let g:vim_markdown_folding_disabled=1
 
 "------------------------------------
