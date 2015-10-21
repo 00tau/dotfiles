@@ -2,7 +2,7 @@
 
 # xrandr --auto --output DVI-I-1 --right-of DVI-I-2 --output DVI-I-2 --rotate left
 
-setxkbmap draxu grid
+setxkbmap draxh grid
 xsetroot -cursor_name left_ptr
 
 #xsetroot -solid '#5A8E3A'

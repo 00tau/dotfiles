@@ -66,7 +66,7 @@ these can be used to type letters `é` and `è`, as in *Café*.
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | £     | ¦  | +  | $  | [  | @  | %  | ]  | \  | &  | °  | €     |
 | SHIFT | ~  | <  | -  | (  | §  | _  | )  | /  | >  | ^  | SHIFT |
-|       | ´  | ´  | =  | {  | #  | *  | }  | `|`| ´  | ´  | ¢     |
+|       | ©  | ´  | =  | {  | #  | *  | }  | `|`| ´  | ℤ  | ¢     |
 
 When additionally pressing SHIFT, it yields a *shifted symbol* layer, which is
 full of UTF-8 characters:
