@@ -79,7 +79,6 @@ xkb_symbols "grid" {
 
     // Alphanumeric section
 
-    key.type = "ONE_LEVEL";
     key <ESC>  { [ Caps_Lock ] };
 
     // Thumb row: upper right
@@ -93,11 +92,9 @@ xkb_symbols "grid" {
     //key <HOME> { [] };
 
     // Thumb row: lower right
-    key.type = "FOUR_LEVEL";
     key <SPCE> { [ space, space, Escape, Escape ] };
-    key.type = "ONE_LEVEL";
     key <RTRN> { [ Return ] };
-    key <PGDN> { [ Multi_key ]};
+    key <PGDN> { type[Group1]="ONE_LEVEL", symbols[Group1] = [ ISO_Level5_Shift ] };
 
     // Thumb row: lower left
     key <BKSP> { type[Group1]="ONE_LEVEL", symbols[Group1] = [ ISO_Level3_Shift ] };
@@ -123,10 +120,10 @@ xkb_symbols "grid" {
 
     // Keyboard row number: +1
     key.type = "EIGHT_LEVEL";
-    key <TAB>  { [ udiaeresis, Udiaeresis, sterling, U2213 ] };
-    key <AD01> { [ colon, semicolon, brokenbar, U2124 ] };
-    key <AD02> { [ comma, exclam, plus, U2228 ] };
-    key <AD03> { [ period, question, dollar, U2026 ] };
+    key <TAB>  { [ udiaeresis, Udiaeresis, sterling, U2213, dead_cedilla ] };
+    key <AD01> { [ colon, semicolon, brokenbar, U2124, dead_diaeresis ] };
+    key <AD02> { [ comma, exclam, plus, U2228, dead_abovering ] };
+    key <AD03> { [ period, question, dollar, U2026, dead_macron ] };
     key <AD04> { [ p, P, bracketleft, U228A, Greek_pi, Greek_PI ] };
     key <AD05> { [ y, Y, at, U2115, Greek_upsilon, Greek_UPSILON ] };
     key <AD06> { [ f, F, percent, U211D, Greek_phi, Greek_PHI ] };
@@ -134,7 +131,7 @@ xkb_symbols "grid" {
     key <AD08> { [ c, C, backslash, U2219, Greek_chi, Greek_CHI ] };
     key <AD09> { [ r, R, ampersand, U2227, Greek_rho, Greek_RHO ] };
     key <AD10> { [ l, L, degree, U211A, Greek_lambda, Greek_LAMBDA ] };
-    key <BKSL> { [ odiaeresis, Odiaeresis, EuroSign, plusminus ] };
+    key <BKSL> { [ odiaeresis, Odiaeresis, EuroSign, plusminus, dead_ogonek ] };
 
     // Keyboard row number: 0 (home row)
     key.type = "ONE_LEVEL";
@@ -157,18 +154,18 @@ xkb_symbols "grid" {
 
     // Keyboard row number: -1
     key.type = "EIGHT_LEVEL";
-    key <LFSH> { [ adiaeresis, Adiaeresis, cent ] };
-    key <AB01> { [ apostrophe, quotedbl, copyright, U2203] };
-    key <AB02> { [ q, Q, acute, U2225 ] };
-    key <AB03> { [ j, J, equal, U2260 ] };
+    key <LFSH> { [ adiaeresis, Adiaeresis, cent, dead_greek, dead_breve ] };
+    key <AB01> { [ apostrophe, quotedbl, copyright, U2203, dead_tilde] };
+    key <AB02> { [ q, Q, acute, U2225, dead_acute ] };
+    key <AB03> { [ j, J, equal, U2260, dead_circumflex ] };
     key <AB04> { [ k, K, braceleft, U222B, Greek_kappa, Greek_KAPPA ] };
     key <AB05> { [ x, X, numbersign, U2207, Greek_xi, Greek_XI ] };
     key <AB06> { [ b, B, asterisk, U2206, Greek_beta, Greek_BETA ] };
     key <AB07> { [ m, M, braceright, U22A4, Greek_mu, Greek_MU ] };
     key <AB08> { [ w, W, bar, U22C5, Greek_omega, Greek_OMEGA ] };
     key <AB09> { [ v, V, grave, U22A5, Greek_theta, Greek_THETA ] };
-    key <AB10> { [ z, Z, U2124, U2200, Greek_zeta, Greek_ZETA ] };
-    key <RTSH> { [ ssharp, ssharp ] };
+    key <AB10> { [ z, Z, dead_grave, U2200, Greek_zeta, Greek_ZETA ] };
+    key <RTSH> { [ ssharp, ssharp, dead_belowdot, dead_abovedot, dead_horn ] };
 
     // Keyboard row number: -2 (very bad for your tendons!)
     key.type = "ONE_LEVEL";
@@ -180,3 +177,5 @@ xkb_symbols "grid" {
     include "level3(modifier_mapping)"
     include "level5(modifier_mapping)"
 };
+
+// partial alphanumeric_keys modifier_keys keypad_keys
