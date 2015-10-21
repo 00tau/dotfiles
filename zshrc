@@ -94,5 +94,14 @@ export PAGER=/usr/local/bin/vimpager
 export PATH=~/.dotfiles/scripts:$PATH
 export R_LIBS_USER=~/software/R
 
+# Freesurfer needs its own
+export FREESURFER_HOME=~/software/freesurfer/freesurfer
+export FSFAST_HOME=$FREESURFER/fsfast
+export FSF_OUTPUT_FORMAT=nii
+export SUBJECTS_DIR=$FREESURFER/subjects
+export MNI_DIR=$FREESURFER/mni
+
+alias freesource=$FREESURFER/SetUpFreeSurfer.sh
+
 # Named directories
 data=~/documents/affective-disorders/data
