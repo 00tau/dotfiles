@@ -8,6 +8,12 @@ hc() {
 
 hc emit_hook reload
 
+# mouse
+hc mouseunbind --all
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 zoom
+hc mousebind $Mod-Button3 resize
+
 # colors
 hc set frame_border_normal_color  '#000000'
 hc set frame_border_active_color  '#FFFFFF'

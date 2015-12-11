@@ -12,6 +12,12 @@ hc keyunbind --all
 # use the some swap functions to give hc some tiling gimmics
 swap=~/.config/herbstluftwm/swap
 
+# mouse
+hc mouseunbind --all
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 zoom
+hc mousebind $Mod-Button3 resize
+
 # keybindings
 Mod=Mod4
 hc keybind $Mod-a spawn cinnamon-screensaver-command -l

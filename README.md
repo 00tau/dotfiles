@@ -52,7 +52,7 @@ When pressing SHIFT, it yields the shifted or *capital* layer:
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | Ü     | ;  | !  | ?  | P  | Y  | F  | G  | C  | R  | L  | Ö     |
 | SHIFT | A  | O  | E  | U  | I  | D  | H  | T  | N  | S  | SHIFT |
-| Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | ß     |
+| Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | `     |
 
 The alternative-ground or *symbol* layer (when pressing Alt-Gr) looks
 like this: Note how easy it is to press combinations such as `<-` or `~/` or
@@ -66,7 +66,7 @@ these can be used to type letters `é` and `è`, as in *Café*.
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | £     | ¦  | +  | $  | [  | @  | %  | ]  | \  | &  | °  | €     |
 | SHIFT | ~  | <  | -  | (  | §  | _  | )  | /  | >  | ^  | SHIFT |
-|       | ©  | ´  | =  | {  | #  | *  | }  | `|`| ´  | ℤ  | ¢     |
+| ℂ     | ℚ  | ℝ  | =  | {  | #  | *  | }  | `|`| ℕ  | ℤ  | HH    |
 
 When additionally pressing SHIFT, it yields a *shifted symbol* layer, which is
 full of UTF-8 characters:
@@ -75,7 +75,7 @@ full of UTF-8 characters:
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | ∓     | ℤ  | ∨  | …  | ⊊  | ℕ  | ℝ  | ⊆  | ∙  | ∧  | ℚ  | ±     |
 | SHIFT | ≈  | ≤  | ∅  | ∉  | ∞  | ⫫  | ∈  | ∘  | ≥  | ∝  | SHIFT |
-|       | ∃  | ∥  | ≠  | ∫  | ∇  | ∆  | ⊤  | ⋅  | ⊥  | ∀  |       |
+| ¢     | ∃  | ∥  | ≠  | ∫  | ∇  | ∆  | ⊤  | ⋅  | ⊥  | ∀  | ´     |
 
 When using the Katzenpfote layout, you have also access to a *greek layer*
 (when pressing R-Ctrl, the right control key).  This layer is particularly
@@ -86,7 +86,7 @@ TeX-dialects, such as [ConTeXt](http://wiki.contextgarden.net/) and
 
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
-|       |    |    |    | π  | υ  | φ  | γ  | χ  | ρ  | λ  |       |
+|       |    |    | é  | π  | υ  | φ  | γ  | χ  | ρ  | λ  |       |
 | SHIFT | α  | ο  | ε  | ψ  | ι  | δ  | η  | τ  | ν  | σ  | SHIFT |
 |       |    |    |    | κ  | ξ  | β  | μ  | ω  | θ  | ζ  |       |
 

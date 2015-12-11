@@ -124,7 +124,7 @@ xkb_symbols "grid" {
     // Keyboard row number: +1
     key.type = "FOUR_LEVEL";
     key <TAB>  { [ udiaeresis, Udiaeresis, sterling, U2213 ] };
-    key <AD01> { [ colon, semicolon, brokenbar, U2124 ] };
+    key <AD01> { [ colon, semicolon, brokenbar, U2102 ] };
     key <AD02> { [ comma, exclam, plus, U2228 ] };
     key <AD03> { [ period, question, dollar, U2026 ] };
     key.type = "EIGHT_LEVEL";
