@@ -52,7 +52,7 @@ When pressing SHIFT, it yields the shifted or *capital* layer:
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 | Ü     | ;  | !  | ?  | P  | Y  | F  | G  | C  | R  | L  | Ö     |
 | SHIFT | A  | O  | E  | U  | I  | D  | H  | T  | N  | S  | SHIFT |
-| Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | `     |
+| Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | ß     |
 
 The alternative-ground or *symbol* layer (when pressing Alt-Gr) looks
 like this: Note how easy it is to press combinations such as `<-` or `~/` or
@@ -64,39 +64,39 @@ these can be used to type letters `é` and `è`, as in *Café*.
 
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
-| £     | ¦  | +  | $  | [  | @  | %  | ]  | \  | &  | °  | €     |
-| SHIFT | ~  | <  | -  | (  | §  | _  | )  | /  | >  | ^  | SHIFT |
-| ℂ     | ℚ  | ℝ  | =  | {  | #  | *  | }  | `|`| ℕ  | ℤ  | HH    |
+| §     | ∪  | +  | $  | [  | @  | %  | ]  | \  | &  | ∩  | ∞     |
+| SHIFT | ~  | <  | -  | (  | ±  | _  | )  | /  | >  | ^  | SHIFT |
+| ℂ     | ℚ  | ℝ  | =  | {  | #  | *  | }  | `|`| ℕ  | ℤ  | ℍ     |
 
 When additionally pressing SHIFT, it yields a *shifted symbol* layer, which is
 full of UTF-8 characters:
 
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
-| ∓     | ℤ  | ∨  | …  | ⊊  | ℕ  | ℝ  | ⊆  | ∙  | ∧  | ℚ  | ±     |
-| SHIFT | ≈  | ≤  | ∅  | ∉  | ∞  | ⫫  | ∈  | ∘  | ≥  | ∝  | SHIFT |
-| ¢     | ∃  | ∥  | ≠  | ∫  | ∇  | ∆  | ⊤  | ⋅  | ⊥  | ∀  | ´     |
+| ¦     | ⋃  | ∨  | …  | ⊊  | ⨉  | °  | ⊆  | ∙  | ∧  | ⋂  |       |
+| SHIFT | ≈  | ≤  | ∅  | ∉  | ∓  | ⫫  | ∈  | ∘  | ≥  | ∝  | SHIFT |
+| ´     | ∃  | ∥  | ≠  | ∫  | ∇  | ∆  | ⊤  | ⋅  | ⊥  | ∀  | ` `   |
 
 When using the Katzenpfote layout, you have also access to a *greek layer*
 (when pressing R-Ctrl, the right control key).  This layer is particularly
-useful, when writing mathematical scripts in [TeX](http://tug.org/), as most
+useful, when writing mathematical text in [TeX](http://tug.org/), as most
 TeX-dialects, such as [ConTeXt](http://wiki.contextgarden.net/) and
 [LaTeX](http://www.latex-project.org/), understand
 [UTF-8](http://www.utf-8.com/).
 
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
-|       |    |    | é  | π  | υ  | φ  | γ  | χ  | ρ  | λ  |       |
+|       | å  | ø  | é  | π  | υ  | φ  | γ  | χ  | ρ  | λ  |       |
 | SHIFT | α  | ο  | ε  | ψ  | ι  | δ  | η  | τ  | ν  | σ  | SHIFT |
-|       |    |    |    | κ  | ξ  | β  | μ  | ω  | θ  | ζ  |       |
+|       | ñ  | £  | €  | κ  | ξ  | β  | μ  | ω  | θ  | ζ  |       |
 
 When additionally pressing SHIFT, it yields the *capital greek* layer:
 
 | ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
-|       |    |    |    | Π  | Υ  | Φ  | Γ  | Χ  | Ρ  | Λ  |       |
+|       | Å  | Ø  | É  | Π  | Υ  | Φ  | Γ  | Χ  | Ρ  | Λ  |       |
 | SHIFT | Α  | Ο  | Ε  | Ψ  | Ι  | Δ  | Η  | Τ  | Ν  | Σ  | SHIFT |
-|       |    |    |    | Κ  | Ξ  | Β  | Μ  | Ω  | Θ  | Ζ  |       |
+|       | Ñ  | ©  | ¢  | Κ  | Ξ  | Β  | Μ  | Ω  | Θ  | Ζ  |       |
 
 In fact, this layout allows you to directly write
 
