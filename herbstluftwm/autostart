@@ -30,12 +30,13 @@ hc set frame_normal_opacity 0
 # gaps
 hc set frame_gap 2
 hc set frame_padding 1
-hc set frame_border_width 1
+#hc set frame_border_width 1
+hc set frame_border_width 3
 hc set always_show_frame 0
-hc set window_gap -2
+hc set window_gap 0
 hc set window_border_width 1
-hc set window_border_inner_width 1
-hc set smart_window_surroundings 1
+hc set window_border_inner_width 0
+hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
 
@@ -46,8 +47,9 @@ hc unrule -F
 hc rule focus=off # normally do not focus new clients
 
 # give focus to most common terminals
-hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
+#hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)|st|st-256color' focus=on
+#hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 

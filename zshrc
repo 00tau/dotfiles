@@ -1,28 +1,49 @@
 #file: ~/.zshrc
 #author: Thomas W. D. Moebius (00tau@suud.de)
-#year: 2011,2012,2013,2014
+#year: 2011,2012,2013,2014,2016
+#
+# Use modern completion system
+autoload -Uz compinit
+compinit
 
-# Completion
-zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
-zstyle ':completion:*' completions 1
-zstyle ':completion:*' glob 1
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2 eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' max-errors 2 numeric
-zstyle ':completion:*' prompt '%e'
-zstyle ':completion:*' substitute 1
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
 
-# Completing process IDs with menu selection:
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*'   force-list always
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# directory as argument, this will remove the trailing slash (usefull in ln)
-zstyle ':completion:*' squeeze-slashes true
+#  # Completion
+# autoload -Uz compinit && compinit
+#  zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+#  zstyle ':completion:*' completions 1
+#  zstyle ':completion:*' glob 1
+#  zstyle ':completion:*' list-colors ''
+#  zstyle ':completion:*' max-errors 2 numeric
+#  zstyle ':completion:*' prompt '%e'
+#  zstyle ':completion:*' substitute 1
+#
+#  # Completing process IDs with menu selection:
+#  zstyle ':completion:*:*:kill:*' menu yes select
+#  zstyle ':completion:*:kill:*'   force-list always
+#
+#  # directory as argument, this will remove the trailing slash (usefull in ln)
+#  zstyle ':completion:*' squeeze-slashes true
 
 # cd will never select the parent directory (e.g.: cd ../<TAB>):
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 autoload -U colors && colors
-autoload -Uz compinit && compinit
 
 setopt menu_complete
 
@@ -30,7 +51,7 @@ setopt menu_complete
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-#setopt appendhistory
+#setopt appendhistory histignorealldups sharehistory
 setopt INC_APPEND_HISTORY SHARE_HISTORY HIST_IGNORE_ALL_DUPS \
     HIST_SAVE_NO_DUPS HIST_REDUCE_BLANKS HIST_IGNORE_SPACE \
     NO_HIST_BEEP
@@ -73,10 +94,10 @@ alias -s jpg=sxiv
 alias -s jpeg=sxiv
 alias -s tex=op
 alias -s md=vimpager
-alias -s html=firefox
-alias -s org=firefox
-alias -s com=firefox
-alias -s de=firefox
+alias -s html=luakit
+alias -s org=luakit
+alias -s com=luakit
+alias -s de=luakit
 alias -s plink='p-link --noweb --script'
 alias -s ine=lrs
 

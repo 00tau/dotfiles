@@ -161,7 +161,8 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
 
-au FileType python vnoremap <buffer> <cr>    :call SendToTmux(@")<cr>
+au FileType python vnoremap <buffer> <cr>    "+y:call SendToTmux('%paste')<cr>
+au FileType python nnoremap <buffer> <cr>    V}"+y:call SendToTmux('%paste')<cr>
 au FileType python nnoremap <buffer> <space> yy:call SendToTmux(@")<cr>j
 
 "------------------------------------
