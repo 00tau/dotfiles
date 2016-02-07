@@ -111,7 +111,7 @@ bindkey "^T" vi-cmd-mode
 
 # PATH and ENVIRONMENT VARIABLES
 export EDITOR=/usr/bin/vim
-export PAGER=/usr/local/bin/vimpager
+#export PAGER=/usr/local/bin/vimpager
 export PATH=~/.dotfiles/scripts:$PATH
 export R_LIBS_USER=~/software/R
 
