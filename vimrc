@@ -31,7 +31,7 @@ set title
 set showmatch
 
 "------------------------------------
-" Spellcheck settings
+" Spell check settings
 "------------------------------------
 set spelllang=en_gb,de
 set spellsuggest=10
@@ -135,7 +135,6 @@ let maplocalleader = "\\"
 "------------------------------------
 " Lightline
 "------------------------------------
-
 let g:lightline = {
             \ 'colorscheme': 'wombat',
             \ }
@@ -143,7 +142,6 @@ let g:lightline = {
 "------------------------------------
 " Tmuxline
 "------------------------------------
-
 let g:tmuxline_powerline_separators = 0
 
 "------------------------------------
@@ -154,9 +152,8 @@ let g:tmuxline_powerline_separators = 0
 set laststatus=2
 
 "------------------------------------
-" Markdown
+" Python
 "------------------------------------
-
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
@@ -171,6 +168,9 @@ au FileType python nnoremap <buffer> <space> yy:call SendToTmux(@")<cr>j
 au BufRead,BufNewFile *.md :set ft=markdown | :set spell
 au BufRead,BufNewFile README :set ft=markdown | :set spell
 let g:vim_markdown_folding_disabled=1
+
+au FileType markdown nnoremap <buffer> <space> gwap
+au FileType markdown nnoremap <buffer> <cr> (gw}
 
 "------------------------------------
 " Pandoc
