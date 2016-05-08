@@ -1,0 +1,188 @@
+default
+xkb_symbols "basic" {
+
+    name[Group1]="Katzenpfote";
+
+    // Alphanumeric section
+
+    key.type = "ONE_LEVEL";
+    key <ESC>  { [ Caps_Lock ] };
+
+    // Thumb row: upper right
+    key <RCTL> { [ Delete ] };
+    key <RALT> { [ Multi_Key ] };
+    //key <PGUP> { [] };
+
+    // Thumb row: upper left
+    key <LCTL> { [ BackSpace ] };
+    key <LALT> { [ Multi_Key ] };
+    //key <HOME> { [] };
+
+    // Thumb row: lower right
+    key.type = "FOUR_LEVEL";
+    key <SPCE> { [ space, space, Escape, Escape ] };
+    key.type = "ONE_LEVEL";
+    key <RTRN> { [ Return ] };
+    key <PGDN> { [ ISO_Level5_Shift ]};
+
+    // Thumb row: lower left
+    key <BKSP> { [ ISO_Level3_Shift ] };
+    key <DELE> { [ Control_L ] };
+    key <END>  { [ Super_L ] };
+
+    // Keyboard row number: +2
+    key.type = "ONE_LEVEL";
+    key <AE12> { [ Escape ] };
+    key <AE01> { [ 7 ] };
+    key <AE02> { [ 5 ] };
+    key <AE03> { [ 3 ] };
+    key <AE04> { [ 1 ] };
+    key <AE05> { [ 9 ] };
+    key <AE06> { [ 0 ] };
+    key <AE07> { [ 2 ] };
+    key <AE08> { [ 4 ] };
+    key <AE09> { [ 6 ] };
+    key <AE10> { [ 8 ] };
+
+    key.type = "TWO_LEVEL";
+    key <AE11> { [ Tab, ISO_Left_Tab ] };
+
+    // U211D sterling EuroSign, U211A, U2115
+    // Keyboard row number: +1
+    key.type = "FOUR_LEVEL";
+    key <TAB>  { [ udiaeresis, Udiaeresis, dead_diaeresis, section ] };
+    key.type = "EIGHT_LEVEL";
+    key <AD01> { [ colon, semicolon, U222A, U22C3 ] };
+    key <AD02> { [ comma, exclam, plus, U2228, U00A1 ] };
+    key <AD03> { [ period, question, dollar, U2026, U00Bf ] };
+    key <AD04> { [ p, P, bracketleft, U228A, Greek_pi, Greek_PI ] };
+    key <AD05> { [ y, Y, at, U2A09, Greek_upsilon, Greek_UPSILON ] };
+    key <AD06> { [ f, F, percent, degree, Greek_phi, Greek_PHI ] };
+    key <AD07> { [ g, G, bracketright, U2286, Greek_gamma, Greek_GAMMA ] };
+    key <AD08> { [ c, C, backslash, U2219, Greek_chi, Greek_CHI ] };
+    key <AD09> { [ r, R, ampersand, U2227, Greek_rho, Greek_RHO ] };
+    key <AD10> { [ l, L, U2229, U22C2, Greek_lambda, Greek_LAMBDA ] };
+    key <BKSL> { [ odiaeresis, Odiaeresis, U00F8, U00D8, U0153, U0152 ] };
+
+    // Keyboard row number: 0 (home row)
+    key.type = "ONE_LEVEL";
+    key <CAPS> { [ Shift_L ] };
+
+    key.type = "EIGHT_LEVEL";
+    key <AC01> { [ a, A, asciitilde, U2248, Greek_alpha, Greek_ALPHA ] };
+    key <AC02> { [ o, O, less, U2264, Greek_omicron, Greek_OMICRON ] };
+    key <AC03> { [ e, E, minus, U2205, Greek_epsilon, Greek_EPSILON ] };
+    key <AC04> { [ u, U, parenleft, U2209, Greek_psi, Greek_PSI ] };
+    key <AC05> { [ i, I, plusminus, U2213 , Greek_iota, Greek_IOTA ] };
+    key <AC06> { [ d, D, underscore, U221E, Greek_delta, Greek_DELTA ] };
+    key <AC07> { [ h, H, parenright, U2208, Greek_eta, Greek_ETA ] };
+    key <AC08> { [ t, T, slash, U2218, Greek_tau, Greek_TAU ] };
+    key <AC09> { [ n, N, greater, U2265, Greek_nu, Greek_NU ] };
+    key <AC10> { [ s, S, asciicircum, U221D, Greek_sigma, Greek_SIGMA ] };
+
+    key.type = "ONE_LEVEL";
+    key <AC11> { [ Shift_R ] };
+
+    // Keyboard row number: -1
+    key.type = "EIGHT_LEVEL";
+    key <LFSH> { [ adiaeresis, Adiaeresis, U00E5, U00C5, U00E6, U00C6 ] };
+    key <AB01> { [ apostrophe, quotedbl, dead_tilde, U2203, U210D ] };
+    key <AB02> { [ q, Q, dead_grave, U2225, U2115 ] };
+    key <AB03> { [ j, J, equal, U2260, U2102, cent ] };
+    key <AB04> { [ k, K, braceleft, U222B, Greek_kappa, Greek_KAPPA ] };
+    key <AB05> { [ x, X, numbersign, U2207, Greek_xi, Greek_XI ] };
+    key <AB06> { [ b, B, asterisk, U2206, Greek_beta, Greek_BETA ] };
+    key <AB07> { [ m, M, braceright, U22A4, Greek_mu, Greek_MU ] };
+    key <AB08> { [ w, W, bar, U22C5, Greek_omega, Greek_OMEGA ] };
+    key <AB09> { [ v, V, dead_acute, U22A5, Greek_theta, Greek_THETA ] };
+    key <AB10> { [ z, Z, dead_circumflex, U2200, Greek_zeta, Greek_ZETA ] };
+    key.type = "FOUR_LEVEL";
+    key <RTSH> { [ ssharp, ssharp, ccedilla, Ccedilla ] };
+
+    // Keyboard row number: -2 (very bad for your tendons, don't use it!)
+    key.type = "ONE_LEVEL";
+    key <TLDE> { [ ] };
+    key <LSGT> { [ ] };
+    key <AD11> { [ ] };
+    key <AD12> { [ ] };
+
+    include "level3(modifier_mapping)"
+    include "level5(modifier_mapping)"
+// EuroSign, U00F1, U00D1, U00F8, U00D8, U00E9, U00C9, U211D, U2225, sterling, copyright, U2124, brokenbar
+};
+
+partial alphanumeric_keys
+xkb_symbols "nogrid" {
+
+    name[Group1]= "Katzenpfote no grid version";
+
+    // Alphanumeric section
+
+    key <ESC>  { [ Escape ] };
+    key <LCTL> { [ Caps_Lock ] };
+    key <RALT> { [ Alt_L ] };
+
+    key <SPCE> { [ space, space, Escape, Escape ] };
+
+    // Keyboard row number: +2
+    key <TLDE> { [ Home ] };
+    key <AE01> { [ Super_L ] };
+    key <AE02> { [ 7 ] };
+    key <AE03> { [ 5 ] };
+    key <AE04> { [ 3 ] };
+    key <AE05> { [ 1 ] };
+    key <AE06> { [ 9 ] };
+    key <AE07> { [ 0 ] };
+    key <AE08> { [ 2 ] };
+    key <AE09> { [ 4 ] };
+    key <AE10> { [ 6 ] };
+    key <AE11> { [ 8 ] };
+    key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
+
+    // Keyboard row number: +1
+    key <TAB>  { [ udiaeresis, Udiaeresis ] };
+    key <AD01> { [ colon, semicolon, bracketleft ] };
+    key <AD02> { [ comma, exclam, plus ] };
+    key <AD03> { [ period, question, dollar ] };
+    key <AD04> { [ p, P, bracketright, Greek_pi ] };
+    key <AD05> { [ y, Y, acute, Greek_psi ] };
+    key <AD06> { [ f, F, grave, Greek_phi ] };
+    key <AD07> { [ g, G, slash, Greek_gamma ] };
+    key <AD08> { [ c, C, underscore, Greek_chi ] };
+    key <AD09> { [ r, R, ampersand, Greek_rho ] };
+    key <AD10> { [ l, L, percent, Greek_lambda ] };
+    key <AD11> { [ odiaeresis, Odiaeresis ] };
+    key <AD12> { [ slash, backslash ] };
+
+    // Keyboard row number: 0
+    key <CAPS> { [ Control_L ] };
+    key <AC01> { [ a, A, asciitilde, Greek_alpha ] };
+    key <AC02> { [ o, O, less, Greek_omicron ] };
+    key <AC03> { [ e, E, minus, Greek_epsilon ] };
+    key <AC04> { [ u, U, greater, Greek_upsilon ] };
+    key <AC05> { [ i, I, parenleft, Greek_iota ] };
+    key <AC06> { [ d, D, parenright, Greek_delta ] };
+    key <AC07> { [ h, H, braceright, Greek_eta ] };
+    key <AC08> { [ t, T, backslash, Greek_tau ] };
+    key <AC09> { [ n, N, braceleft, Greek_nu ] };
+    key <AC10> { [ s, S, asciicircum, Greek_sigma ] };
+    key <AC11> { [ ssharp, slash ] };
+    key <BKSL> { [ minus, underscore ] };
+
+    // Keyboard row number: -1
+    key <LSGT> { [ adiaeresis, Adiaeresis, bar ] };
+    key <AB01> { [ apostrophe, quotedbl ] };
+    key <AB02> { [ q, Q, at ] };
+    key <AB03> { [ j, J, equal ] };
+    key <AB04> { [ k, K, asterisk, Greek_kappa ] };
+    key <AB05> { [ x, X, bar, Greek_xi ] };
+    key <AB06> { [ b, B, brokenbar, Greek_beta ] };
+    key <AB07> { [ m, M, numbersign, Greek_mu ] };
+    key <AB08> { [ w, W, at, Greek_omega ] };
+    key <AB09> { [ v, V, section, Greek_theta ] };
+    key <AB10> { [ z, Z, degree, Greek_zeta ] };
+
+    include "level3(ralt_switch)"
+};
+
+// partial alphanumeric_keys modifier_keys keypad_keys
