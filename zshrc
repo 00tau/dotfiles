@@ -82,9 +82,8 @@ alias hc="herbstclient "
 alias ch="herbstclient spawn "
 alias tmux="tmux -2 "
 alias R="R --no-save -q "
-alias p="source ~/software/python-environments/nmf/bin/activate"
-alias pc="ipython3 qtconsole --pylab"
-alias pk="ipython3 kernel --pylab"
+alias p="source ~/software/python-environments/for/bin/activate"
+alias pp="ipython --colors=nocolor --pylab='auto' "
 alias running="htop -u $(whoami)"
 
 # Suffix Aliases
@@ -102,10 +101,13 @@ alias -s com=luakit
 alias -s de=luakit
 alias -s plink='p-link --noweb --script'
 alias -s ine=lrs
+alias -s csv=gnumeric --no-splash
 
 # Keybindings
 bindkey -v
 bindkey "^T" vi-cmd-mode
+#bindkey "^P" yank
+#bindkey "^Y" yank-pop
 #bindkey "up" history-search-backward
 #bindkey "down" history-search-forward
 #bindkey '\e[A' history-search-backward

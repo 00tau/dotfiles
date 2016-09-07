@@ -28,12 +28,13 @@ hc keybind $Mod-Shift-d spawn $swap close
 hc keybind $Mod-Return spawn $swap stack_spawn st -e tmux
 
 # tags
-TAG_NAMES=( {7,5,3,1,2,4,6,8} )
-TAG_KEYS=( {7,5,3,1,2,4,6,8} 0 )
+tag_names=( {7,5,3,1,2,4,6,8} )
+tag_keys=( {7,5,3,1,2,4,6,8} 0 )
 
-for i in ${!TAG_NAMES[@]} ; do
-    hc add "${TAG_NAMES[$i]}"
-    key="${TAG_KEYS[$i]}"
+hc rename default "${tag_names[0]}" || true
+for i in ${!tag_names[@]} ; do
+    hc add "${tag_names[$i]}"
+    key="${tag_keys[$i]}"
     if ! [ -z "$key" ] ; then
         hc keybind "$Mod-$key" use_index "$i"
         hc keybind "$Mod-Shift-$key" move_index "$i"
@@ -70,7 +71,7 @@ hc keybind $Mod-u       shift right
 
 # change pane configuration: adding and removing
 #   values are multiples of the golden fraction
-hc keybind $Mod-w split vertical  0.7669549  # =1-(8/13)^3
+hc keybind $Mod-w split vertical 0.7669549  # =1-(8/13)^3
 hc keybind $Mod-v split horizontal 0.6213018 # =1-(8/13)^2
 hc keybind $Mod-q remove
 
@@ -82,8 +83,7 @@ hc keybind $Mod-Shift-c resize up +$RESIZESTEP
 hc keybind $Mod-Shift-n resize right +$RESIZESTEP
 
 # change pane configuration: layout
-hc keybind $Mod-s cycle_layout 1 max grid
-hc keybind $Mod-l cycle_layout 1 horizontal vertical
+hc keybind $Mod-s cycle_layout 1 vertical horizontal max grid
 
 # change pane configuration: tiling, floating and fullscreen
 hc keybind $Mod-f pseudotile toggle
@@ -102,7 +102,7 @@ hc keybind $Mod-space       cycle
 
 #hc keybind $Mod-q jumpto urgent
 # menu
-hc keybind $Mod-b spawn dmenu_run -nb "#535353" -nf "#EEEEEE" -sf "#EEEEEE" -sb "#53BBCB"
+hc keybind $Mod-b spawn dmenu_run_hlwm -nb "#535353" -nf "#EEEEEE" -sf "#EEEEEE" -sb "#53BBCB"
 
 # sound
 hc keybind $Mod-k spawn "amixer -- sset PCM playback 5%+"

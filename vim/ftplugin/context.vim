@@ -4,6 +4,7 @@ compiler context
 " Compiling and manipulating `mupdf`
 nnoremap <buffer> <space> gq}:w<cr>:silent make %<cr>:silent ! xdotool search --class mupdf key --window \%\@ r<cr>
 nnoremap <buffer> <space> gq}:w<cr>:silent make %<cr>:silent ! xdotool search --class mupdf key --window \%\@ r<cr>
+nnoremap <buffer> <cr> gwap
 nnoremap <buffer> <LocalLeader>k :silent ! xdotool search --class mupdf key --window \%\@ k<cr>
 nnoremap <buffer> <LocalLeader>j :silent ! xdotool search --class mupdf key --window \%\@ j<cr>
 
@@ -43,7 +44,6 @@ nnoremap <buffer> <LocalLeader>bf Bi{\bf <c-o>W}<esc>
 set autoindent
 set nocindent
 set nosmartindent
-set textwidth=102
 
 " enable spell checking
 syn spell toplevel

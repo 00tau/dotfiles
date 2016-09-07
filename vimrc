@@ -44,7 +44,6 @@ au FileType text,tex,context,markdown set spell
 filetype plugin on
 filetype indent on
 set fileformat=unix
-set textwidth=102
 
 au FileType text,tex,context,markdown set nosmartindent
 
@@ -86,7 +85,8 @@ endif
 "------------------------------------
 " Indentation
 "------------------------------------
-set wrap linebreak textwidth=0 wrapmargin=0 nolist
+set textwidth=72
+set wrap linebreak wrapmargin=0 nolist
 set tabstop=4
 set backspace=2
 set shiftwidth=4
@@ -122,7 +122,7 @@ endif
 autocmd BufWritePre * :%s/\s\+$//e
 
 "---------------------------------------
-" Turn off the annoing beeb
+" Turn off the annoying beeb
 "---------------------------------------
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
@@ -140,9 +140,22 @@ let g:lightline = {
             \ }
 
 "------------------------------------
-" Tmuxline
+" Tmux
 "------------------------------------
+
+" Tmuxline
 let g:tmuxline_powerline_separators = 0
+
+" SendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
+au FileType python,sh,zsh nnoremap <buffer> <space> yy:call SendToTmux(@")<cr>j
+
+au FileType python vnoremap <buffer> <cr> "+y:call SendToTmux('%paste')<cr>
+au FileType python nnoremap <buffer> <cr> "+yap:call SendToTmux('%paste')<cr>
+
+au FileType sh,zsh vnoremap <buffer> <cr> y:call SendToTmux(@")<cr>
+au FileType sh,zsh nnoremap <buffer> <cr> yap:call SendToTmux(@")<cr>
+
 
 "------------------------------------
 " Statusbar
@@ -150,17 +163,6 @@ let g:tmuxline_powerline_separators = 0
 " set statusline=%F%m%r%h%w\ type=%Y\ pos=%04l,%04v\ %p%%\ len=%L
 " set statusline=%{fugitive#statusline()}
 set laststatus=2
-
-"------------------------------------
-" Python
-"------------------------------------
-vmap <C-c><C-c> <Plug>SendSelectionToTmux
-nmap <C-c><C-c> <Plug>NormalModeSendToTmux
-nmap <C-c>r <Plug>SetTmuxVars
-
-au FileType python vnoremap <buffer> <cr>    "+y:call SendToTmux('%paste')<cr>
-au FileType python nnoremap <buffer> <cr>    V}"+y:call SendToTmux('%paste')<cr>
-au FileType python nnoremap <buffer> <space> yy:call SendToTmux(@")<cr>j
 
 "------------------------------------
 " Markdown
@@ -171,6 +173,11 @@ let g:vim_markdown_folding_disabled=1
 
 au FileType markdown nnoremap <buffer> <space> gwap
 au FileType markdown nnoremap <buffer> <cr> (gw}
+
+"------------------------------------
+" Python
+"------------------------------------
+au FileType python :set textwidth=0
 
 "------------------------------------
 " Pandoc
