@@ -23,7 +23,7 @@ Mod=Mod4
 hc keybind $Mod-a spawn cinnamon-screensaver-command -l
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-colon reload
-hc keybind $Mod-d spawn $swap auto
+#hc keybind $Mod-d spawn $swap auto # I've never used that
 hc keybind $Mod-Shift-d spawn $swap close
 hc keybind $Mod-Return spawn $swap stack_spawn st -e tmux
 
@@ -40,6 +40,12 @@ for i in ${!tag_names[@]} ; do
         hc keybind "$Mod-Shift-$key" move_index "$i"
     fi
 done
+
+# renaming and moving to tags
+rename_tag=~/.config/herbstluftwm/rename-tag
+use_tag=~/.config/herbstluftwm/use-tag
+hc keybind $Mod-l spawn $rename_tag
+hc keybind $Mod-d spawn $use_tag
 
 # move around tags
 hc keybind $Mod-r     use_index +1 --skip-visible

@@ -50,7 +50,7 @@ hc rule focus=off
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 hc rule class='Gvim' focus=on
-hc rule title~'Figure.*' index=/0
+hc rule title~'Figure.*' index=/0 focus=on
 
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 

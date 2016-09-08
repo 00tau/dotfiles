@@ -6,11 +6,6 @@ xsetroot -cursor_name left_ptr
 
 xsetroot -solid '#010101'
 
-# set the wallpaper
-if [ -x /usr/bin/feh ] ; then
-    eval $(cat ~/.fehbg)
-fi
-
 # hide the mouse pointer when not needed
 if [ -x /usr/bin/unclutter ] ; then
     unclutter &
@@ -24,5 +19,11 @@ fi
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 setxkbmap kat
+
+# set the wallpaper
+if [ -x /usr/bin/feh ] ; then
+    #eval $(cat /home/moebius/.fehbg)
+    /home/moebius/.fehbg
+fi
 
 exec dbus-launch herbstluftwm
