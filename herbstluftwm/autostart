@@ -8,12 +8,6 @@ hc() {
 
 hc emit_hook reload
 
-# mouse
-hc mouseunbind --all
-hc mousebind $Mod-Button1 move
-hc mousebind $Mod-Button2 zoom
-hc mousebind $Mod-Button3 resize
-
 # colors
 hc set frame_border_normal_color  '#000000'
 hc set frame_border_active_color  '#FFFFFF'
@@ -40,32 +34,28 @@ hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
 
+# layouts
+hc set default_frame_layout 2
+
+# mouse
+hc mouseunbind --all
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 zoom
+hc mousebind $Mod-Button3 resize
+
 # rules
-
 hc unrule -F
-
-# normally do not focus new clients
 hc rule focus=off
-
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 hc rule class='Gvim' focus=on
 hc rule title~'Figure.*' index=/0 focus=on
-
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)|st|st-256color' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 
-# example
-
-# move all xterms to tag 3
-#hc rule class=XTerm tag=3
-
-# give focus to most common terminals
-#hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)|st|st-256color' focus=on
-
-# pseudotile all dialog, utility, and splash windows
-#hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
-
-hc set tree_style '╾│ ├└╼─┐'
+#hc set tree_style '╾│ ├└╼─┐'
+hc set tree_style "-| |'--"
 
 # do multi monitor setup here, e.g.:
 # hc set_monitors 1280x1024+0+0 1280x1024+1280+0

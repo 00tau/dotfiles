@@ -169,6 +169,9 @@ set laststatus=2
 "------------------------------------
 au BufRead,BufNewFile *.md :set ft=markdown | :set spell
 au BufRead,BufNewFile README :set ft=markdown | :set spell
+au FileType markdown :hi link markdownError Normal
+au FileType markdown :syn match markdownIgnore "\$.*_.*\$"
+
 let g:vim_markdown_folding_disabled=1
 
 au FileType markdown nnoremap <buffer> <space> gwap
@@ -277,10 +280,10 @@ noremap l :NERDTreeToggle<cr>
 noremap <C-g> :Gstatus<cr>
 
 " Navigate buffers
-noremap <C-q> :sbn<bar>bd#<cr>
-noremap <C-k> :bp<cr>
-noremap <C-j> :bn<cr>
-noremap <C-n> :b#<cr>
+noremap <left> :sbn<bar>bd#<cr>
+noremap <up> :bp<cr>
+noremap <down> :bn<cr>
+noremap <right> :b#<cr>
 
 " Quick movements within a line
 noremap h F
@@ -315,7 +318,7 @@ au FileType rmd nnoremap <buffer> [[ ?^#<cr>
 
 " Movement keys in normal mode are free to bind. Let us use those to turn
 " pages in the PDF with the tutorial/help/info-material you are reading.
-nnoremap <left> :silent ! xdotool search --class mupdf key --window \%\@ comma<cr>
-nnoremap <right> :silent ! xdotool search --class mupdf key --window \%\@ period<cr>
-nnoremap <up> :silent ! xdotool search --class mupdf key --window \%\@ H<cr>
-nnoremap <down> :silent ! xdotool search --class mupdf key --window \%\@ W<cr>
+"nnoremap <left> :silent ! xdotool search --class mupdf key --window \%\@ comma<cr>
+"nnoremap <right> :silent ! xdotool search --class mupdf key --window \%\@ period<cr>
+"nnoremap <up> :silent ! xdotool search --class mupdf key --window \%\@ H<cr>
+"nnoremap <down> :silent ! xdotool search --class mupdf key --window \%\@ W<cr>

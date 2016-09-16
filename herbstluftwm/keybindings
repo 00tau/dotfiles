@@ -89,7 +89,7 @@ hc keybind $Mod-Shift-c resize up +$RESIZESTEP
 hc keybind $Mod-Shift-n resize right +$RESIZESTEP
 
 # change pane configuration: layout
-hc keybind $Mod-s cycle_layout 1 vertical horizontal max grid
+hc keybind $Mod-s cycle_layout 1 vertical max
 
 # change pane configuration: tiling, floating and fullscreen
 hc keybind $Mod-f pseudotile toggle
