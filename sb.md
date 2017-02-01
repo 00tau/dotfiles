@@ -41,7 +41,7 @@ It centres around:
 * tmux,
     terminal multiplexer
 * gvim,
-    editor and jack knife
+    editor
 * sxiv,
     image browser
 * mupdf,
@@ -57,16 +57,17 @@ pleasing for the eye, too.
 Some Notes
 ----------
 
-* Use W-l to rename the current tag.  Some default options will be
+* Use `W-l` to rename the current tag.  Some default options will be
   listed but you may chose any name which suits you.
 
-* Use W-d to jump to a valid tag. A selection will be displayed of all
+* Use `W-d` to jump to a valid tag. A selection will be displayed of all
   available tags. A fuzzy search matches the closest string you enter.
   For example W-dmai would jump to the tag `E-Mail`.
 
-* In the shell: When using a Dvorak keyboard layout, typing ls -l in a
-  terminal is awkward. Assuming you are a lot in a terminal, you are
-  will type this, well, a lot.  For this reason, Seebrise defines the
+* In the shell: when using a Dvorak keyboard layout, such as
+  [Katzenpfote](http://00tau.github.io/katzenpfote/), typing `ls -l` in
+  a terminal is awkward. Assuming you are a lot in a terminal, you will
+  type this, well, a lot.  For this reason, Seebrise defines the
   zsh-aliases:
 
     ```
@@ -75,7 +76,7 @@ Some Notes
     alias ey="eu -la "
     ```
 
-* In the shell: Assuming you are browsing through your files and opening
+* In the shell: assuming you are browsing through your files and opening
   a lot of them using a shell, too, Seebrise defines a handy script
   named *op*.  Invoking
 
@@ -83,16 +84,20 @@ Some Notes
     op [SERVERNAME] FILE
     ```
 
-  will open the file in gvim.  Also, gvim will be run in server mode,
-  and the name of the server will be set equal to the current visible
-  tag (a workspace in herbstluftwm).  If SERVERNAME is a valid server
-  name, the file will be opened in the respected vim-session instead.
+  will open the file `FILE` in gvim.  But gvim will also be run in
+  server mode, and the name of the server will be set equal to the
+  current visible tag (a workspace in herbstluftwm).
 
-* In Vim: Use M< and M> to jump to the end of previously selected text.
-  This is useful if you have just send a selected block of python code
-  to the shell and now would like to continue working after this block.
-  Say, you would like to start evaluate all code above the cursor and
-  continue where you are: Vgg<cr>M>
+  If there already exists a vim server which name is equal to the
+  currently visible tag, then the file gets opened in that vim session
+  instead.  If SERVERNAME is given and a valid server name, the file
+  will be opened in the respected vim server instead.
+
+* In vim: use `M<` and `M>` to jump to the end of previously selected
+  text.  This is useful if you have just send a selected block of python
+  code to the shell and now would like to continue working after this
+  block.  Say, you would like to start evaluate all code above the
+  cursor and continue where you are: `Vgg<cr>M>`.
 
 Installation
 ------------
