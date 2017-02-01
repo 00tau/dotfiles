@@ -74,7 +74,7 @@ When pressing SHIFT, it yields the shifted or *capital* layer:
 
 The *symbol* layer looks as follows:
 
-| ESC   | d¨ | d˛ | d¸ | ´  | d´ | d` | \` | €  | ¢  | £  | TAB   |
+| ESC   | d¨ | d˛ | d¸ | ´  | d´ | d` | `` | €  | ¢  | £  | TAB   |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 |       | ∪  | +  | $  | [  | @  | %  | ]  | \  | &  | ∩  | ø     |
 | SHIFT | ~  | <  | -  | (  | ±  | _  | )  | /  | >  | ^  | SHIFT |
@@ -169,12 +169,11 @@ and `keysym`s in `kp`.
 Trivia
 -------
 
-Katzenpfote is German and it literally translates to: `the paw of a
-cat`.  However,
-[Katzenpfote](http://www.sailingace.com/segellexikon/d/katzenpfote/katzenpfote.htm)
-is also a nautical term used by German sailors to describe the
-characteristic pattern that a [light
-breeze](http://00tau.github.io/seebrise/) draws on calm see.
+Katzenpfote is German and it literally translates to: "the paw of a
+cat".  However, Katzenpfote is also a [nautical
+term](http://www.sailingace.com/segellexikon/d/katzenpfote/katzenpfote.htm)
+used by German sailors to describe the characteristic pattern that a
+[light breeze](http://00tau.github.io/seebrise/) draws on calm see.
 Katzenpfote is the standard keyboard layout in
 [Seebrise](http://00tau.github.io/seebrise/).
 
