@@ -74,7 +74,7 @@ When pressing SHIFT, it yields the shifted or *capital* layer:
 
 The *symbol* layer looks as follows:
 
-| ESC   | d¨ | d˛ | d¸ | ´  | d´ | d` | `` | €  | ¢  | £  | TAB   |
+| ESC   | d¨ | d˛ | d¸ | ´  | d´ | d\` | \` | €  | ¢  | £  | TAB   |
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 |       | ∪  | +  | $  | [  | @  | %  | ]  | \  | &  | ∩  | ø     |
 | SHIFT | ~  | <  | -  | (  | ±  | _  | )  | /  | >  | ^  | SHIFT |
