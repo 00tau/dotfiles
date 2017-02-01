@@ -11,7 +11,7 @@ set guioptions=a
 " vim.  Simply copy new skipts to the .vim/bundle/
 " directory.  They get loaded automatically.
 runtime bundle/pathogen/autoload/pathogen.vim
-let g:pathogen_disabled = ['tmuxline.vim', 'vim-ipython']
+let g:pathogen_disabled = ['tmuxline.vim', 'vim-ipython', 'lightline']
 call pathogen#infect()
 
 "------------------------------------
@@ -19,7 +19,12 @@ call pathogen#infect()
 "------------------------------------
 set t_Co=256
 syntax enable
-colorscheme wombat256mod
+
+set background=dark
+"set background=light
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
+colorscheme hybrid
 highlight clear SignColumn
 highlight link SignColumn LineNr
 
@@ -94,6 +99,8 @@ set expandtab
 set autoindent
 set smartindent
 
+:set comments+=b:#'
+
 "------------------------------------
 " Search
 "------------------------------------
@@ -135,9 +142,7 @@ let maplocalleader = "\\"
 "------------------------------------
 " Lightline
 "------------------------------------
-let g:lightline = {
-            \ 'colorscheme': 'wombat',
-            \ }
+"let g:lightline = {'colorscheme': 'hybrid'}
 
 "------------------------------------
 " Tmux
@@ -150,8 +155,8 @@ let g:tmuxline_powerline_separators = 0
 nmap <C-c>r <Plug>SetTmuxVars
 au FileType python,sh,zsh nnoremap <buffer> <space> yy:call SendToTmux(@")<cr>j
 
-au FileType python vnoremap <buffer> <cr> "+y:call SendToTmux('%paste')<cr>
-au FileType python nnoremap <buffer> <cr> "+yap:call SendToTmux('%paste')<cr>
+au FileType python vmap <buffer> <cr> "+y:call SendToTmux('%paste')<cr>}<space>
+au FileType python nmap <buffer> <cr> "+yap:call SendToTmux('%paste')<cr>}<space>
 
 au FileType sh,zsh vnoremap <buffer> <cr> y:call SendToTmux(@")<cr>
 au FileType sh,zsh nnoremap <buffer> <cr> yap:call SendToTmux(@")<cr>
@@ -160,8 +165,8 @@ au FileType sh,zsh nnoremap <buffer> <cr> yap:call SendToTmux(@")<cr>
 "------------------------------------
 " Statusbar
 "------------------------------------
-" set statusline=%F%m%r%h%w\ type=%Y\ pos=%04l,%04v\ %p%%\ len=%L
-" set statusline=%{fugitive#statusline()}
+"set statusline=%F%m%r%h%w\ type=%Y\ pos=%04l,%04v\ %p%%\ len=%L
+set statusline=%{fugitive#statusline()}
 set laststatus=2
 
 "------------------------------------
