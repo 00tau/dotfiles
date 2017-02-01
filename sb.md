@@ -4,54 +4,55 @@ Seebrise
 Introduction
 ------------
 
-Seebrise is a desktop environment is for power users and professionals,
-and it is highly customised. It has evolved around the need for a
-desktop environment that is *not getting in the way* when concurrently:
+Seebrise is a desktop environment for power users and professionals, and
+it is highly customised. It has evolved around the need for a desktop
+environment that is not getting in the way when concurrently:
 programming on different projects, doing multiple statistical analysis,
 reading scientific papers, writing technical reports or articles, and,
 well, doing research. It is for people, who like to optimise workflows
-(and maybe spending a little too much time in optimising, too).  It is
-for people, who take the tautology: "A window manager should manage my
-windows" seriously, and for people, who care about *screen real estate*
-maybe a little too much, too, if this is at all possible.
+(and maybe spending a little too much time in optimising, too), and it
+is for people, who take the tautology: "a window manager should manage
+my windows" seriously, and for people, who care about *screen real
+estate* maybe a little too much, too, if this is at all possible.
 
 It consists basically of a collection of configuration files and scripts
 (mostly written in Python) that build on top of the marvellous window
-manager [HerbustluftWM](http://www.herbstluftwm.org/) yielding a
+manager [herbustluftwm](http://www.herbstluftwm.org/) yielding a
 fruitful touch-typing environment.  It aims to give a smooth transitions
 between terminal emulators, editors, web, and document browsers.
 
 It is heavily keyboard driven and key bindings are optimised for the use
-with a grid keyboard (i.e., a keyboard that is non-staggered) which map
-onto a customised Dvorak variant keyboard layout, named Katzenpfoten.
+with a grid keyboard (i.e., a keyboard that is non-staggered).  Seebrise
+also assumes that you are using the Dvorak variant
+[Katzenpfote](http://00tau.github.io/katzenpfote/).
 
 It centres around:
 
-herbstluftwm
+* herbstluftwm
     a tiling window manager
 
-dzen2
+* dzen2
     messaging and notification panel
 
-dmenu
+* dmenu
     dynamic menu for evoking everything
 
-zsh
+* zsh
     shell
 
-st
+* st
     terminal emulator
 
-tmux
+* tmux
     terminal multiplexer
 
-gvim
+* gvim
     editor and jack knife
 
-sxiv
+* sxiv
     image browser
 
-mupdf
+* mupdf
     pdf viewer
 
 Seebrise follows a common theme for key strokes and short cuts, which
