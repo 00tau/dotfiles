@@ -78,7 +78,7 @@ The *symbol* layer looks as follows:
 |------:|----|----|----|----|----|----|----|----|----|----|:------|
 |       | ∪  | +  | $  | [  | @  | %  | ]  | \  | &  | ∩  | ø     |
 | SHIFT | ~  | <  | -  | (  | ±  | _  | )  | /  | >  | ^  | SHIFT |
-| å     | “  | «  | =  | {  | #  | *  | }  | `|`| »  | ”  | §     |
+| å     | “  | «  | =  | {  | #  | *  | }  | \| | »  | ”  | §     |
 
 Symbols prefixed with 'd' are dead keys.  Note how easy it is to press
 combinations such as `<-` or `~/` or `[]`.  When additionally pressing
