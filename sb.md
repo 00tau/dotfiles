@@ -28,31 +28,23 @@ also assumes that you are using the Dvorak variant
 
 It centres around:
 
-* herbstluftwm
+* herbstluftwm,
     a tiling window manager
-
-* dzen2
+* dzen2,
     messaging and notification panel
-
-* dmenu
+* dmenu,
     dynamic menu for evoking everything
-
-* zsh
+* zsh,
     shell
-
-* st
+* st,
     terminal emulator
-
-* tmux
+* tmux,
     terminal multiplexer
-
-* gvim
+* gvim,
     editor and jack knife
-
-* sxiv
+* sxiv,
     image browser
-
-* mupdf
+* mupdf,
     pdf viewer
 
 Seebrise follows a common theme for key strokes and short cuts, which
